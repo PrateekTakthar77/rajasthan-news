@@ -299,6 +299,11 @@ function Home() {
                     navigate(`/fullnews/${result?.category[0]}/${result?.title}`, { state: { data: result } });
                   }} />
                 ))}
+                {/* multiple filter conditions
+                const filteredItems = Articles?.filter(item => {
+                 return item.subcategory.some(sub => sub === "BJP" || sub === "AnotherValue" || sub === "YetAnotherValue");
+                 });
+                */}
               </Grid>
             </Box>
           </Box>
