@@ -1,21 +1,13 @@
 import React, { useEffect } from 'react';
-import { Box, Typography, Grid } from '@mui/material';
+import { Divider, Box, Typography, Grid } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
-
-import HomeCard from '../Home/HomeCard';
-
+import HomeCard from '../../pages/Home/HomeCard';
 import { getArticles } from '../../Redux/actions/Home';
-
-
 import { useSelector } from 'react-redux';
-import Carousell from '../Carousel/Carousell';
 
-function Viralnews() {
+function SportsNews() {
 
   const { Articles } = useSelector(state => state.HomeReducer)
-
-
-
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -24,27 +16,20 @@ function Viralnews() {
 
 
   return (
-<>
-<Carousell/>
 
-
-    <Box
-      marginTop={8}
-      sx={{ flexGrow: 1 }}
-    >
-
+    <Box style={{marginTop:"100px"}}>
       <Grid container>
         <Grid item xs={12} sm={12} md={10} lg={10} paddingInline={5} paddingBlock={2}>
-
-          <Box>
+        <Box>
             <Grid container spacing={3}>
-              {Articles?.map((result, index) => index < 6 && (
+              {Articles?.filter(item => item.subcategory[0] === "Sports").map((result, index) => index < 6 && (
                 <HomeCard key={index} result={result} onClick={() => {
                   console.log('navigate');
                   navigate(`/fullnews/${result?.category[0]}/${result?.title}`, { state: { data: result } });
                 }} />
               ))}
             </Grid>
+           
           </Box>
 
         </Grid>
@@ -53,9 +38,10 @@ function Viralnews() {
           <Typography>ADD Space</Typography>
         </Grid>
       </Grid>
-    </Box>
-    </>
+      </Box>
+
+
   )
 }
 
-export default Viralnews
+export default SportsNews
