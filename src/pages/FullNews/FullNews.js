@@ -108,7 +108,7 @@
                     </Grid> */}
                     <Grid container>
     <Grid item xs={12} style={{ flexGrow: 1 }}>
-        <Typography variant="body1" style={{ marginTop: "10px", color: "black", fontSize: "20px" }} dangerouslySetInnerHTML={createMarkup(state?.data?.description)} />
+        <Typography variant="body1" style={{ marginTop: "10px", fontSize: "20px" ,backgroundColor:"none"}} dangerouslySetInnerHTML={createMarkup(state?.data?.description)} />
     </Grid>
 </Grid>
 

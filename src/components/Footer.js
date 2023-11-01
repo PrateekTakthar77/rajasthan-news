@@ -8,26 +8,27 @@ import { Box } from "@mui/material";
 
 export default function Footer() {
   return (
-    <Box component="footer" sx={{ backgroundColor: (theme) => theme.palette.mode === "light" ? theme.palette.grey[200]
-            : theme.palette.grey[800],
-        p: 6,
-      }}
+    <Box component="footer" sx={{
+      backgroundColor: (theme) => theme.palette.mode === "light" ? theme.palette.grey[200]
+        : theme.palette.grey[800],
+      p: 6,
+    }}
     >
       <Container maxWidth="lg">
-        <Grid container spacing={5}>
+        <Grid container spacing={10}>
 
           <Grid item xs={12} sm={4}>
-            <Typography variant="h6" color="text.primary" gutterBottom>
+            {/* <Typography variant="h6" color="text.primary" gutterBottom>
               About Us
             </Typography>
             <Typography variant="body2" color="text.secondary">
               We are XYZ company, dedicated to providing the best service to our
               customers.
-            </Typography>
+            </Typography> */}
           </Grid>
 
           <Grid item xs={12} sm={4}>
-            <Typography variant="h6" color="text.primary" gutterBottom>
+            {/* <Typography variant="h6" color="text.primary" gutterBottom>
               Contact Us
             </Typography>
             <Typography variant="body2" color="text.secondary">
@@ -38,11 +39,20 @@ export default function Footer() {
             </Typography>
             <Typography variant="body2" color="text.secondary">
               Phone: +1 234 567 8901
-            </Typography>
+            </Typography> */}
+            <Box mt={5}>
+              <Typography variant="body2" color="text.secondary" align="center">
+                {"Copyright © "}
+                <Link color="inherit" href="">
+                  Your Website
+                </Link>
+                {new Date().getFullYear()}
+              </Typography>
+            </Box>
           </Grid>
 
           <Grid item xs={12} sm={4}>
-            <Typography variant="h6" color="text.primary" gutterBottom>
+            <Typography variant="h6" color="text.primary" gutterBottom style={{fontSize:"15px"}}>
               Follow Us
             </Typography>
             <Link href="https://www.facebook.com/" color="inherit">
@@ -59,9 +69,9 @@ export default function Footer() {
               <Twitter />
             </Link>
           </Grid>
-          
+
         </Grid>
-        <Box mt={5}>
+        {/* <Box mt={5}>
           <Typography variant="body2" color="text.secondary" align="center">
             {"Copyright © "}
             <Link color="inherit" href="">
@@ -69,7 +79,7 @@ export default function Footer() {
             </Link>
             {new Date().getFullYear()}
           </Typography>
-        </Box>
+        </Box> */}
       </Container>
     </Box>
   );

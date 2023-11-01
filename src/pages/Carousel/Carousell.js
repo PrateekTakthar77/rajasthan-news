@@ -13,14 +13,14 @@ import img3 from "../../assets/images/cricket.webp"
 import img4 from "../../assets/images/eduction.jpeg"
 import img5 from "../../assets/images/vnews.jpeg"
 
-const Background = styled("div")({
-  width: "340px",
-  height: "200px",
-  backgroundImage: `url(${img1})`,
-  backgroundPosition: "center",
-  backgroundSize: "cover",
-  backgroundRepeat: "no-repeat",
-});
+// const Background = styled("div")({
+//   width: "340px",
+//   height: "200px",
+//   backgroundImage: `url(${img1})`,
+//   backgroundPosition: "center",
+//   backgroundSize: "cover",
+//   backgroundRepeat: "no-repeat",
+// });
 
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
