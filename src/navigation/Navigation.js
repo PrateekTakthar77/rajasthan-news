@@ -14,6 +14,7 @@ import CongressNews from '../pages/AllNews/CongressNews'
 import SportsNews from '../pages/AllNews/SportsNews';
 
 import FullNews from '../pages/FullNews/FullNews';
+import BreakingNews from '../pages/BreakingNews/BreakingNews';
 
 
 function Navigation() {
@@ -27,10 +28,12 @@ function Navigation() {
                 <Route path='/education' element={<Education />} />
                 <Route path='/viralnews' element={<Viralnews />} />
 
-                <Route path='/all' element={<All/>} />
-                <Route path='/bjpnews' element={<BjpNews/>} />
-                <Route path='/congressnews' element={<CongressNews/>} />
-                <Route path='/sportsnews' element={<SportsNews/>} />
+                <Route path='/all' element={<All />} />
+                <Route path='/bjpnews' element={<BjpNews />} />
+                <Route path='/congressnews' element={<CongressNews />} />
+                <Route path='/sportsnews' element={<SportsNews />} />
+                <Route path='/breakingnews' element={<BreakingNews />} />
+
 
                 <Route path='/fullnews/:param1?/:param2?/:param3?' element={<FullNews />} />
             </Routes>

@@ -1,0 +1,68 @@
+import React from 'react'
+import { Grid, Box, Typography, Divider } from '@mui/material'
+import { Link } from "react-router-dom"
+
+const BreakingNewsTitle = () => {
+    return (
+        <Grid container>
+
+            <Grid item xs={12} sm={12} md={2} lg={2} ></Grid>
+
+            <Grid item xs={12} sm={12} md={8} lg={8} >
+                <Link to="/breakingnews">
+                    <Box sx={{
+                        height: 'auto',
+                        backgroundColor: 'red',
+                        margin: '0 auto',
+                        marginTop: 10,
+                        borderRadius: '20px',
+                        marginLeft: "20px",
+                        marginRight: "20px",
+                        marginBottom: "40px",
+                        display: 'flex',
+                        flexDirection: 'row',
+                    }}>
+                        <Typography sx={{
+                             fontSize: "22px",
+                             fontWeight: "900",
+                             color: "#fff",
+                             padding: "3px",
+                             textDecoration: "none", // Remove underline
+                             marginTop: "3px",
+                             marginLeft: "20px",
+                             fontStyle: 'italic'
+                        }}>
+                            BREAKING NEWS
+                        </Typography>
+                        <Divider sx={{
+                            width: '0.2%',
+                            marginLeft: '15px',
+                            marginRight: "15px"
+                        }}
+                            orientation="vertical"
+                            variant="middle"
+                            flexItem
+                            style={{ backgroundColor: 'white' }}
+                        />
+                        <Typography style={{
+                            fontSize: "20px",
+                            fontWeight: "700",
+                            color: "#fff",
+                            padding: "3px",
+                            // textDecoration: "none",
+                            marginTop: "3px"
+                        }}>
+                            सोशल मीडिया पर एक कार पर हुए हमले का वीडियो तेजी से वायरल हो रहा है
+                        </Typography>
+                    </Box>
+                </Link>
+            </Grid>
+            <Grid item xs={12} sm={12} md={2} lg={2} >
+            </Grid>
+
+
+        </Grid>
+    )
+}
+
+export default BreakingNewsTitle
