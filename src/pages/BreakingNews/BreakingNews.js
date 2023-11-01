@@ -11,21 +11,21 @@ const BreakingNews = () => {
                 <Grid container>
 
                     <Grid item xs={12} sm={12} lg={1} md={1}
-                        style={{ backgroundColor: "yellow" }}
+                        // style={{ backgroundColor: "yellow" }}
                     ></Grid>
 
                     {Data.map((item, index) => (
                         <Grid item xs={12} sm={12} lg={8} md={8} style={{ marginBottom: "20px" }}>
                             <Grid container>
                                 <Grid item xs={12} sm={12} lg={1.5} md={1.5}
-                                    style={{ backgroundColor: "red" }}
+                                    // style={{ backgroundColor: "red" }}
                                 >
                                     <Typography style={{ fontSize: "19px", fontWeight: "700", marginLeft: "10px" }}>
                                         {item.time}
                                     </Typography>
                                 </Grid>
                                 <Grid item xs={12} sm={12} lg={9} md={9}
-                                    style={{ backgroundColor: "blue" }}
+                                    // style={{ backgroundColor: "blue" }}
                                 >
                                     <Typography style={{ fontSize: "17px", fontWeight: "700", marginTop: "1px", marginLeft: "10px" }}>
                                         {item.news}
@@ -33,10 +33,10 @@ const BreakingNews = () => {
                                 </Grid>
 
                                 <Grid item xs={12} sm={12} lg={1.5} md={1.5}
-                                    style={{ backgroundColor: "green" }}
+                                    // style={{ backgroundColor: "green" }}
                                 >
                                     <Typography style={{ fontSize: "17px", fontWeight: "700", marginTop: "1px", marginLeft: "10px" }}>
-                                        मराठा
+                                     
                                     </Typography>
                                 </Grid>
                             </Grid>
@@ -46,7 +46,7 @@ const BreakingNews = () => {
                         </Grid>
                     ))}
                     <Grid item xs={12} sm={12} md={3} lg={3}
-                        style={{ backgroundColor: "purple" }}
+                        // style={{ backgroundColor: "purple" }}
                     >
                         <Typography>
                             ADVERTISEMENT
