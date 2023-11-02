@@ -6,6 +6,12 @@ import img from "../../assets/images/img2.jpeg"
 import R1 from "../../assets/images/R1.png"
 import R2 from "../../assets/images/R2.png"
 
+import add1 from "../../assets/images/add1.jpeg"
+import add2 from "../../assets/images/add2.jpeg"
+import add3 from "../../assets/images/add3.jpeg"
+import add4 from "../../assets/images/add4.jpeg"
+import add5 from "../../assets/images/add5.jpeg"
+
 
 
 
@@ -93,11 +99,12 @@ const FullNews = () => {
                 // backgroundColor:"blue" ,
                 align: "center"
             }}>
-                <img src={img} style={{ height: "300px", width: "300px", marginLeft: "10px" }} />
-                <img src={img} style={{ height: "300px", width: "300px", marginLeft: "10px" }} />
-                <img src={img} style={{ height: "300px", width: "300px", marginLeft: "10px" }} />
-                <img src={img} style={{ height: "300px", width: "300px", marginLeft: "10px" }} />
-                <img src={img} style={{ height: "300px", width: "300px", marginLeft: "10px" }} />
+                   <img src={add2} alt='add' style={{ width: "260px", height: "250px" }} />
+          <img src={add3} alt='add' style={{ width: "260px", height: "250px", marginTop:"20px" }} />
+          <img src={add5} alt='add' style={{ width: "260px", height: "250px" , marginTop:"20px" }} />
+          <img src={add3} alt='add' style={{ width: "260px", height: "250px", marginTop:"20px" }} />
+          <img src={add4} alt='add' style={{ width: "260px", height: "250px", marginTop:"20px" }} />
+          <img src={add5} alt='add' style={{ width: "260px", height: "250px" , marginTop:"20px" }} />
             </Grid>
         </Grid>
     );

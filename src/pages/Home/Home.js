@@ -8,8 +8,15 @@ import Carousell from '../Carousel/Carousell';
 import { Link } from 'react-router-dom';
 import BreakingNewsTitle from '../BreakingNews/BreakingNewsTitle';
 
-import redTia from "../../assets/images/RedTriangle.png"
+import redTia from "../../assets/images/RedTriangle.png";
 import add from "../../assets/images/img10.jpeg"
+
+import add1 from "../../assets/images/add1.jpeg"
+import add2 from "../../assets/images/add2.jpeg"
+import add3 from "../../assets/images/add3.jpeg"
+import add4 from "../../assets/images/add4.jpeg"
+import add5 from "../../assets/images/add5.jpeg"
+
 
 
 function Home() {
@@ -31,22 +38,35 @@ function Home() {
 
 
       {/* Carousell */}
-      <div style={{ marginTop: "-100px" }}>
+      <div style={{ marginTop: "-130px" }}>
         <Carousell />
       </div>
 
 
-      <Grid container style={{ marginTop: "20px" }}>
+      <Grid container style={{ marginTop: "1px" }}>
         <Grid item xs={12} sm={12} md={9.5} lg={9.5} paddingInline={5} paddingBlock={2} 
-        // style={{ backgroundColor: "green" }}
+        // sx={{backgroundColor:"green"}}
         >
-
 
           {/* --------ALL NEWS------------------------------------------------ */}
 
-          <Box 
-          // style={{ backgroundColor: "purple" }}
-          >
+          <Box display="flex" justifyContent="space-between">
+            < Box style={{ display: "flex", flexDirection: "row",}}>
+              <Typography style={{ fontSize: "20px", fontWeight: "600" }}>हिंदी न्यूज़</Typography>
+              <Typography style={{ fontSize: "20px", fontWeight: "600", marginLeft: "10px", marginRight: "10px" }}>/</Typography>
+              <Typography style={{ fontSize: "20px", fontWeight: "600", padding: "2px", backgroundColor: "red", color: "#fff" }}>Explained</Typography>
+            </Box>
+
+            <Box style={{ textDecoration: 'none'}}>
+              <Link to={'/all'} style={{ textDecoration: 'none' }}>
+                <Typography style={{ textDecoration: 'none', color: 'red', fontSize: "15px", fontWeight: "700" }}>
+                  और भी..
+                </Typography>
+              </Link>
+            </Box>
+          </Box>
+
+          <Box sx={{marginTop:"10px"}}>
             <Grid container spacing={3}>
               {Articles?.map((result, index) => index < 6 && (
                 <HomeCard key={index} result={result} onClick={() => {
@@ -55,20 +75,24 @@ function Home() {
                 }} />
               ))}
             </Grid>
-            <Link to={'/all'} style={{ textDecoration: 'none' }}>
-              <Typography style={{ textDecoration: 'none', color: 'blue' }}>
-                See All
-              </Typography>
-            </Link>
           </Box>
 
           {/* --------BJP NEWS------------------------------------------------ */}
 
-          <Divider textAlign="left" >
+          <Box display="flex" justifyContent="space-between">
             < Box style={{ display: "flex", flexDirection: "row", margin: "10px" }}>
-              <Typography style={{ fontSize: "35px", fontWeight: "700", fontStyle: "italic" }}>BJP NEWS</Typography>
+              <Typography style={{ fontSize: "35px", fontWeight: "700", fontStyle: "italic" }}>BJP</Typography>
               <img src={redTia} style={{ width: "28px", height: "28px", marginTop: "10px", marginLeft: "10px" }} />
-            </Box></Divider>
+            </Box>
+            <Box style={{ textDecoration: 'none', marginTop: "25px" }}>
+              <Link to={'/bjpnews'} style={{ textDecoration: 'none' }}>
+                <Typography style={{ textDecoration: 'none', color: 'red', fontSize: "15px", fontWeight: "700" }}>
+                  और भी..
+                </Typography>
+              </Link>
+
+            </Box>
+          </Box>
 
           <Box>
             <Box >
@@ -79,28 +103,25 @@ function Home() {
                     navigate(`/fullnews/${result?.category[0]}/${result?.title}`, { state: { data: result } });
                   }} />
                 ))}
-                {/* multiple filter conditions
-                const filteredItems = Articles?.filter(item => {
-                 return item.subcategory.some(sub => sub === "BJP" || sub === "AnotherValue" || sub === "YetAnotherValue");
-                 });
-                */}
               </Grid>
-              <Link to={'/bjpnews'} style={{ textDecoration: 'none' }}>
-                <Typography style={{ textDecoration: 'none', color: 'blue' }}>
-                  See All
-                </Typography>
-              </Link>
             </Box>
           </Box>
 
           {/* --------CONGRESS NEWS------------------------------------------------ */}
 
-          <Divider textAlign="left" >
+          <Box display="flex" justifyContent="space-between">
             < Box style={{ display: "flex", flexDirection: "row", margin: "10px" }}>
-              <Typography style={{ fontSize: "35px", fontWeight: "700", fontStyle: "italic" }}>CONGRESS NEWS</Typography>
+              <Typography style={{ fontSize: "35px", fontWeight: "700", fontStyle: "italic" }}>CONGRESS</Typography>
               <img src={redTia} style={{ width: "28px", height: "28px", marginTop: "10px", marginLeft: "10px" }} />
             </Box>
-          </Divider>
+            <Box style={{ textDecoration: 'none', marginTop: "25px" }}>
+              <Link to={'/congressnews'} style={{ textDecoration: 'none' }}>
+                <Typography style={{ textDecoration: 'none', color: 'red', fontSize: "15px", fontWeight: "700" }}>
+                  और भी..
+                </Typography>
+              </Link>
+            </Box>
+          </Box>
 
           <Box>
             <Grid container spacing={3}>
@@ -111,25 +132,24 @@ function Home() {
                 }} />
               ))}
             </Grid>
-            <Link to={'/congressnews'} style={{ textDecoration: 'none' }}>
-              <Typography style={{ textDecoration: 'none', color: 'blue' }}>
-                See All
-              </Typography>
-            </Link>
           </Box>
 
 
           {/* --------SPORTS NEWS------------------------------------------------ */}
 
-          <Divider textAlign="left" >
+          <Box display="flex" justifyContent="space-between">
             < Box style={{ display: "flex", flexDirection: "row", margin: "10px" }}>
-              <Typography style={{ fontSize: "35px", fontWeight: "700", fontStyle: "italic" }}>SPORTS NEWS</Typography>
+              <Typography style={{ fontSize: "35px", fontWeight: "700", fontStyle: "italic" }}>SPORTS</Typography>
               <img src={redTia} style={{ width: "28px", height: "28px", marginTop: "10px", marginLeft: "10px" }} />
             </Box>
-          </Divider>
-
-
-
+            <Box style={{ textDecoration: 'none', marginTop: "25px" }}>
+              <Link to={'/sportsnews'} style={{ textDecoration: 'none' }}>
+                <Typography style={{ textDecoration: 'none', color: 'red', fontSize: "15px", fontWeight: "700" }}>
+                  और भी..
+                </Typography>
+              </Link>
+            </Box>
+          </Box>
 
           <Box>
             <Grid container spacing={3}>
@@ -140,11 +160,6 @@ function Home() {
                 }} />
               ))}
             </Grid>
-            <Link to={'/sportsnews'} style={{ textDecoration: 'none' }} >
-              <Typography style={{ textDecoration: 'none', color: 'blue' }}>
-                See All
-              </Typography>
-            </Link>
           </Box>
 
         </Grid >
@@ -152,15 +167,20 @@ function Home() {
         {/* --------ADVERTISEMENT------------------------------------------------ */}
 
 
-        {/* <Grid item xs={12} sm={12} md={1} lg={1} marginTop={2} sx={{backgroundColor:"red"}}>
-      
-        </Grid> */}
-
-        <Grid item xs={12} sm={12} md={2} lg={2.5} marginTop={2.5}
+        <Grid item xs={12} sm={12} md={2} lg={2.5} marginTop={7}
           // sx={{ backgroundColor: "blue" }}
-          paddingInline={5}>
-          {/* <Typography>ADD Space</Typography> */}
-          <img src={add} alt='add' style={{ width: "220px", height: "200px" }} />
+          >
+          <img src={add2} alt='add' style={{ width: "260px", height: "250px" }} />
+          <img src={add3} alt='add' style={{ width: "260px", height: "250px", marginTop:"20px" }} />
+          <img src={add5} alt='add' style={{ width: "260px", height: "250px" , marginTop:"20px" }} />
+          <img src={add3} alt='add' style={{ width: "260px", height: "250px", marginTop:"20px" }} />
+          <img src={add4} alt='add' style={{ width: "260px", height: "250px", marginTop:"20px" }} />
+          <img src={add5} alt='add' style={{ width: "260px", height: "250px" , marginTop:"20px" }} />
+          <img src={add3} alt='add' style={{ width: "260px", height: "250px", marginTop:"20px" }} />
+          <img src={add4} alt='add' style={{ width: "260px", height: "250px", marginTop:"20px" }} />
+          <img src={add5} alt='add' style={{ width: "260px", height: "250px" , marginTop:"20px" }} />
+          <img src={add4} alt='add' style={{ width: "260px", height: "250px", marginTop:"20px" }} />
+          <img src={add5} alt='add' style={{ width: "260px", height: "250px" , marginTop:"20px" }} />
         </Grid>
       </Grid >
     </Box >

@@ -105,7 +105,7 @@ function Header(props) {
           </Link>
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
             {navItems.map((item, index) => (
-              <Button key={index} sx={{ color: '#fff', fontSize: 25, fontWeight: "500", ...buttonHoverStyle, }} onClick={() => { navigate(item?.to) }}>
+              <Button key={index} sx={{ color: '#fff', fontSize: "25px", fontWeight: "500", ...buttonHoverStyle, }} onClick={() => { navigate(item?.to) }}>
                 {item?.name}
               </Button>
             ))}
