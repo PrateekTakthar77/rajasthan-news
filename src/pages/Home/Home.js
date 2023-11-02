@@ -9,6 +9,8 @@ import { Link } from 'react-router-dom';
 import BreakingNewsTitle from '../BreakingNews/BreakingNewsTitle';
 
 import redTia from "../../assets/images/RedTriangle.png"
+import add from "../../assets/images/img10.jpeg"
+
 
 function Home() {
 
@@ -33,13 +35,18 @@ function Home() {
         <Carousell />
       </div>
 
+
       <Grid container style={{ marginTop: "20px" }}>
-        <Grid item xs={12} sm={12} md={10} lg={10} paddingInline={5} paddingBlock={2}>
+        <Grid item xs={12} sm={12} md={9.5} lg={9.5} paddingInline={5} paddingBlock={2} 
+        // style={{ backgroundColor: "green" }}
+        >
 
 
           {/* --------ALL NEWS------------------------------------------------ */}
 
-          <Box style={{ backgroundColor: "purplex" }}>
+          <Box 
+          // style={{ backgroundColor: "purple" }}
+          >
             <Grid container spacing={3}>
               {Articles?.map((result, index) => index < 6 && (
                 <HomeCard key={index} result={result} onClick={() => {
@@ -55,13 +62,14 @@ function Home() {
             </Link>
           </Box>
 
+          {/* --------BJP NEWS------------------------------------------------ */}
+
           <Divider textAlign="left" >
             < Box style={{ display: "flex", flexDirection: "row", margin: "10px" }}>
-            <Typography style={{ fontSize: "35px", fontWeight: "700", fontStyle: "italic" }}>BJP NEWS</Typography>
-            <img src={redTia} style={{ width: "28px", height: "28px", marginTop: "10px", marginLeft: "10px" }} />
-          </Box></Divider>
+              <Typography style={{ fontSize: "35px", fontWeight: "700", fontStyle: "italic" }}>BJP NEWS</Typography>
+              <img src={redTia} style={{ width: "28px", height: "28px", marginTop: "10px", marginLeft: "10px" }} />
+            </Box></Divider>
 
-          {/* --------BJP NEWS------------------------------------------------ */}
           <Box>
             <Box >
               <Grid container spacing={3}>
@@ -85,6 +93,8 @@ function Home() {
             </Box>
           </Box>
 
+          {/* --------CONGRESS NEWS------------------------------------------------ */}
+
           <Divider textAlign="left" >
             < Box style={{ display: "flex", flexDirection: "row", margin: "10px" }}>
               <Typography style={{ fontSize: "35px", fontWeight: "700", fontStyle: "italic" }}>CONGRESS NEWS</Typography>
@@ -92,7 +102,6 @@ function Home() {
             </Box>
           </Divider>
 
-          {/* --------CONGRESS NEWS------------------------------------------------ */}
           <Box>
             <Grid container spacing={3}>
               {Articles?.filter(item => item.subcategory[0] === "Congress").map((result, index) => index < 6 && (
@@ -110,7 +119,8 @@ function Home() {
           </Box>
 
 
-         
+          {/* --------SPORTS NEWS------------------------------------------------ */}
+
           <Divider textAlign="left" >
             < Box style={{ display: "flex", flexDirection: "row", margin: "10px" }}>
               <Typography style={{ fontSize: "35px", fontWeight: "700", fontStyle: "italic" }}>SPORTS NEWS</Typography>
@@ -120,7 +130,6 @@ function Home() {
 
 
 
-          {/* --------SPORTS NEWS------------------------------------------------ */}
 
           <Box>
             <Grid container spacing={3}>
@@ -143,9 +152,15 @@ function Home() {
         {/* --------ADVERTISEMENT------------------------------------------------ */}
 
 
+        {/* <Grid item xs={12} sm={12} md={1} lg={1} marginTop={2} sx={{backgroundColor:"red"}}>
+      
+        </Grid> */}
 
-        <Grid item xs={12} sm={12} md={2} lg={2} marginTop={2}>
-          <Typography>ADD Space</Typography>
+        <Grid item xs={12} sm={12} md={2} lg={2.5} marginTop={2.5}
+          // sx={{ backgroundColor: "blue" }}
+          paddingInline={5}>
+          {/* <Typography>ADD Space</Typography> */}
+          <img src={add} alt='add' style={{ width: "220px", height: "200px" }} />
         </Grid>
       </Grid >
     </Box >

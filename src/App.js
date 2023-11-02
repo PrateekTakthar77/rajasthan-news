@@ -4,6 +4,7 @@ import Navigation from './navigation/Navigation';
 import Footer from './components/Footer';
 import { Provider } from 'react-redux';
 import store from "./Redux/store"
+// import Caro from './pages/Caro';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Footer />
       </Box>
     </Provider>
+    // <Caro/>
   )
 }
 

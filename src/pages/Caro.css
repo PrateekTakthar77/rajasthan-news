@@ -2,7 +2,6 @@
     width: 100%;
     max-width: 1400px; /* Set a maximum width for the container */
     margin: 0 auto; /* Horizontally center the container */
-    margin-top: 100px;
   }
   
   /* Define media queries for different screen sizes */
