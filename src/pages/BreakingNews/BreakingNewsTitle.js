@@ -6,9 +6,9 @@ const BreakingNewsTitle = () => {
     return (
         <Grid container>
 
-            <Grid item xs={12} sm={12} md={2} lg={2} ></Grid>
+            <Grid item xs={12} sm={12} md={1.5} lg={1.5} ></Grid>
 
-            <Grid item xs={12} sm={12} md={8} lg={8} >
+            <Grid item xs={12} sm={12} md={9} lg={9} >
                 <Link to="/breakingnews">
                     <Box sx={{
                         height: 'auto',
@@ -57,7 +57,7 @@ const BreakingNewsTitle = () => {
                     </Box>
                 </Link>
             </Grid>
-            <Grid item xs={12} sm={12} md={2} lg={2} >
+            <Grid item xs={12} sm={12} md={1.5} lg={1.5} >
             </Grid>
 
 
