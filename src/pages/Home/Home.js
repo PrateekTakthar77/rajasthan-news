@@ -88,7 +88,7 @@ function Home() {
     </div>
 
 
-      <Grid container style={{ marginTop: "1px" }}>
+      <Grid container style={{ marginTop: "1px" , padding:"10px" }}>
         <Grid xs={12} sm={12} md={0.3} lg={0.3}
         //  sx={{ backgroundColor: "orange" }}
          ></Grid>
