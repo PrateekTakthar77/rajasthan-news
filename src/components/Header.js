@@ -40,9 +40,13 @@ const navItems = [
     to: '/education',
     name: 'एजुकेशन',
   },
+  // {
+  //   to: '/viralnews',
+  //   name: 'वायरल न्यूज़',
+  // },
   {
-    to: '/viralnews',
-    name: 'वायरल न्यूज़',
+    to: '/technology',
+    name: 'टेक्नोलॉजी',
   },
 ];
 
@@ -57,7 +61,7 @@ function Header(props) {
   };
 
   const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
+    <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' , backgroundColor:"#2d3748" }}>
       <Typography variant="h6" sx={{ my: 2 }}>
       राजस्थान-समाचार
       </Typography>
@@ -81,7 +85,7 @@ function Header(props) {
   const container = window !== undefined ? () => window().document.body : undefined;
 
   return (
-    <Box sx={{ display: 'flex' }}>
+    <Box sx={{ display: 'flex'}}>
       <CssBaseline />
       <AppBar component="nav" style={{ backgroundColor: "#008E97" }} elevation={0}>
         <Toolbar>
@@ -98,14 +102,14 @@ function Header(props) {
             <Typography
               variant="h6"
               component="div"
-              style={{ fontSize: "30px" }}
+              style={{ fontSize: "30px"  , fontFamily:"Poppins" , fontWeight:"600"}}
             >
               राजस्थान-समाचार
             </Typography>
           </Link>
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
             {navItems.map((item, index) => (
-              <Button key={index} sx={{ color: '#fff', fontSize: "25px", fontWeight: "500", ...buttonHoverStyle, }} onClick={() => { navigate(item?.to) }}>
+              <Button key={index} sx={{ color: '#fff', fontSize: "25px", fontFamily:"Poppins" , fontWeight:"400", ...buttonHoverStyle, }} onClick={() => { navigate(item?.to) }}>
                 {item?.name}
               </Button>
             ))}

@@ -6,6 +6,7 @@ import { CardActionArea } from '@mui/material'
 import { Typography, Grid } from '@mui/material';
 
 const HomeCard = ({ result, onClick }) => {
+    
     function createMarkup(htmlContent) {
         return { __html: htmlContent };
     }
@@ -18,7 +19,7 @@ const HomeCard = ({ result, onClick }) => {
                         component="img"
                         height="200"
                         image={result?.photo}
-                        alt="green iguana"
+                        alt="Main Image"
                     />
                     <CardContent>
                         <Typography gutterBottom variant="h5" component="div" sx={{
@@ -26,6 +27,11 @@ const HomeCard = ({ result, onClick }) => {
                             overflow: 'hidden',
                             WebkitBoxOrient: 'vertical',
                             WebkitLineClamp: 2,
+                            color: "#D2122E",
+                            fontSize: "18px",
+                            fontFamily:"Poppins", 
+                            fontWeight: "500",
+                            textAlign: "justify"
                         }}>
                             {result?.title}
                         </Typography>
@@ -42,6 +48,11 @@ const HomeCard = ({ result, onClick }) => {
                             overflow: 'hidden',
                             WebkitBoxOrient: 'vertical',
                             WebkitLineClamp: 3,
+                            color: "black",
+                            fontSize: "15px",
+                            fontWeight: "500",
+                            fontFamily:"Poppins",
+                            textAlign: "justify"
                         }} dangerouslySetInnerHTML={createMarkup(result?.description)} />
                     </CardContent>
                 </CardActionArea>

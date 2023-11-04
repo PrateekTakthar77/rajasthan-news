@@ -22,7 +22,7 @@ function CongressNews() {
         <Grid item xs={12} sm={12} md={10} lg={10} paddingInline={5} paddingBlock={2}>
         <Box>
             <Grid container spacing={3}>
-              {Articles?.filter(item => item.subcategory[0] === "Congress").map((result, index) => index < 6 && (
+              {Articles?.filter(item => item.subcategory[0] === "Congress").map((result, index) =>(
                 <HomeCard key={index} result={result} onClick={() => {
                   console.log('navigate');
                   navigate(`/fullnews/${result?.category[0]}/${result?.title}`, { state: { data: result } });

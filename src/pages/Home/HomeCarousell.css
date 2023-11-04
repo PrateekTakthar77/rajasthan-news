@@ -1,0 +1,13 @@
+.carousel-container {
+    width: 50%;
+    max-width: 1400px;
+    margin: 0 auto; 
+    margin-top: -10px;
+  }
+  
+
+  @media (max-width: 768px) {
+    .carousel-container {
+      max-width: 90%; 
+    }
+  }

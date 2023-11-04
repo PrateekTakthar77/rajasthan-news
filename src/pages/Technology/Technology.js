@@ -2,6 +2,9 @@ import React, { useEffect } from 'react';
 import HomeCard from '../Home/HomeCard';
 import { Box, Typography, Grid } from '@mui/material';
 
+import Carousel from 'react-grid-carousel';
+import { Link } from 'react-router-dom';
+
 import { useNavigate } from 'react-router-dom';
 import { getArticles } from '../../Redux/actions/Home';
 import { useSelector } from 'react-redux';
@@ -12,7 +15,7 @@ import add3 from "../../assets/images/add3.jpeg"
 import add4 from "../../assets/images/add4.jpeg"
 import add5 from "../../assets/images/add5.jpeg"
 
-function Viralnews() {
+function Technology() {
 
   const { Articles } = useSelector(state => state.HomeReducer)
   const navigate = useNavigate();
@@ -24,7 +27,21 @@ function Viralnews() {
   return (
     <>
 
-      <Box marginTop={5} sx={{ flexGrow: 1 }} >
+<div className="carousel-container">
+            <Carousel cols={5} rows={1} gap={10} loop={true} dotColorActive='#795548' dotColorInactive='#ccc'>
+
+                <Carousel.Item>
+                    {/* <Link to="/"> */}
+                    <div style={{ backgroundColor: "#606060", height: "50px", width: "100%%", display: "flex", alignItems: "center", justifyContent: "center", borderRadius: "10px" }}>
+                            <h3 style={{ color: "#fff", fontFamily: "Poppins", fontSize: "25px", fontWeight: "700" }}>टेक्नोलॉजी</h3>
+                        </div>
+                    {/* </Link> */}
+                </Carousel.Item>
+        
+            </Carousel>
+        </div >
+
+      <Box marginTop={10} sx={{ flexGrow: 1 }} >
 
         <Grid container>
 
@@ -37,7 +54,7 @@ function Viralnews() {
 
             <Box>
             <Grid container spacing={3}>
-                {Articles?.filter(item => item.subcategory[0] === "viral news").map((result, index) =>(
+                {Articles?.filter(item => item.category[0] === "technology").map((result, index) =>(
                   <HomeCard key={index} result={result} onClick={() => {
                     console.log('navigate');
                     navigate(`/fullnews/${result?.category[0]}/${result?.title}`, { state: { data: result } });
@@ -66,6 +83,6 @@ function Viralnews() {
   )
 }
 
-export default Viralnews;
+export default Technology;
 
 

@@ -1,111 +1,128 @@
-// import React from 'react';
-// import { Box, Typography } from '@mui/material';
-
-// function Sports() {
-//   return (
-//     <Box
-//       marginTop={8}
-//     >
-//       <Typography variant="h1">Sports</Typography>
-//     </Box>
-//   );
-// }
-
-// export default Sports;
-
-// import React, { useEffect } from 'react';
-// import { Divider, Box, Typography, Grid } from '@mui/material';
-// import { useNavigate } from 'react-router-dom';
-// import { getArticles } from '../../Redux/actions/Home';
-// import { useSelector } from 'react-redux';
-
-// import HomeCard from '../Home/HomeCard';
-
-// function Elections() {
-//   const { Articles } = useSelector(state => state.HomeReducer)
-
-//   const navigate = useNavigate();
-
-
-//   useEffect(() => {
-//     getArticles();
-//   }, [])
-
-
-
-//   return (
-//     <>
-//       <Divider textAlign="left" sx={{ marginBlock: 3 }} style={{ fontSize: "30px", color: "black", marginTop: "100px" }}>
-//         चुनाव 2023</Divider>
-
-//       <Box marginTop={1} sx={{ flexGrow: 1 }} >
-//         <Grid container>
-//           <Grid item xs={12} sm={12} md={10} lg={10} paddingInline={5} paddingBlock={2}>
-//             <Box >
-//               <Grid container spacing={3}>
-//                 {Articles?.map((result, index) => index < 6 && (
-//                   <HomeCard key={index} result={result} onClick={() => {
-//                     console.log('navigate');
-//                     navigate(`/fullnews/${result?.category[0]}/${result?.title}`, { state: { data: result } });
-//                   }} />
-//                 ))}
-//               </Grid>
-//             </Box>
-//           </Grid>
-//         </Grid>
-//       </Box>
-//     </>
-//   );
-// }
-
-// export default Elections;
-
 import React, { useEffect } from 'react';
-import { Divider, Box, Typography, Grid } from '@mui/material';
-import { useNavigate } from 'react-router-dom';
 import HomeCard from '../Home/HomeCard';
+import { Box, Typography, Grid } from '@mui/material';
+import Carousel from 'react-grid-carousel';
+import { Link } from 'react-router-dom';
+
+import { useNavigate } from 'react-router-dom';
 import { getArticles } from '../../Redux/actions/Home';
 import { useSelector } from 'react-redux';
-import Carousell from "../Carousel/Carousell"
+
+import add1 from "../../assets/images/add1.jpeg"
+import add2 from "../../assets/images/add2.jpeg"
+import add3 from "../../assets/images/add3.jpeg"
+import add4 from "../../assets/images/add4.jpeg"
+import add5 from "../../assets/images/add5.jpeg"
 
 
-function Sports() {
+function Education() {
 
   const { Articles } = useSelector(state => state.HomeReducer)
-
-
-
   const navigate = useNavigate();
 
   useEffect(() => {
     getArticles();
   }, [])
 
-
   return (
     <>
-      <Carousell />
+
+<div className="carousel-container">
+            <Carousel cols={5} rows={1} gap={10} loop={true} dotColorActive='#795548' dotColorInactive='#ccc'>
+
+                <Carousel.Item>
+                    {/* <Link to="/"> */}
+                    <div style={{ backgroundColor: "#606060", height: "50px", width: "100%%", display: "flex", alignItems: "center", justifyContent: "center", borderRadius: "10px" }}>
+                            <h3 style={{ color: "#fff", fontFamily: "Poppins", fontSize: "25px", fontWeight: "700" }}>UPSC</h3>
+                        </div>
+                    {/* </Link> */}
+                </Carousel.Item>
+
+                <Carousel.Item>
+                    {/* <Link to="/elections"> */}
+                        <div style={{ backgroundColor: "#606060", height: "50px", width: "100%%", display: "flex", alignItems: "center", justifyContent: "center", borderRadius: "10px" }}>
+                            <h3 style={{ color: "#fff", fontFamily: "Poppins", fontSize: "25px", fontWeight: "700" }}>CAT</h3>
+                        </div>
+                    {/* </Link> */}
+                </Carousel.Item>
+
+                <Carousel.Item>
+                   {/* <Link to="/elections"> */}
+                   <div style={{ backgroundColor: "#606060", height: "50px", width: "100%%", display: "flex", alignItems: "center", justifyContent: "center", borderRadius: "10px" }}>
+                            <h3 style={{ color: "#fff", fontFamily: "Poppins", fontSize: "25px", fontWeight: "700" }}>GATE</h3>
+                        </div>
+                    {/* </Link> */}
+                </Carousel.Item>
+
+                <Carousel.Item>
+                    {/* <Link to="/elections"> */}
+                    <div style={{ backgroundColor: "#606060", height: "50px", width: "100%%", display: "flex", alignItems: "center", justifyContent: "center", borderRadius: "10px" }}>
+                            <h3 style={{ color: "#fff", fontFamily: "Poppins", fontSize: "25px", fontWeight: "700" }}>CBSE</h3>
+                        </div>
+                    {/* </Link> */}
+                </Carousel.Item>
+
+                <Carousel.Item>
+                    {/* <Link to="/elections"> */}
+                    <div style={{ backgroundColor: "#606060", height: "50px", width: "100%%", display: "flex", alignItems: "center", justifyContent: "center", borderRadius: "10px" }}>
+                            <h3 style={{ color: "#fff", fontFamily: "Poppins", fontSize: "25px", fontWeight: "700" }}>NCERT</h3>
+                        </div>
+                    {/* </Link> */}
+                </Carousel.Item>
+                <Carousel.Item>
+                    {/* <Link to="/elections"> */}
+                    <div style={{ backgroundColor: "#606060", height: "50px", width: "100%%", display: "flex", alignItems: "center", justifyContent: "center", borderRadius: "10px" }}>
+                            <h3 style={{ color: "#fff", fontFamily: "Poppins", fontSize: "25px", fontWeight: "700" }}>JR ENGG</h3>
+                        </div>
+                    {/* </Link> */}
+                </Carousel.Item>
+                <Carousel.Item>
+                    {/* <Link to="/elections"> */}
+                    <div style={{ backgroundColor: "#606060", height: "50px", width: "100%%", display: "flex", alignItems: "center", justifyContent: "center", borderRadius: "10px" }}>
+                            <h3 style={{ color: "#fff", fontFamily: "Poppins", fontSize: "25px", fontWeight: "700" }}>UPTAT</h3>
+                        </div>
+                    {/* </Link> */}
+                </Carousel.Item>
+                <Carousel.Item>
+                    {/* <Link to="/elections"> */}
+                    <div style={{ backgroundColor: "#606060", height: "50px", width: "100%%", display: "flex", alignItems: "center", justifyContent: "center", borderRadius: "10px" }}>
+                            <h3 style={{ color: "#fff", fontFamily: "Poppins", fontSize: "25px", fontWeight: "700" }}>CTAT</h3>
+                        </div>
+                    {/* </Link> */}
+                </Carousel.Item>
+                <Carousel.Item>
+                    {/* <Link to="/elections"> */}
+                    <div style={{ backgroundColor: "#606060", height: "50px", width: "100%%", display: "flex", alignItems: "center", justifyContent: "center", borderRadius: "10px" }}>
+                            <h3 style={{ color: "#fff", fontFamily: "Poppins", fontSize: "25px", fontWeight: "700" }}>TECHNOLOGY</h3>
+                        </div>
+                    {/* </Link> */}
+                </Carousel.Item>
+                <Carousel.Item>
+                    {/* <Link to="/elections"> */}
+                    <div style={{ backgroundColor: "#606060", height: "50px", width: "100%%", display: "flex", alignItems: "center", justifyContent: "center", borderRadius: "10px" }}>
+                            <h3 style={{ color: "#fff", fontFamily: "Poppins", fontSize: "25px", fontWeight: "700" }}>BSC</h3>
+                        </div>
+                    {/* </Link> */}
+                </Carousel.Item>
 
 
-      <Box
-        marginTop={8}
-        sx={{ flexGrow: 1 }}
-      >
+            </Carousel>
+        </div >
+
+      <Box marginTop={5} sx={{ flexGrow: 1 }} >
 
         <Grid container>
-          <Grid item xs={12} sm={12} md={10} lg={10} paddingInline={5} paddingBlock={2}>
+
+          <Grid item xs={12} sm={12} md={0.3} lg={0.3} marginTop={2}
+          // sx={{backgroundColor:"blue"}}
+          >
+          </Grid>
+
+          <Grid item xs={12} sm={12} md={8.7} lg={8.7} paddingBlock={2}>
 
             <Box>
-              {/* <Grid container spacing={3}>
-              {Articles?.map((result, index) => index < 6 && (
-                <HomeCard key={index} result={result} onClick={() => {
-                  console.log('navigate');
-                  navigate(`/fullnews/${result?.category[0]}/${result?.title}`, { state: { data: result } });
-                }} />
-              ))}
-            </Grid> */}
               <Grid container spacing={3}>
-                {Articles?.filter(item => item.category[0] === "education").map((result, index) => index < 6 && (
+                {Articles?.filter(item => item.category[0] === "education").map((result, index) => (
                   <HomeCard key={index} result={result} onClick={() => {
                     console.log('navigate');
                     navigate(`/fullnews/${result?.category[0]}/${result?.title}`, { state: { data: result } });
@@ -116,13 +133,23 @@ function Sports() {
 
           </Grid>
 
-          <Grid item xs={12} sm={12} md={2} lg={2} marginTop={2}>
-            <Typography>ADD Space</Typography>
+          <Grid item xs={12} sm={12} md={3} lg={3} sx={{
+            marginTop: "16px",
+            display: "flex",
+            //  backgroundColor:"green",
+            flexDirection: "column",
+          }} >
+            <img src={add2} alt='add' style={{ width: "260px", height: "250px", alignSelf: "center" }} />
+            <img src={add3} alt='add' style={{ width: "260px", height: "250px", marginTop: "20px", alignSelf: "center" }} />
+            <img src={add5} alt='add' style={{ width: "260px", height: "250px", marginTop: "20px", alignSelf: "center" }} />
           </Grid>
+
         </Grid>
+
       </Box>
     </>
   )
 }
 
-export default Sports
+export default Education;
+
