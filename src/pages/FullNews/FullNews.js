@@ -43,10 +43,10 @@ const FullNews = () => {
 
                 <Grid container >
                     <Grid item xs={12} style={{ flexGrow: 1 }}>
-                        <Box style={{ display: "flex", flexDirection: "row" }}>
+                        <Box style={{ display: "flex", flexDirection: "row" ,padding:"10px"  }}>
 
                             <img src={R2} style={{ height: "20px", width: "20px", marginTop: "8px", marginRight: "5px", }} />
-                            <Typography variant="h4" component="div" style={{ color: "black", fontSize: "30px", fontFamily: "Poppins", fontWeight: "600", textAlign: "justify" , padding:"10px" }}>
+                            <Typography variant="h4" component="div" style={{ color: "black", fontSize: "30px", fontFamily: "Poppins", fontWeight: "600", textAlign: "justify" , }}>
                                 {state?.data?.title}
                             </Typography>
 
