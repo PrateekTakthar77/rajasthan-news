@@ -46,7 +46,7 @@ const FullNews = () => {
                         <Box style={{ display: "flex", flexDirection: "row" }}>
 
                             <img src={R2} style={{ height: "20px", width: "20px", marginTop: "8px", marginRight: "5px", }} />
-                            <Typography variant="h4" component="div" style={{ color: "black", fontSize: "30px", fontFamily: "Poppins", fontWeight: "600", textAlign: "justify" }}>
+                            <Typography variant="h4" component="div" style={{ color: "black", fontSize: "30px", fontFamily: "Poppins", fontWeight: "600", textAlign: "justify" , padding:"10px" }}>
                                 {state?.data?.title}
                             </Typography>
 
@@ -55,7 +55,7 @@ const FullNews = () => {
                     </Grid>
                 </Grid>
 
-                <Grid xs={12} sm={12} md={8} lg={8} style={{ marginTop: "10px" }}>
+                <Grid xs={12} sm={12} md={8} lg={8} style={{ marginTop: "10px" , padding:"10px"}}>
                     <img src={state?.data?.photo} style={{
                         // maxWidth: '100%',
                         height: '400px',
@@ -70,7 +70,7 @@ const FullNews = () => {
                     </Grid> */}
                 <Grid container >
                     <Grid item xs={12} style={{ flexGrow: 1 }}>
-                        <Typography style={{ marginTop: "10px", fontSize: "20px", backgroundColor: "#fff", fontFamily: "Poppins", fontWeight: "500", textAlign: "justify" }} dangerouslySetInnerHTML={createMarkup(state?.data?.description)} />
+                        <Typography style={{ marginTop: "10px", fontSize: "17px", backgroundColor: "#fff", fontFamily: "Poppins", fontWeight: "500", textAlign: "justify" , padding:"10px"}} dangerouslySetInnerHTML={createMarkup(state?.data?.description)} />
                     </Grid>
                 </Grid>
 

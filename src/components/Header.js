@@ -61,7 +61,7 @@ function Header(props) {
   };
 
   const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' , backgroundColor:"#2d3748" }}>
+    <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center'}}>
       <Typography variant="h6" sx={{ my: 2 }}>
       राजस्थान-समाचार
       </Typography>
