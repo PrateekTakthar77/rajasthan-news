@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import HomeCard from '../Home/HomeCard';
 import { Box, Typography, Grid } from '@mui/material';
 import Carousel from 'react-grid-carousel';
+import {Link} from "react-router-dom"
 
 import { useNavigate } from 'react-router-dom';
 import { getArticles } from '../../Redux/actions/Home';
@@ -29,79 +30,26 @@ function Sports() {
       <div className="carousel-container">
         <Carousel cols={5} rows={1} gap={10} loop={true} dotColorActive='#795548' dotColorInactive='#ccc'>
 
-          <Carousel.Item>
-            {/* <Link to="/"> */}
-            <div style={{ backgroundColor: "#606060", height: "50px", width: "100%%", display: "flex", alignItems: "center", justifyContent: "center", borderRadius: "10px" }}>
-              <h3 style={{ color: "#fff", fontFamily: "Poppins", fontSize: "25px", fontWeight: "700" }}>CRICKET</h3>
+        <Carousel.Item>
+            <div
+              onClick={() => {
+                console.log(Articles?.filter(item => item.subcategory[0] === "BJP"), "BJPpppppp");
+                navigate('/elections/politics/BJP', { state: { data: Articles?.filter(item => item.subcategory[0] === "BJP") } });
+              }}
+              style={{ backgroundColor: "#011e29", height: "100px", width: "100%", display: "flex", alignItems: "center", justifyContent: "center", borderRadius: "10px" , transition: "background-color 0.3s"}}>
+              <h3 style={{ color: "#fff", fontFamily: "Poppins", fontSize: "30px", fontWeight: "700" }}>CRICKET</h3>
             </div>
-            {/* </Link> */}
           </Carousel.Item>
 
           <Carousel.Item>
-            {/* <Link to="/elections"> */}
-            <div style={{ backgroundColor: "#606060", height: "50px", width: "100%%", display: "flex", alignItems: "center", justifyContent: "center", borderRadius: "10px" }}>
-              <h3 style={{ color: "#fff", fontFamily: "Poppins", fontSize: "25px", fontWeight: "700" }}>FOOTBALL</h3>
+            <div
+              onClick={() => {
+                console.log(Articles?.filter(item => item.subcategory[0] === "BJP"), "BJPpppppp");
+                navigate('/elections/politics/BJP', { state: { data: Articles?.filter(item => item.subcategory[0] === "BJP") } });
+              }}
+              style={{ backgroundColor: "#011e29", height: "100px", width: "100%", display: "flex", alignItems: "center", justifyContent: "center", borderRadius: "10px" , transition: "background-color 0.3s"}}>
+              <h3 style={{ color: "#fff", fontFamily: "Poppins", fontSize: "30px", fontWeight: "700" }}>OTHERS</h3>
             </div>
-            {/* </Link> */}
-          </Carousel.Item>
-
-          <Carousel.Item>
-            {/* <Link to="/elections"> */}
-            <div style={{ backgroundColor: "#606060", height: "50px", width: "100%%", display: "flex", alignItems: "center", justifyContent: "center", borderRadius: "10px" }}>
-              <h3 style={{ color: "#fff", fontFamily: "Poppins", fontSize: "25px", fontWeight: "700" }}>HOCKEY</h3>
-            </div>
-            {/* </Link> */}
-          </Carousel.Item>
-
-          <Carousel.Item>
-            {/* <Link to="/elections"> */}
-            <div style={{ backgroundColor: "#606060", height: "50px", width: "100%%", display: "flex", alignItems: "center", justifyContent: "center", borderRadius: "10px" }}>
-              <h3 style={{ color: "#fff", fontFamily: "Poppins", fontSize: "25px", fontWeight: "700" }}>BASKETBALL</h3>
-            </div>
-            {/* </Link> */}
-          </Carousel.Item>
-
-          <Carousel.Item>
-            {/* <Link to="/elections"> */}
-            <div style={{ backgroundColor: "#606060", height: "50px", width: "100%%", display: "flex", alignItems: "center", justifyContent: "center", borderRadius: "10px" }}>
-              <h3 style={{ color: "#fff", fontFamily: "Poppins", fontSize: "25px", fontWeight: "700" }}>POLO</h3>
-            </div>
-            {/* </Link> */}
-          </Carousel.Item>
-          <Carousel.Item>
-            {/* <Link to="/elections"> */}
-            <div style={{ backgroundColor: "#606060", height: "50px", width: "100%%", display: "flex", alignItems: "center", justifyContent: "center", borderRadius: "10px" }}>
-              <h3 style={{ color: "#fff", fontFamily: "Poppins", fontSize: "25px", fontWeight: "700" }}>BASEBALL</h3>
-            </div>
-            {/* </Link> */}
-          </Carousel.Item>
-          <Carousel.Item>
-            {/* <Link to="/elections"> */}
-            <div style={{ backgroundColor: "#606060", height: "50px", width: "100%%", display: "flex", alignItems: "center", justifyContent: "center", borderRadius: "10px" }}>
-              <h3 style={{ color: "#fff", fontFamily: "Poppins", fontSize: "25px", fontWeight: "700" }}>MOTO GP</h3>
-            </div>
-            {/* </Link> */}
-          </Carousel.Item>
-          <Carousel.Item>
-            {/* <Link to="/elections"> */}
-            <div style={{ backgroundColor: "#606060", height: "50px", width: "100%%", display: "flex", alignItems: "center", justifyContent: "center", borderRadius: "10px" }}>
-              <h3 style={{ color: "#fff", fontFamily: "Poppins", fontSize: "25px", fontWeight: "700" }}>F1</h3>
-            </div>
-            {/* </Link> */}
-          </Carousel.Item>
-          <Carousel.Item>
-            {/* <Link to="/elections"> */}
-            <div style={{ backgroundColor: "#606060", height: "50px", width: "100%%", display: "flex", alignItems: "center", justifyContent: "center", borderRadius: "10px" }}>
-              <h3 style={{ color: "#fff", fontFamily: "Poppins", fontSize: "25px", fontWeight: "700" }}>SWIMMING</h3>
-            </div>
-            {/* </Link> */}
-          </Carousel.Item>
-          <Carousel.Item>
-            {/* <Link to="/elections"> */}
-            <div style={{ backgroundColor: "#606060", height: "50px", width: "100%%", display: "flex", alignItems: "center", justifyContent: "center", borderRadius: "10px" }}>
-              <h3 style={{ color: "#fff", fontFamily: "Poppins", fontSize: "25px", fontWeight: "700" }}>GO CART</h3>
-            </div>
-            {/* </Link> */}
           </Carousel.Item>
 
         </Carousel>
@@ -124,7 +72,7 @@ function Sports() {
                 {Articles?.filter(item => item.category[0] === "sports").map((result, index) => (
                   <HomeCard key={index} result={result} onClick={() => {
                     console.log('navigate');
-                    navigate(`/${result?.category[0]}/${result?.subcategory[0]}/${result?.title}`, { state: { data: result } });
+                    navigate(`/${result?.category[0]}/${result?.subcategory[0]}/${result?.engtitle}`, { state: { data: result } });
                   }} />
                 ))}
               </Grid>

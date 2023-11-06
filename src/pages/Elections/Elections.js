@@ -31,7 +31,7 @@ function Elections() {
   return (
     <>
       <div className="carousel-container">
-        <Carousel cols={5} rows={1} gap={10} loop={true} dotColorActive='#795548' dotColorInactive='#ccc'>
+        <Carousel cols={4} rows={1} gap={10} loop={true} dotColorActive='#795548' dotColorInactive='#ccc'>
 
           <Carousel.Item>
             <div
@@ -39,53 +39,54 @@ function Elections() {
                 console.log(Articles?.filter(item => item.subcategory[0] === "BJP"), "BJPpppppp");
                 navigate('/elections/politics/BJP', { state: { data: Articles?.filter(item => item.subcategory[0] === "BJP") } });
               }}
-              style={{ backgroundColor: "#606060", height: "50px", width: "100%%", display: "flex", alignItems: "center", justifyContent: "center", borderRadius: "10px" }}>
-
-
-              <h3 style={{ color: "#fff", fontFamily: "Poppins", fontSize: "25px", fontWeight: "700" }}>BJP</h3>
+              style={{ backgroundColor: "#011e29", height: "100px", width: "100%", display: "flex", alignItems: "center", justifyContent: "center", borderRadius: "10px" , transition: "background-color 0.3s"}}>
+              <h3 style={{ color: "#fff", fontFamily: "Poppins", fontSize: "30px", fontWeight: "700" }}>BJP</h3>
             </div>
           </Carousel.Item>
 
+
           <Carousel.Item>
-              <div 
-               onClick={() => {
-                console.log(Articles?.filter(item => item.subcategory[0] === "Congress"), "BJPpppppp");
+            <div
+              onClick={() => {
+                console.log(Articles?.filter(item => item.subcategory[0] === "Congress"), "CONGOOooooooo");
                 navigate('/elections/politics/Congress', { state: { data: Articles?.filter(item => item.subcategory[0] === "Congress") } });
               }}
-               style={{ backgroundColor: "#606060", height: "50px", width: "100%%", display: "flex", alignItems: "center", justifyContent: "center", borderRadius: "10px" }}>
-                <h3 style={{ color: "#fff", fontFamily: "Poppins", fontSize: "25px", fontWeight: "700" }}>CONGRESS</h3>
-              </div>
+              style={{ backgroundColor: "#011e29", height: "100px", width: "100%", display: "flex", alignItems: "center", justifyContent: "center", borderRadius: "10px" , transition: "background-color 0.3s"}}>
+              <h3 style={{ color: "#fff", fontFamily: "Poppins", fontSize: "30px", fontWeight: "700" }}>CONGRESS</h3>
+            </div>
           </Carousel.Item>
 
           <Carousel.Item>
-            {/* <Link to="/elections"> */}
-            <div style={{ backgroundColor: "#606060", height: "50px", width: "100%%", display: "flex", alignItems: "center", justifyContent: "center", borderRadius: "10px" }}>
-              <h3 style={{ color: "#fff", fontFamily: "Poppins", fontSize: "25px", fontWeight: "700" }}>JDU</h3>
+            <div
+              onClick={() => {
+                console.log(Articles?.filter(item => item.subcategory[0] === "Samajwadi"), "CONGOOooooooo");
+                navigate('/elections/politics/Samajwadi', { state: { data: Articles?.filter(item => item.subcategory[0] === "Samajwadi") } });
+              }}
+              style={{ backgroundColor: "#011e29", height: "100px", width: "100%", display: "flex", alignItems: "center", justifyContent: "center", borderRadius: "10px" , transition: "background-color 0.3s"}}>
+              <h3 style={{ color: "#fff", fontFamily: "Poppins", fontSize: "30px", fontWeight: "700",  alignItems: "center", justifyContent: "center", textAlign:"center" }}>SAMAJWADI</h3>
             </div>
-            {/* </Link> */}
           </Carousel.Item>
 
           <Carousel.Item>
-            {/* <Link to="/elections"> */}
-            <div style={{ backgroundColor: "#606060", height: "50px", width: "100%%", display: "flex", alignItems: "center", justifyContent: "center", borderRadius: "10px" }}>
-              <h3 style={{ color: "#fff", fontFamily: "Poppins", fontSize: "25px", fontWeight: "700" }}>SHIV SENA</h3>
+            <div
+              onClick={() => {
+                console.log(Articles?.filter(item => item.subcategory[0] === "Shiv sena"), "CONGOOooooooo");
+                navigate('/elections/politics/ShivSena', { state: { data: Articles?.filter(item => item.subcategory[0] === "Shiv sena") } });
+              }}
+              style={{ backgroundColor: "#011e29", height: "100px", width: "100%", display: "flex", alignItems: "center", justifyContent: "center", borderRadius: "10px" , transition: "background-color 0.3s"}}>
+              <h3 style={{ color: "#fff", fontFamily: "Poppins", fontSize: "30px", fontWeight: "700",  alignItems: "center", justifyContent: "center", textAlign:"center" }}>SHIV SENA</h3>
             </div>
-            {/* </Link> */}
           </Carousel.Item>
 
           <Carousel.Item>
-            {/* <Link to="/elections"> */}
-            <div style={{ backgroundColor: "#606060", height: "50px", width: "100%%", display: "flex", alignItems: "center", justifyContent: "center", borderRadius: "10px" }}>
-              <h3 style={{ color: "#fff", fontFamily: "Poppins", fontSize: "25px", fontWeight: "700" }}>RJD</h3>
+            <div
+              onClick={() => {
+                console.log(Articles?.filter(item => item.subcategory[0] === "other"), "CONGOOooooooo");
+                navigate('/elections/politics/ShivSena', { state: { data: Articles?.filter(item => item.subcategory[0] === "other") } });
+              }}
+              style={{ backgroundColor: "#011e29", height: "100px", width: "100%", display: "flex", alignItems: "center", justifyContent: "center", borderRadius: "10px" , transition: "background-color 0.3s"}}>
+              <h3 style={{ color: "#fff", fontFamily: "Poppins", fontSize: "30px", fontWeight: "700",  alignItems: "center", justifyContent: "center", textAlign:"center" }}>OTHERS</h3>
             </div>
-            {/* </Link> */}
-          </Carousel.Item>
-          <Carousel.Item>
-            {/* <Link to="/elections"> */}
-            <div style={{ backgroundColor: "#606060", height: "50px", width: "100%%", display: "flex", alignItems: "center", justifyContent: "center", borderRadius: "10px" }}>
-              <h3 style={{ color: "#fff", fontFamily: "Poppins", fontSize: "25px", fontWeight: "700" }}>AAP</h3>
-            </div>
-            {/* </Link> */}
           </Carousel.Item>
 
 
@@ -109,7 +110,7 @@ function Elections() {
                   <HomeCard key={index} result={result} onClick={() => {
                     console.log('navigate');
                     // navigate(`/fullnews/${result?.category[0]}/${result?.title}`, { state: { data: result } });
-                    navigate(`/${result?.category[0]}/${result?.subcategory[0]}/${result?.title}`, { state: { data: result } });
+                    navigate(`/${result?.category[0]}/${result?.subcategory[0]}/${result?.engtitle}`, { state: { data: result } });
                   }} />
                 ))}
               </Grid>

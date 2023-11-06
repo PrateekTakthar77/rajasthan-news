@@ -127,7 +127,9 @@ const BreakingNewsTitle = () => {
                                 color: "#fff",
                                 // padding: "3px",
                                 textDecoration: "none",
-                                marginTop: "4px", paddingRight:"2px" , paddingLeft:"2px"
+                                marginTop: "4px",
+                                //  paddingRight:"2px" ,
+                                 paddingLeft:"2px"
                             }}>
                                मराठा आंदोलन पर बोले उद्धव- मराठा नहीं कर सकते बवाल, पता करना होगा इसके पीछे कौन है
                             </Typography>
@@ -145,7 +147,7 @@ const BreakingNewsTitle = () => {
                         opacity: 1;
                     }
                     50% {
-                        opacity: 0;
+                        opacity: 1;
                     }
                     100% {
                         opacity: 1;

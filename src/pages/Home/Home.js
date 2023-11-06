@@ -38,8 +38,9 @@ function Home() {
     <Box sx={{ flexGrow: 1, backgroundColor: "#fff" }} style={{ marginTop: "10px" }}>
       {/* ... your existing code ... */}
       {loading ? (
-        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
-          <CircularProgress />
+        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' , flexDirection:"column"}}>
+          <CircularProgress  style={{ color: '#0a2351' }} />
+          <Typography style={{fontFamily: "Poppins", fontSize: "15px", fontWeight: "500" , marginTop:"10px" }} >Loading...</Typography>
         </div>
       ) : (
         <Box sx={{ flexGrow: 1, backgroundColor: "#fff" }} style={{ marginTop: "10px" }} >
@@ -51,44 +52,52 @@ function Home() {
 
           {/* Carousell */}
           <div style={{ marginTop: "10px" }}>
-            <Carousel cols={4} rows={1} gap={10} loop={true} showDots={false} dotColorActive='#795548' dotColorInactive='#ccc'>
+            <Carousel cols={5} rows={1} gap={10} loop={true} showDots={false} dotColorActive='#795548' dotColorInactive='#ccc'>
 
-              {/* <Carousel.Item>
-          <Link to="/" style={{textDecoration:"none"}}>
-            <div style={{ backgroundColor: "#606060", height: "100px", width: "100%" , display:"flex" , alignItems:"center" , justifyContent:"center" , borderRadius:"10px"}}>
-              <h3 style={{ color: "#fff" , fontFamily: "Poppins" , fontSize:"40px" , fontWeight:"700" }}>होम</h3>
-            </div>
-          </Link>
-        </Carousel.Item> */}
+              <Carousel.Item  width="20%">
+                <Link to="/breakingnews" style={{ textDecoration: "none" }}>
+                  <div style={{ backgroundColor: "#011e29", height: "100px", width: "100%", display: "flex", alignItems: "center", justifyContent: "center", borderRadius: "10px" , transition: "background-color 0.3s"}}>
+                    <h3 style={{ color: "#fff", fontFamily: "Poppins", fontSize: "30px", fontWeight: "700" }}>ब्रेकिंग न्यूज</h3>
+                  </div>
+                </Link>
+              </Carousel.Item>
 
-              <Carousel.Item>
+              <Carousel.Item width="20%">
                 <Link to="/elections" style={{ textDecoration: "none" }}>
-                  <div style={{ backgroundColor: "#606060", height: "100px", width: "100%", display: "flex", alignItems: "center", justifyContent: "center", borderRadius: "10px" }}>
-                    <h3 style={{ color: "#fff", fontFamily: "Poppins", fontSize: "40px", fontWeight: "700" }}>चुनाव 2023</h3>
+                  <div style={{ backgroundColor: "#011e29", height: "100px", width: "100%", display: "flex", alignItems: "center", justifyContent: "center", borderRadius: "10px" }}>
+                    <h3 style={{ color: "#fff", fontFamily: "Poppins", fontSize: "30px", fontWeight: "700" }}>चुनाव 2023</h3>
                   </div>
                 </Link>
               </Carousel.Item>
 
-              <Carousel.Item>
+              <Carousel.Item width="20%"> 
                 <Link to="/sports" style={{ textDecoration: "none" }}>
-                  <div style={{ backgroundColor: "#606060", height: "100px", width: "100%", display: "flex", alignItems: "center", justifyContent: "center", borderRadius: "10px" }}>
-                    <h3 style={{ color: "#fff", fontFamily: "Poppins", fontSize: "40px", fontWeight: "700" }}>स्पोर्ट्स</h3>
+                  <div style={{ backgroundColor: "#011e29", height: "100px", width: "100%", display: "flex", alignItems: "center", justifyContent: "center", borderRadius: "10px" }}>
+                    <h3 style={{ color: "#fff", fontFamily: "Poppins", fontSize: "30px", fontWeight: "700" }}>स्पोर्ट्स</h3>
                   </div>
                 </Link>
               </Carousel.Item>
 
-              <Carousel.Item>
+              <Carousel.Item width="20%">
                 <Link to="/education" style={{ textDecoration: "none" }}>
-                  <div style={{ backgroundColor: "#606060", height: "100px", width: "100%", display: "flex", alignItems: "center", justifyContent: "center", borderRadius: "10px" }}>
-                    <h3 style={{ color: "#fff", fontFamily: "Poppins", fontSize: "40px", fontWeight: "700" }}>एजुकेशन</h3>
+                  <div style={{ backgroundColor: "#011e29", height: "100px", width: "100%", display: "flex", alignItems: "center", justifyContent: "center", borderRadius: "10px" }}>
+                    <h3 style={{ color: "#fff", fontFamily: "Poppins", fontSize: "30px", fontWeight: "700" }}>एजुकेशन</h3>
                   </div>
                 </Link>
               </Carousel.Item>
 
-              <Carousel.Item>
+              <Carousel.Item width="20%">
                 <Link to="/technology" style={{ textDecoration: "none" }}>
-                  <div style={{ backgroundColor: "#606060", height: "100px", width: "100%", display: "flex", alignItems: "center", justifyContent: "center", borderRadius: "10px" }}>
-                    <h3 style={{ color: "#fff", fontFamily: "Poppins", fontSize: "40px", fontWeight: "700" }}>टेक्नोलॉजी</h3>
+                  <div style={{ backgroundColor: "#011e29", height: "100px", width: "100%", display: "flex", alignItems: "center", justifyContent: "center", borderRadius: "10px" }}>
+                    <h3 style={{ color: "#fff", fontFamily: "Poppins", fontSize: "30px", fontWeight: "700" }}>टेक्नोलॉजी</h3>
+                  </div>
+                </Link>
+              </Carousel.Item>
+
+              <Carousel.Item width="20%">
+                <Link to="/technology" style={{ textDecoration: "none" }}>
+                  <div style={{ backgroundColor: "#011e29", height: "100px", width: "100%", display: "flex", alignItems: "center", justifyContent: "center", borderRadius: "10px" }}>
+                    <h3 style={{ color: "#fff", fontFamily: "Poppins", fontSize: "30px", fontWeight: "700" }}>मनोरंजन</h3>
                   </div>
                 </Link>
               </Carousel.Item>
@@ -158,7 +167,7 @@ function Home() {
                     {Articles?.filter(item => item.subcategory[0] === "BJP").map((result, index) => index < 6 && (
                       <HomeCard key={index} result={result} onClick={() => {
                         console.log('navigate');
-                        navigate(`/${result?.category[0]}/${result?.subcategory[0]}/${result?.title}`, { state: { data: result } });
+                        navigate(`/${result?.category[0]}/${result?.subcategory[0]}/${result?.engtitle}`, { state: { data: result } });
                       }} />
                     ))}
                   </Grid>
@@ -186,7 +195,7 @@ function Home() {
                   {Articles?.filter(item => item.subcategory[0] === "Congress").map((result, index) => index < 6 && (
                     <HomeCard key={index} result={result} onClick={() => {
                       console.log('navigate');
-                      navigate(`/${result?.category[0]}/${result?.subcategory[0]}/${result?.title}`, { state: { data: result } });
+                      navigate(`/${result?.category[0]}/${result?.subcategory[0]}/${result?.engtitle}`, { state: { data: result } });
                     }} />
                   ))}
                 </Grid>
@@ -213,7 +222,7 @@ function Home() {
                   {Articles?.filter(item => item.subcategory[0] === "Sports" || item.subcategory[0] === "cricket").map((result, index) => index < 6 && (
                     <HomeCard key={index} result={result} onClick={() => {
                       console.log('navigate');
-                      navigate(`/${result?.category[0]}/${result?.subcategory[0]}/${result?.title}`, { state: { data: result } });
+                      navigate(`/${result?.category[0]}/${result?.subcategory[0]}/${result?.engtitle}`, { state: { data: result } });
                     }} />
                   ))}
                 </Grid>

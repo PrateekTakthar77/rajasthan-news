@@ -8,17 +8,8 @@ import { useNavigate } from 'react-router-dom';
 import { getArticles } from '../../Redux/actions/Home';
 import { useSelector } from 'react-redux';
 
-import Carousel from 'react-grid-carousel';
-
-
-import add1 from "../../assets/images/add1.jpeg"
-import add2 from "../../assets/images/add2.jpeg"
-import add3 from "../../assets/images/add3.jpeg"
-import add4 from "../../assets/images/add4.jpeg"
-import add5 from "../../assets/images/add5.jpeg"
-
 // import ElectionsSubcategory from './ElectionsSubcategory';
-function ElectionsSubcategory() {
+function SportsSubcategory() {
 
   const { Articles } = useSelector(state => state.HomeReducer)
   const navigate = useNavigate();
@@ -73,4 +64,4 @@ function ElectionsSubcategory() {
   )
 }
 
-export default ElectionsSubcategory;
+export default SportsSubcategory;

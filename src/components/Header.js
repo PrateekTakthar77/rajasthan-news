@@ -95,7 +95,7 @@ function Header(props) {
   return (
     <Box sx={{ display: 'flex'}}>
       <CssBaseline />
-      <AppBar component="nav" style={{ backgroundColor: "#008E97" }} elevation={0}>
+      <AppBar component="nav" style={{ backgroundColor: "#011e29" }} elevation={0}>
         <Toolbar>
           <IconButton
             color="inherit"

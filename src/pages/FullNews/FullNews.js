@@ -25,30 +25,24 @@ const FullNews = () => {
     return (
         <Grid container paddingBlock={2} style={{ marginTop: "60px" }}>
 
-            <Grid xs={12} sm={12} md={0.5} lg={0.5}
-                paddingBlock={2}
-                spacing={2}
+            <Grid xs={12} sm={12} md={0.5} lg={0.5} paddingBlock={2} spacing={2}
                 // sx={{backgroundColor:"red"}}
-                
-           
             ></Grid>
 
-            <Grid item xs={12} sm={12} md={9} lg={9} paddingBlock={2} style={{
-                width: "800px",
-                alignItems: "center",
+            <Grid item xs={12} sm={12} md={9} lg={9} paddingBlock={2} style={{ width: "800px", alignItems: "center",
                 // backgroundColor:"blue",
                 // padding: "10px"
             }}
             >
-
                 <Grid container >
                     <Grid item xs={12} style={{ flexGrow: 1 }}>
                         <Box style={{ display: "flex", flexDirection: "row" ,padding:"10px"  }}>
 
-                            <img src={R2} style={{ height: "20px", width: "20px", marginTop: "8px", marginRight: "5px", }} />
-                            <Typography variant="h4" component="div" style={{ color: "#D2122E", fontSize: "30px", fontFamily: "Poppins", fontWeight: "600", textAlign: "justify" , }}>
+                            <img src={R2} style={{ height: "20px", width: "20px", marginTop: "4px", marginRight: "5px", }} />
+                            <Typography variant="h4" component="div" style={{ color: "#D2122E", fontSize: "25px", fontFamily: "Poppins", fontWeight: "600", textAlign: "justify" , }}>
                                 {state?.data?.title}
                             </Typography>
+                            
 
 
                         </Box>

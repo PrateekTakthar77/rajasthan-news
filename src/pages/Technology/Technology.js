@@ -30,13 +30,16 @@ function Technology() {
 <div className="carousel-container">
             <Carousel cols={5} rows={1} gap={10} loop={true} dotColorActive='#795548' dotColorInactive='#ccc'>
 
-                <Carousel.Item>
-                    {/* <Link to="/"> */}
-                    <div style={{ backgroundColor: "#606060", height: "50px", width: "100%%", display: "flex", alignItems: "center", justifyContent: "center", borderRadius: "10px" }}>
-                            <h3 style={{ color: "#fff", fontFamily: "Poppins", fontSize: "25px", fontWeight: "700" }}>टेक्नोलॉजी</h3>
-                        </div>
-                    {/* </Link> */}
-                </Carousel.Item>
+            <Carousel.Item>
+            <div
+              onClick={() => {
+                console.log(Articles?.filter(item => item.subcategory[0] === "BJP"), "BJPpppppp");
+                navigate('/elections/politics/BJP', { state: { data: Articles?.filter(item => item.subcategory[0] === "BJP") } });
+              }}
+              style={{ backgroundColor: "#011e29", height: "100px", width: "100%", display: "flex", alignItems: "center", justifyContent: "center", borderRadius: "10px" , transition: "background-color 0.3s"}}>
+              <h3 style={{ color: "#fff", fontFamily: "Poppins", fontSize: "30px", fontWeight: "700" }}>MOBILE & APPS</h3>
+            </div>
+          </Carousel.Item>
         
             </Carousel>
         </div >
@@ -57,7 +60,7 @@ function Technology() {
                 {Articles?.filter(item => item.category[0] === "technology").map((result, index) =>(
                   <HomeCard key={index} result={result} onClick={() => {
                     console.log('navigate');
-                    navigate(`/${result?.category[0]}/${result?.title}`, { state: { data: result } });
+                    navigate(`/${result?.category[0]}/${result?.engtitle}`, { state: { data: result } });
                   }} />
                 ))}
               </Grid>
