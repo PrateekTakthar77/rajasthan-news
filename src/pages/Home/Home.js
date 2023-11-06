@@ -164,7 +164,7 @@ function Home() {
               <Box>
                 <Box >
                   <Grid container spacing={3}>
-                    {Articles?.filter(item => item.subcategory[0] === "BJP").map((result, index) => index < 6 && (
+                    {Articles?.filter(item => item.subcategory[0] === "bjp").map((result, index) => index < 6 && (
                       <HomeCard key={index} result={result} onClick={() => {
                         console.log('navigate');
                         navigate(`/${result?.category[0]}/${result?.subcategory[0]}/${result?.engtitle}`, { state: { data: result } });
@@ -192,7 +192,7 @@ function Home() {
 
               <Box>
                 <Grid container spacing={3}>
-                  {Articles?.filter(item => item.subcategory[0] === "Congress").map((result, index) => index < 6 && (
+                  {Articles?.filter(item => item.subcategory[0] === "congress").map((result, index) => index < 6 && (
                     <HomeCard key={index} result={result} onClick={() => {
                       console.log('navigate');
                       navigate(`/${result?.category[0]}/${result?.subcategory[0]}/${result?.engtitle}`, { state: { data: result } });
@@ -219,7 +219,7 @@ function Home() {
 
               <Box>
                 <Grid container spacing={3}>
-                  {Articles?.filter(item => item.subcategory[0] === "Sports" || item.subcategory[0] === "cricket").map((result, index) => index < 6 && (
+                  {Articles?.filter(item => item.subcategory[0] === "sports" || item.subcategory[0] === "cricket").map((result, index) => index < 6 && (
                     <HomeCard key={index} result={result} onClick={() => {
                       console.log('navigate');
                       navigate(`/${result?.category[0]}/${result?.subcategory[0]}/${result?.engtitle}`, { state: { data: result } });

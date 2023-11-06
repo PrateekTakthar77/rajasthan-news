@@ -20,6 +20,8 @@ import BreakingNews from '../pages/BreakingNews/BreakingNews';
 import JduNews from '../pages/AllNews/JduNews';
 import Others from "../pages/AllNews/Others"
 import ElectionsSubcategory from '../pages/Elections/ElectionsSubcategory';
+import SportsSubcategory from '../pages/Sports/SportsSubcategory';
+import EducationSubcategory from '../pages/Education/EducationSubcategory';
 
 function Navigation() {
     return (
@@ -31,7 +33,9 @@ function Navigation() {
                 <Route path='/elections' element={<Elections />} />
                 <Route path='/elections/:param1?/:param2?' element={<ElectionsSubcategory />} />
                 <Route path='/sports' element={<Sports />} />
+                <Route path='/game/:param1?/:param2?' element={<SportsSubcategory/>} />
                 <Route path='/education' element={<Education />} />
+                {/* <Route path='/education/:param1?/:param2?' element={<EducationSubcategory/>} /> */}
                 <Route path='/viralnews' element={<Viralnews />} />
                 <Route path='/technology' element={<Technology/>} />
                 <Route path='/entertainment' element={<Entertainment/>} />

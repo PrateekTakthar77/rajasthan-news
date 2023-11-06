@@ -69,8 +69,8 @@ function Header(props) {
   };
 
   const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center'}}>
-      <Typography variant="h6" sx={{ my: 2 }}>
+    <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
+      <Typography variant="h6" sx={{ my: 2  ,fontFamily:"Poppins" , fontWeight:"700" , fontSize:"25px" }}>
       आज का समाचार
       </Typography>
       <Divider />
@@ -81,9 +81,11 @@ function Header(props) {
               <ListItemButton sx={{ textAlign: 'center' }} onClick={() => {
                 navigate(item?.to);
               }}>
-                <Typography fontSize={20}>{item?.name}</Typography>
+                <Typography sx={{fontFamily:"Poppins" , fontWeight:"700" , fontSize:"20px" }}>{item?.name}</Typography>
+               
               </ListItemButton>
             </ListItem>
+            
           )
         })}
       </List>
@@ -93,7 +95,7 @@ function Header(props) {
   const container = window !== undefined ? () => window().document.body : undefined;
 
   return (
-    <Box sx={{ display: 'flex'}}>
+    <Box sx={{ display: 'flex' }}>
       <CssBaseline />
       <AppBar component="nav" style={{ backgroundColor: "#011e29" }} elevation={0}>
         <Toolbar>

@@ -26,7 +26,7 @@ function BjpNews() {
 
           <Box >
             <Grid container spacing={3}>
-              {Articles?.filter(item => item.subcategory[0] === "BJP").map((result, index) => (
+              {Articles?.filter(item => item.subcategory[0] === "bjp").map((result, index) => (
                 <HomeCard key={index} result={result} onClick={() => {
                   console.log('navigate');
                   navigate(`/${result?.category[0]}/${result?.title}`, { state: { data: result } });

@@ -18,7 +18,7 @@ import add4 from "../../assets/images/add4.jpeg"
 import add5 from "../../assets/images/add5.jpeg"
 
 // import ElectionsSubcategory from './ElectionsSubcategory';
-function SportsSubcategory() {
+function EducationSubcategory() {
 
   const { Articles } = useSelector(state => state.HomeReducer)
   const navigate = useNavigate();
@@ -46,7 +46,7 @@ function SportsSubcategory() {
               <Grid container spacing={3}>
                 {state.data.map((result, index) =>(
                 <HomeCard key={index} result={result} onClick={() => {
-                  console.log('navigate', state.data);
+                  console.log('navigate');
                   navigate(`/${result?.category[0]}/${result?.subcategory[0]}/${result?.engtitle}`, { state: { data: result } });
                 }} />
               ))}
@@ -73,4 +73,4 @@ function SportsSubcategory() {
   )
 }
 
-export default SportsSubcategory;
+export default EducationSubcategory;

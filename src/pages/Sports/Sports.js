@@ -33,8 +33,8 @@ function Sports() {
         <Carousel.Item>
             <div
               onClick={() => {
-                console.log(Articles?.filter(item => item.subcategory[0] === "BJP"), "BJPpppppp");
-                navigate('/elections/politics/BJP', { state: { data: Articles?.filter(item => item.subcategory[0] === "BJP") } });
+                console.log(Articles?.filter(item => item.subcategory[0] === "cricket"), "ccrriiiiccckkkkeeeettttt");
+                navigate('/sports/sports/cricket', { state: { data: Articles?.filter(item => item.subcategory[0] === "cricket") } });
               }}
               style={{ backgroundColor: "#011e29", height: "100px", width: "100%", display: "flex", alignItems: "center", justifyContent: "center", borderRadius: "10px" , transition: "background-color 0.3s"}}>
               <h3 style={{ color: "#fff", fontFamily: "Poppins", fontSize: "30px", fontWeight: "700" }}>CRICKET</h3>
@@ -44,8 +44,8 @@ function Sports() {
           <Carousel.Item>
             <div
               onClick={() => {
-                console.log(Articles?.filter(item => item.subcategory[0] === "BJP"), "BJPpppppp");
-                navigate('/elections/politics/BJP', { state: { data: Articles?.filter(item => item.subcategory[0] === "BJP") } });
+                console.log(Articles?.filter(item => item.subcategory[0] === "bjp"), "bbjjppppppppp");
+                navigate('/elections/politics/bjp', { state: { data: Articles?.filter(item => item.subcategory[0] === "bjp") } });
               }}
               style={{ backgroundColor: "#011e29", height: "100px", width: "100%", display: "flex", alignItems: "center", justifyContent: "center", borderRadius: "10px" , transition: "background-color 0.3s"}}>
               <h3 style={{ color: "#fff", fontFamily: "Poppins", fontSize: "30px", fontWeight: "700" }}>OTHERS</h3>

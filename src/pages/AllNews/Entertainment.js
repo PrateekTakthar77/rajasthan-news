@@ -40,7 +40,7 @@ function Entertainment() {
             <Box>
               <Grid container spacing={3}>
                 {/* {Articles?.filter(item => item.subcategory[0] === "Politics").map((result, index) => index < 6 && ( */}
-                {Articles?.filter(item => item.subcategory[0] === "Entertainment").map((result, index) => index < 6 && (
+                {Articles?.filter(item => item.subcategory[0] === "entertainment").map((result, index) => index < 6 && (
                   <HomeCard key={index} result={result} onClick={() => {
                     console.log('navigate');
                     navigate(`/${result?.category[0]}/${result?.title}`, { state: { data: result } });
