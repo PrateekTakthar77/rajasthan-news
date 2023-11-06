@@ -19,7 +19,7 @@ import add4 from "../../assets/images/add4.jpeg"
 import add5 from "../../assets/images/add5.jpeg"
 
 // import ElectionsSubcategory from './ElectionsSubcategory';
-function Elections() {
+function Entertainment() {
 
   const { Articles } = useSelector(state => state.HomeReducer)
   const navigate = useNavigate();
@@ -32,29 +32,12 @@ function Elections() {
     <>
       <div className="carousel-container">
         <Carousel cols={5} rows={1} gap={10} loop={true} dotColorActive='#795548' dotColorInactive='#ccc'>
-
           <Carousel.Item>
-            <div
-              onClick={() => {
-                console.log(Articles?.filter(item => item.subcategory[0] === "BJP"), "BJPpppppp");
-                navigate('/elections/politics/BJP', { state: { data: Articles?.filter(item => item.subcategory[0] === "BJP") } });
-              }}
-              style={{ backgroundColor: "#606060", height: "50px", width: "100%%", display: "flex", alignItems: "center", justifyContent: "center", borderRadius: "10px" }}>
-
-
-              <h3 style={{ color: "#fff", fontFamily: "Poppins", fontSize: "25px", fontWeight: "700" }}>BJP</h3>
-            </div>
-          </Carousel.Item>
-
-          <Carousel.Item>
-              <div 
-               onClick={() => {
-                console.log(Articles?.filter(item => item.subcategory[0] === "Congress"), "BJPpppppp");
-                navigate('/elections/politics/Congress', { state: { data: Articles?.filter(item => item.subcategory[0] === "Congress") } });
-              }}
-               style={{ backgroundColor: "#606060", height: "50px", width: "100%%", display: "flex", alignItems: "center", justifyContent: "center", borderRadius: "10px" }}>
+            <Link to="/congressnews" style={{ textDecoration: "none" }}>
+              <div style={{ backgroundColor: "#606060", height: "50px", width: "100%%", display: "flex", alignItems: "center", justifyContent: "center", borderRadius: "10px" }}>
                 <h3 style={{ color: "#fff", fontFamily: "Poppins", fontSize: "25px", fontWeight: "700" }}>CONGRESS</h3>
               </div>
+            </Link>
           </Carousel.Item>
 
           <Carousel.Item>
@@ -105,7 +88,7 @@ function Elections() {
             <Box>
               <Grid container spacing={3}>
                 {/* {Articles?.filter(item => item.subcategory[0] === "Politics").map((result, index) => index < 6 && ( */}
-                {Articles?.filter(item => item.category[0] === "politics").map((result, index) => (
+                {Articles?.filter(item => item.subcategory[0] === "Entertainment").map((result, index) => (
                   <HomeCard key={index} result={result} onClick={() => {
                     console.log('navigate');
                     // navigate(`/fullnews/${result?.category[0]}/${result?.title}`, { state: { data: result } });
@@ -135,4 +118,4 @@ function Elections() {
   )
 }
 
-export default Elections;
+export default Entertainment;

@@ -24,9 +24,13 @@ const buttonHoverStyle = {
 
 const drawerWidth = 240;
 const navItems = [
+  // {
+  //   to: '/',
+  //   name: 'होम',
+  // },
   {
-    to: '/',
-    name: 'होम',
+    to: '/breakingnews',
+    name: 'ब्रेकिंग न्यूज',
   },
   {
     to: '/elections',
@@ -48,6 +52,10 @@ const navItems = [
     to: '/technology',
     name: 'टेक्नोलॉजी',
   },
+  {
+    to: '/entertainment',
+    name: 'मनोरंजन',
+  },
 ];
 
 function Header(props) {
@@ -63,7 +71,7 @@ function Header(props) {
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center'}}>
       <Typography variant="h6" sx={{ my: 2 }}>
-      राजस्थान-समाचार
+      आज का समाचार
       </Typography>
       <Divider />
       <List>
@@ -104,8 +112,8 @@ function Header(props) {
               component="div"
               style={{ fontSize: "30px"  , fontFamily:"Poppins" , fontWeight:"600"}}
             >
-              राजस्थान-समाचार
-            </Typography>
+               आज का समाचार
+                           </Typography>
           </Link>
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
             {navItems.map((item, index) => (

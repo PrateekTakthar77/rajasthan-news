@@ -125,7 +125,7 @@ function Education() {
                 {Articles?.filter(item => item.category[0] === "education").map((result, index) => (
                   <HomeCard key={index} result={result} onClick={() => {
                     console.log('navigate');
-                    navigate(`/fullnews/${result?.category[0]}/${result?.title}`, { state: { data: result } });
+                    navigate(`/${result?.category[0]}/${result?.title}`, { state: { data: result } });
                   }} />
                 ))}
               </Grid>

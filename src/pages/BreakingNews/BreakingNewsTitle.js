@@ -79,8 +79,8 @@ import Marquee from "react-fast-marquee";
 const BreakingNewsTitle = () => {
     return (
         <Grid container sx={{ textDecoration: "none" }}>
-            <Grid item xs={12} sm={12} md={1} lg={1} ></Grid>
-            <Grid item xs={12} sm={12} md={10} lg={10} sx={{ textDecoration: "none" }}>
+            <Grid item xs={12} sm={12} md={0.5} lg={0.5} ></Grid>
+            <Grid item xs={12} sm={12} md={11} lg={11} sx={{ textDecoration: "none" }}>
                 <Link to="/breakingnews" style={{ textDecoration: "none" }}>
                     <Box sx={{
                         height: 'auto',
@@ -97,11 +97,11 @@ const BreakingNewsTitle = () => {
                         animation: 'blink 3s infinite', // Apply the animation
                     }}>
                         <Typography sx={{
-                            fontSize: "22px",
+                            fontSize: "20px",
                             fontFamily: "Poppins",
-                            fontWeight: "600",
+                            fontWeight: "500",
                             color: "#fff",
-                            padding: "3px",
+                            padding: "-3px",
                             textDecoration: "none", // Remove underline
                             marginTop: "3px",
                             marginLeft: "20px",
@@ -113,21 +113,21 @@ const BreakingNewsTitle = () => {
                         <Divider sx={{
                             width: '0.2%',
                             marginLeft: '15px',
-                            marginRight: "15px"
+                            marginRight: "15px",
                         }}
                             orientation="vertical"
                             variant="middle"
                             flexItem
-                            style={{ backgroundColor: '#808080' }}
+                            style={{ backgroundColor: '#808080' ,}}
                         />
                         <Marquee>
                             <Typography style={{
                                 fontSize: "20px",
                                 fontWeight: "700",
                                 color: "#fff",
-                                padding: "3px",
+                                // padding: "3px",
                                 textDecoration: "none",
-                                marginTop: "4px"
+                                marginTop: "4px", paddingRight:"2px" , paddingLeft:"2px"
                             }}>
                                मराठा आंदोलन पर बोले उद्धव- मराठा नहीं कर सकते बवाल, पता करना होगा इसके पीछे कौन है
                             </Typography>
@@ -136,7 +136,7 @@ const BreakingNewsTitle = () => {
                     </Box>
                 </Link>
             </Grid>
-            <Grid item xs={12} sm={12} md={1} lg={1} >
+            <Grid item xs={12} sm={12} md={0.5} lg={0.5} >
             </Grid>
             <style>
                 {`

@@ -7,7 +7,7 @@ import Sports from '../pages/Sports/Sports';
 import Education from '../pages/Education/Education';
 import Viralnews from '../pages/Viralnews/Viralnews';
 import Technology from '../pages/Technology/Technology';
-
+import Entertainment from "../pages/Entertainment/Entertainment"
 import Header from '../components/Header';
 
 import All from '../pages/AllNews/All';
@@ -18,8 +18,8 @@ import SportsNews from '../pages/AllNews/SportsNews';
 import FullNews from '../pages/FullNews/FullNews';
 import BreakingNews from '../pages/BreakingNews/BreakingNews';
 import JduNews from '../pages/AllNews/JduNews';
-import Entertainment from '../pages/AllNews/Entertainment';
 import Others from "../pages/AllNews/Others"
+import ElectionsSubcategory from '../pages/Elections/ElectionsSubcategory';
 
 function Navigation() {
     return (
@@ -27,23 +27,22 @@ function Navigation() {
             <Header />
             <Routes>
                 <Route path='/' element={<Home />} />
+                <Route path='/:param1?/:param2?/:param3?' element={<FullNews />} />
                 <Route path='/elections' element={<Elections />} />
+                <Route path='/elections/:param1?/:param2?' element={<ElectionsSubcategory />} />
                 <Route path='/sports' element={<Sports />} />
                 <Route path='/education' element={<Education />} />
                 <Route path='/viralnews' element={<Viralnews />} />
                 <Route path='/technology' element={<Technology/>} />
+                <Route path='/entertainment' element={<Entertainment/>} />
 
                 <Route path='/all' element={<All />} />
                 <Route path='/bjpnews' element={<BjpNews />} />
                 <Route path='/congressnews' element={<CongressNews />} />
                 <Route path='/sportsnews' element={<SportsNews />} />
                 <Route path='/jdunews' element={<JduNews/>} />
-                <Route path='/entertainment' element={<Entertainment/>} />
                 <Route path='/breakingnews' element={<BreakingNews />} />
                 <Route path='/others' element={<Others/>} />
-
-
-                <Route path='/fullnews/:param1?/:param2?/:param3?' element={<FullNews />} />
             </Routes>
         </BrowserRouter>
     )

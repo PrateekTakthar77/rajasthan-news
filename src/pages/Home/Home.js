@@ -42,15 +42,15 @@ function Home() {
 
       {/* Carousell */}
       <div style={{marginTop:"10px"}}>
-      <Carousel cols={5} rows={1} gap={10} loop={true} showDots={false} dotColorActive='#795548' dotColorInactive='#ccc'>
+      <Carousel cols={4} rows={1} gap={10} loop={true} showDots={false} dotColorActive='#795548' dotColorInactive='#ccc'>
 
-        <Carousel.Item>
+        {/* <Carousel.Item>
           <Link to="/" style={{textDecoration:"none"}}>
             <div style={{ backgroundColor: "#606060", height: "100px", width: "100%" , display:"flex" , alignItems:"center" , justifyContent:"center" , borderRadius:"10px"}}>
               <h3 style={{ color: "#fff" , fontFamily: "Poppins" , fontSize:"40px" , fontWeight:"700" }}>होम</h3>
             </div>
           </Link>
-        </Carousel.Item>
+        </Carousel.Item> */}
 
         <Carousel.Item>
           <Link to="/elections" style={{textDecoration:"none"}}>
@@ -102,8 +102,8 @@ function Home() {
           <Box display="flex" justifyContent="space-between">
             < Box style={{ display: "flex", flexDirection: "row", }}>
               <Typography style={{ fontSize: "20px", fontWeight: "600", fontFamily: "Poppins" }}>हिंदी न्यूज़</Typography>
-              <Typography style={{ fontSize: "20px", fontWeight: "600", marginLeft: "10px", marginRight: "10px", fontFamily: "Poppins" }}>/</Typography>
-              <Typography style={{ fontSize: "20px", fontWeight: "600", padding: "2px", backgroundColor: "red", color: "#fff", fontFamily: "Poppins", borderRadius: "6px" }}>Explained</Typography>
+              {/* <Typography style={{ fontSize: "20px", fontWeight: "600", marginLeft: "10px", marginRight: "10px", fontFamily: "Poppins" }}>/</Typography> */}
+              {/* <Typography style={{ fontSize: "20px", fontWeight: "600", padding: "2px", backgroundColor: "red", color: "#fff", fontFamily: "Poppins", borderRadius: "6px" }}>Explained</Typography> */}
             </Box>
 
             <Box style={{ textDecoration: 'none' }}>
@@ -120,7 +120,7 @@ function Home() {
               {Articles?.map((result, index) => index < 6 && (
                 <HomeCard key={index} result={result} onClick={() => {
                   console.log('navigate');
-                  navigate(`/fullnews/${result?.category[0]}/${result?.subcategory[0]}/${result?.engtitle}`, { state: { data: result } });
+                  navigate(`/${result?.category[0]}/${result?.subcategory[0]}/${result?.engtitle}`, { state: { data: result } });
                 }} />
               ))}
             </Grid>
@@ -149,7 +149,7 @@ function Home() {
                 {Articles?.filter(item => item.subcategory[0] === "BJP").map((result, index) => index < 6 && (
                   <HomeCard key={index} result={result} onClick={() => {
                     console.log('navigate');
-                    navigate(`/fullnews/${result?.category[0]}/${result?.subcategory[0]}/${result?.title}`, { state: { data: result } });
+                    navigate(`/${result?.category[0]}/${result?.subcategory[0]}/${result?.title}`, { state: { data: result } });
                   }} />
                 ))}
               </Grid>
@@ -177,7 +177,7 @@ function Home() {
               {Articles?.filter(item => item.subcategory[0] === "Congress").map((result, index) => index < 6 && (
                 <HomeCard key={index} result={result} onClick={() => {
                   console.log('navigate');
-                  navigate(`/fullnews/${result?.category[0]}/${result?.subcategory[0]}/${result?.title}`, { state: { data: result } });
+                  navigate(`/${result?.category[0]}/${result?.subcategory[0]}/${result?.title}`, { state: { data: result } });
                 }} />
               ))}
             </Grid>
@@ -204,7 +204,7 @@ function Home() {
               {Articles?.filter(item => item.subcategory[0] === "Sports" || item.subcategory[0] === "cricket").map((result, index) => index < 6 && (
                 <HomeCard key={index} result={result} onClick={() => {
                   console.log('navigate');
-                  navigate(`/fullnews/${result?.category[0]}/${result?.subcategory[0]}/${result?.title}`, { state: { data: result } });
+                  navigate(`/${result?.category[0]}/${result?.subcategory[0]}/${result?.title}`, { state: { data: result } });
                 }} />
               ))}
             </Grid>

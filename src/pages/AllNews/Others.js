@@ -42,7 +42,7 @@ function Elections() {
                 {Articles?.filter(item => item.category[0] === "politics").map((result, index) => index < 6 && (
                   <HomeCard key={index} result={result} onClick={() => {
                     console.log('navigate');
-                    navigate(`/fullnews/${result?.category[0]}/${result?.title}`, { state: { data: result } });
+                    navigate(`/${result?.category[0]}/${result?.title}`, { state: { data: result } });
                   }} />
                 ))}
               </Grid>

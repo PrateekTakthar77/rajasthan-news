@@ -44,7 +44,7 @@ function TechnonologyNews() {
                 {Articles?.filter(item => item.category[0] === "technology").map((result, index) => index < 6 && (
                   <HomeCard key={index} result={result} onClick={() => {
                     console.log('navigate');
-                    navigate(`/fullnews/${result?.category[0]}/${result?.title}`, { state: { data: result } });
+                    navigate(`/${result?.category[0]}/${result?.title}`, { state: { data: result } });
                   }} />
                 ))}
               </Grid>

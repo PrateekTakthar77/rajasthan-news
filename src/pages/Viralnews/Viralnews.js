@@ -40,7 +40,7 @@ function Viralnews() {
                 {Articles?.filter(item => item.subcategory[0] === "viral news").map((result, index) =>(
                   <HomeCard key={index} result={result} onClick={() => {
                     console.log('navigate');
-                    navigate(`/fullnews/${result?.category[0]}/${result?.title}`, { state: { data: result } });
+                    navigate(`/${result?.category[0]}/${result?.title}`, { state: { data: result } });
                   }} />
                 ))}
               </Grid>
