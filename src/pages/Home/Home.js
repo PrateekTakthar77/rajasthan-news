@@ -60,7 +60,7 @@ function Home() {
 
           {/* Carousell */}
           <div style={{ marginTop: "10px" }}>
-            <Carousel cols={5} rows={1} gap={10} loop={true} showDots={false} dotColorActive='#795548' dotColorInactive='#ccc'>
+            <Carousel cols={6} rows={1} gap={10} loop={true} showDots={false} dotColorActive='#795548' dotColorInactive='#ccc'>
 
 
               <Carousel.Item width="20%">
