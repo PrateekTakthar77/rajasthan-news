@@ -27,7 +27,7 @@ function Technology() {
   return (
     <>
 
-<div className="carousel-container">
+{/* <div className="carousel-container">
             <Carousel cols={5} rows={1} gap={10} loop={true} dotColorActive='#795548' dotColorInactive='#ccc'>
 
             <Carousel.Item>
@@ -42,7 +42,7 @@ function Technology() {
           </Carousel.Item>
         
             </Carousel>
-        </div >
+        </div > */}
 
       <Box marginTop={10} sx={{ flexGrow: 1 }} >
 

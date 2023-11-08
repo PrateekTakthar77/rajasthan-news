@@ -1,82 +1,22 @@
-// import React from 'react'
-// import { Grid, Box, Typography, Divider } from '@mui/material'
-// import { Link } from "react-router-dom"
-
-// const BreakingNewsTitle = () => {
-//     return (
-//         <Grid container sx={{textDecoration:"none"}}>
-
-//             <Grid item xs={12} sm={12} md={1.5} lg={1.5} ></Grid>
-
-//             <Grid item xs={12} sm={12} md={9} lg={9}  sx={{textDecoration:"none"}}>
-//                 <Link to="/breakingnews" style={{textDecoration:"none"}}>
-//                     <Box sx={{
-//                         height: 'auto',
-//                         backgroundColor: 'red',
-//                         margin: '0 auto',
-//                         marginTop: 10,
-//                         borderRadius: '20px',
-//                         marginLeft: "20px",
-//                         marginRight: "20px",
-//                         marginBottom: "40px",
-//                         display: 'flex',
-//                         textDecoration: "none",
-//                         flexDirection: 'row',
-//                     }}>
-//                         <Typography sx={{
-//                              fontSize: "22px",
-//                              fontFamily:"Poppins" ,
-//                              fontWeight: "600",
-//                              color: "#fff",
-//                              padding: "3px",
-//                              textDecoration: "none", // Remove underline
-//                              marginTop: "3px",
-//                              marginLeft: "20px",
-//                              fontStyle: 'italic'
-//                         }}>
-//                             BREAKING NEWS
-//                         </Typography>
-//                         <Divider sx={{
-//                             width: '0.2%',
-//                             marginLeft: '15px',
-//                             marginRight: "15px"
-//                         }}
-//                             orientation="vertical"
-//                             variant="middle"
-//                             flexItem
-//                             style={{ backgroundColor: '#808080' }}
-//                         />
-//                         <Typography style={{
-//                             fontSize: "20px",
-//                             fontWeight: "700",
-//                             color: "#fff",
-//                             padding: "3px",
-//                             textDecoration: "none",
-//                             marginTop: "4px"
-//                         }}>
-//                             सोशल मीडिया पर एक कार पर हुए हमले का वीडियो तेजी से वायरल हो रहा है
-//                         </Typography>
-//                     </Box>
-//                 </Link>
-//             </Grid>
-//             <Grid item xs={12} sm={12} md={1.5} lg={1.5} >
-//             </Grid>
-
-
-//         </Grid>
-//     )
-// }
-
-// export default BreakingNewsTitle
-
-
-import React from 'react'
+import React, { useEffect, useState } from 'react';
 import { Grid, Box, Typography, Divider } from '@mui/material'
 import { Link } from "react-router-dom"
-// import Marquee from 'react-marquee-slider'
 import Marquee from "react-fast-marquee";
 
+import { useNavigate } from 'react-router-dom';
+import { getArticles } from '../../Redux/actions/Home';
+import { useSelector } from 'react-redux';
+
 const BreakingNewsTitle = () => {
+    const [loading, setLoading] = useState(true);
+    const { Articles } = useSelector(state => state.HomeReducer)
+    const navigate = useNavigate();
+
+    useEffect(() => {
+        getArticles().then(() => {
+            setLoading(false)
+        })
+    }, [])
     return (
         <Grid container sx={{ textDecoration: "none" }}>
             <Grid item xs={12} sm={12} md={0.5} lg={0.5} ></Grid>
@@ -112,8 +52,8 @@ const BreakingNewsTitle = () => {
                         </Typography>
                         <Divider sx={{
                             width: '0.2%',
-                            marginLeft: '15px',
-                            marginRight: "15px",
+                            marginLeft: '22px',
+                            marginRight: "10px",
                         }}
                             orientation="vertical"
                             variant="middle"
@@ -121,18 +61,22 @@ const BreakingNewsTitle = () => {
                             style={{ backgroundColor: '#808080' ,}}
                         />
                         <Marquee>
+                        {Articles?.map((result, index) => index < 1 && (
                             <Typography style={{
                                 fontSize: "20px",
                                 fontWeight: "700",
                                 color: "#fff",
                                 // padding: "3px",
                                 textDecoration: "none",
-                                marginTop: "4px",
+                                marginTop: "3px",
                                 //  paddingRight:"2px" ,
-                                 paddingLeft:"2px"
+                                 paddingLeft:"5px",
+                                 paddingRight:"10px",
+                                 marginRight:"3px"
                             }}>
-                               मराठा आंदोलन पर बोले उद्धव- मराठा नहीं कर सकते बवाल, पता करना होगा इसके पीछे कौन है
+                               {result?.title}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;             
                             </Typography>
+                            ))}
                         </Marquee>
 
                     </Box>

@@ -6,13 +6,21 @@ import { getArticles } from '../../Redux/actions/Home';
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import BreakingNewsTitle from '../BreakingNews/BreakingNewsTitle';
-
+import { Card, CardMedia } from '@mui/material';
 import Carousel from 'react-grid-carousel';
 // import "./HomeCarousell.css"
 // import "../Home/HomeCarousell.css"
 
 import redTia from "../../assets/images/RedTriangle.png";
 import add from "../../assets/images/img10.jpeg"
+
+import breakingnews from "../../assets/images/breakingNews.jpeg" 
+import election from "../../assets/images/election.jpeg" 
+import sportsimg from "../../assets/images/sportsimg.jpeg" 
+import eduimg from "../../assets/images/educationimg.jpeg" 
+import Techimg from "../../assets/images/TechnoImg.jpeg"
+import Entimg from "../../assets/images/entertainmentimg.jpeg"
+
 
 import add1 from "../../assets/images/add1.jpeg"
 import add2 from "../../assets/images/add2.jpeg"
@@ -35,15 +43,15 @@ function Home() {
 
 
   return (
-    <Box sx={{ flexGrow: 1, backgroundColor: "#fff" }} style={{ marginTop: "10px" }}>
+    <Box sx={{ flexGrow: 1, backgroundColor: "#fff" }} style={{ marginTop: "6px" }}>
       {/* ... your existing code ... */}
       {loading ? (
-        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' , flexDirection:"column"}}>
-          <CircularProgress  style={{ color: '#0a2351' }} />
-          <Typography style={{fontFamily: "Poppins", fontSize: "15px", fontWeight: "500" , marginTop:"10px" }} >Loading...</Typography>
+        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh', flexDirection: "column" }}>
+          <CircularProgress style={{ color: '#0a2351' }} />
+          <Typography style={{ fontFamily: "Poppins", fontSize: "15px", fontWeight: "500", marginTop: "10px" }} >Loading...</Typography>
         </div>
       ) : (
-        <Box sx={{ flexGrow: 1, backgroundColor: "#fff" }} style={{ marginTop: "10px" }} >
+        <Box sx={{ flexGrow: 1, backgroundColor: "#fff" }} style={{ marginTop: "6px" }} >
 
           {/* Breaking news */}
 
@@ -54,53 +62,237 @@ function Home() {
           <div style={{ marginTop: "10px" }}>
             <Carousel cols={5} rows={1} gap={10} loop={true} showDots={false} dotColorActive='#795548' dotColorInactive='#ccc'>
 
-              <Carousel.Item  width="20%">
+
+              <Carousel.Item width="20%">
                 <Link to="/breakingnews" style={{ textDecoration: "none" }}>
-                  <div style={{ backgroundColor: "#011e29", height: "100px", width: "100%", display: "flex", alignItems: "center", justifyContent: "center", borderRadius: "10px" , transition: "background-color 0.3s"}}>
-                    <h3 style={{ color: "#fff", fontFamily: "Poppins", fontSize: "30px", fontWeight: "700" }}>ब्रेकिंग न्यूज</h3>
-                  </div>
+                  <Card >
+                    <CardMedia
+                      component="img"
+                      alt="Contemplative Reptile"
+                      height="200"
+                      image={breakingnews}
+                      title="Contemplative Reptile"
+                      sx={{ position: "relative" , height:"100px" , width:"100%" }}
+                    />
+                    <Typography
+                      sx={{
+                        // position: "absolute",
+                        top: "20%",
+                        width: "8-0%",
+                        textAlign: "center",
+                        color: "#011e29",
+                        backgroundColor: "none",
+                        fontFamily: "Poppins",
+                        fontSize:"25px",
+                        fontWeight:"600"
+                      }}
+                    >
+                      ब्रेकिंग न्यूज
+                    </Typography>
+                  </Card>
+                </Link>
+              </Carousel.Item>
+
+
+              <Carousel.Item width="20%">
+                <Link to="/elections" style={{ textDecoration: "none" }}>
+                  <Card >
+                    <CardMedia
+                      component="img"
+                      alt="Contemplative Reptile"
+                      height="200"
+                      image={election}
+                      title="Contemplative Reptile"
+                      sx={{ position: "relative" , height:"100px" , width:"100%" }}
+                    />
+                    <Typography
+                      sx={{
+                        // position: "absolute",
+                        top: "20%",
+                        width: "8-0%",
+                        textAlign: "center",
+                        color: "#011e29",
+                        backgroundColor: "none",
+                        fontFamily: "Poppins",
+                        fontSize:"25px",
+                        fontWeight:"600"
+                      }}
+                    >
+                     चुनाव 2023
+                    </Typography>
+                  </Card>
                 </Link>
               </Carousel.Item>
 
               <Carousel.Item width="20%">
-                <Link to="/elections" style={{ textDecoration: "none" }}>
-                  <div style={{ backgroundColor: "#011e29", height: "100px", width: "100%", display: "flex", alignItems: "center", justifyContent: "center", borderRadius: "10px" }}>
-                    <h3 style={{ color: "#fff", fontFamily: "Poppins", fontSize: "30px", fontWeight: "700" }}>चुनाव 2023</h3>
-                  </div>
-                </Link>
-              </Carousel.Item>
-
-              <Carousel.Item width="20%"> 
                 <Link to="/sports" style={{ textDecoration: "none" }}>
-                  <div style={{ backgroundColor: "#011e29", height: "100px", width: "100%", display: "flex", alignItems: "center", justifyContent: "center", borderRadius: "10px" }}>
-                    <h3 style={{ color: "#fff", fontFamily: "Poppins", fontSize: "30px", fontWeight: "700" }}>स्पोर्ट्स</h3>
-                  </div>
+                  <Card >
+                    <CardMedia
+                      component="img"
+                      alt="Contemplative Reptile"
+                      height="200"
+                      image={sportsimg}
+                      title="Contemplative Reptile"
+                      sx={{ position: "relative" , height:"100px" , width:"100%" }}
+                    />
+                    <Typography
+                      sx={{
+                        // position: "absolute",
+                        top: "20%",
+                        width: "8-0%",
+                        textAlign: "center",
+                        color: "#011e29",
+                        backgroundColor: "none",
+                        fontFamily: "Poppins",
+                        fontSize:"25px",
+                        fontWeight:"600"
+                      }}
+                    >
+                     स्पोर्ट्स
+                    </Typography>
+                  </Card>
                 </Link>
               </Carousel.Item>
 
               <Carousel.Item width="20%">
                 <Link to="/education" style={{ textDecoration: "none" }}>
-                  <div style={{ backgroundColor: "#011e29", height: "100px", width: "100%", display: "flex", alignItems: "center", justifyContent: "center", borderRadius: "10px" }}>
-                    <h3 style={{ color: "#fff", fontFamily: "Poppins", fontSize: "30px", fontWeight: "700" }}>एजुकेशन</h3>
-                  </div>
+                  <Card >
+                    <CardMedia
+                      component="img"
+                      alt="Contemplative Reptile"
+                      height="200"
+                      image={eduimg}
+                      title="Contemplative Reptile"
+                      sx={{ position: "relative" , height:"100px" , width:"100%" }}
+                    />
+                    <Typography
+                      sx={{
+                        // position: "absolute",
+                        top: "20%",
+                        width: "8-0%",
+                        textAlign: "center",
+                        color: "#011e29",
+                        backgroundColor: "none",
+                        fontFamily: "Poppins",
+                        fontSize:"25px",
+                        fontWeight:"600"
+                      }}
+                    >
+                    एजुकेशन
+                    </Typography>
+                  </Card>
                 </Link>
               </Carousel.Item>
 
               <Carousel.Item width="20%">
+                <Link to="/technology" style={{ textDecoration: "none" }}>
+                  <Card >
+                    <CardMedia
+                      component="img"
+                      alt="Contemplative Reptile"
+                      height="200"
+                      image={Techimg}
+                      title="Contemplative Reptile"
+                      sx={{ position: "relative" , height:"100px" , width:"100%" }}
+                    />
+                    <Typography
+                      sx={{
+                        // position: "absolute",
+                        top: "20%",
+                        width: "8-0%",
+                        textAlign: "center",
+                        color: "#011e29",
+                        backgroundColor: "none",
+                        fontFamily: "Poppins",
+                        fontSize:"25px",
+                        fontWeight:"600"
+                      }}
+                    >
+                    टेक्नोलॉजी
+                    </Typography>
+                  </Card>
+                </Link>
+              </Carousel.Item>
+
+              <Carousel.Item width="20%">
+                <Link to="/entertainment" style={{ textDecoration: "none" }}>
+                  <Card >
+                    <CardMedia
+                      component="img"
+                      alt="Contemplative Reptile"
+                      height="200"
+                      image={Entimg}
+                      title="Contemplative Reptile"
+                      sx={{ position: "relative" , height:"100px" , width:"100%" }}
+                    />
+                    <Typography
+                      sx={{
+                        // position: "absolute",
+                        top: "20%",
+                        width: "8-0%",
+                        textAlign: "center",
+                        color: "#011e29",
+                        backgroundColor: "none",
+                        fontFamily: "Poppins",
+                        fontSize:"25px",
+                        fontWeight:"600"
+                      }}
+                    >
+                    मनोरंजन
+                    </Typography>
+                  </Card>
+                </Link>
+              </Carousel.Item>
+
+
+
+              {/* <Carousel.Item width="20%">
+                <Link to="/breakingnews" style={{ textDecoration: "none" }}>
+                  <div style={{ backgroundColor: "#011e29", height: "100px", width: "100%", display: "flex", alignItems: "center", justifyContent: "center", borderRadius: "10px", transition: "background-color 0.3s" }}>
+                    <h3 style={{ color: "#fff", fontFamily: "Poppins", fontSize: "30px", fontWeight: "700" }}>ब्रेकिंग न्यूज</h3>
+                  </div>
+                </Link>
+              </Carousel.Item> */}
+
+              {/* <Carousel.Item width="20%">
+                <Link to="/elections" style={{ textDecoration: "none" }}>
+                  <div style={{ backgroundColor: "#011e29", height: "100px", width: "100%", display: "flex", alignItems: "center", justifyContent: "center", borderRadius: "10px" }}>
+                    <h3 style={{ color: "#fff", fontFamily: "Poppins", fontSize: "30px", fontWeight: "700" }}>चुनाव 2023</h3>
+                  </div>
+                </Link>
+              </Carousel.Item> */}
+
+              {/* <Carousel.Item width="20%">
+                <Link to="/sports" style={{ textDecoration: "none" }}>
+                  <div style={{ backgroundColor: "#011e29", height: "100px", width: "100%", display: "flex", alignItems: "center", justifyContent: "center", borderRadius: "10px" }}>
+                    <h3 style={{ color: "#fff", fontFamily: "Poppins", fontSize: "30px", fontWeight: "700" }}>स्पोर्ट्स</h3>
+                  </div>
+                </Link>
+              </Carousel.Item> */}
+
+              {/* <Carousel.Item width="20%">
+                <Link to="/education" style={{ textDecoration: "none" }}>
+                  <div style={{ backgroundColor: "#011e29", height: "100px", width: "100%", display: "flex", alignItems: "center", justifyContent: "center", borderRadius: "10px" }}>
+                    <h3 style={{ color: "#fff", fontFamily: "Poppins", fontSize: "30px", fontWeight: "700" }}>एजुकेशन</h3>
+                  </div>
+                </Link>
+              </Carousel.Item> */}
+
+              {/* <Carousel.Item width="20%">
                 <Link to="/technology" style={{ textDecoration: "none" }}>
                   <div style={{ backgroundColor: "#011e29", height: "100px", width: "100%", display: "flex", alignItems: "center", justifyContent: "center", borderRadius: "10px" }}>
                     <h3 style={{ color: "#fff", fontFamily: "Poppins", fontSize: "30px", fontWeight: "700" }}>टेक्नोलॉजी</h3>
                   </div>
                 </Link>
-              </Carousel.Item>
+              </Carousel.Item> */}
 
-              <Carousel.Item width="20%">
-                <Link to="/technology" style={{ textDecoration: "none" }}>
+              {/* <Carousel.Item width="20%">
+                <Link to="/entertainment" style={{ textDecoration: "none" }}>
                   <div style={{ backgroundColor: "#011e29", height: "100px", width: "100%", display: "flex", alignItems: "center", justifyContent: "center", borderRadius: "10px" }}>
                     <h3 style={{ color: "#fff", fontFamily: "Poppins", fontSize: "30px", fontWeight: "700" }}>मनोरंजन</h3>
                   </div>
                 </Link>
-              </Carousel.Item>
+              </Carousel.Item> */}
 
             </Carousel>
           </div>
@@ -118,15 +310,14 @@ function Home() {
               {/* --------ALL NEWS------------------------------------------------ */}
 
               <Box display="flex" justifyContent="space-between">
-                < Box style={{ display: "flex", flexDirection: "row", }}>
-                  <Typography style={{ fontSize: "20px", fontWeight: "600", fontFamily: "Poppins" }}>हिंदी न्यूज़</Typography>
-                  {/* <Typography style={{ fontSize: "20px", fontWeight: "600", marginLeft: "10px", marginRight: "10px", fontFamily: "Poppins" }}>/</Typography> */}
-                  {/* <Typography style={{ fontSize: "20px", fontWeight: "600", padding: "2px", backgroundColor: "red", color: "#fff", fontFamily: "Poppins", borderRadius: "6px" }}>Explained</Typography> */}
+              < Box style={{ display: "flex", flexDirection: "row", margin: "10px" }}>
+                  <Typography style={{ fontSize: "35px", fontWeight: "700", fontStyle: "italic", fontFamily: "Poppins" }}>HINDI NEWS</Typography>
+                  <img src={redTia} style={{ width: "28px", height: "28px", marginTop: "10px", marginLeft: "10px" }} />
                 </Box>
 
                 <Box style={{ textDecoration: 'none' }}>
                   <Link to={'/all'} style={{ textDecoration: 'none' }}>
-                    <Typography style={{ textDecoration: 'none', color: 'red', fontSize: "15px", fontWeight: "700", marginTop: "8px", fontFamily: "Poppins" }}>
+                    <Typography style={{ textDecoration: 'none', color: 'red', fontSize: "15px", fontWeight: "700", marginTop: "25px", fontFamily: "Poppins" }}>
                       और भी..
                     </Typography>
                   </Link>

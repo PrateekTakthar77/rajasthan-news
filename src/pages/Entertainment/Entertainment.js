@@ -30,7 +30,7 @@ function Entertainment() {
 
   return (
     <>
-      <div className="carousel-container">
+      {/* <div className="carousel-container">
         <Carousel cols={5} rows={1} gap={10} loop={true} dotColorActive='#795548' dotColorInactive='#ccc'>
         <Carousel.Item>
             <div
@@ -44,9 +44,9 @@ function Entertainment() {
           </Carousel.Item>
 
         </Carousel>
-      </div >
+      </div > */}
 
-      <Box marginTop={5} sx={{ flexGrow: 1 }} >
+      <Box marginTop={10} sx={{ flexGrow: 1 }} >
 
         <Grid container >
           <Grid item xs={12} sm={12} md={0.3} lg={0.3} marginTop={2}
@@ -59,7 +59,7 @@ function Entertainment() {
             <Box>
               <Grid container spacing={3}>
                 {/* {Articles?.filter(item => item.subcategory[0] === "Politics").map((result, index) => index < 6 && ( */}
-                {Articles?.filter(item => item.subcategory[0] === "entertainment").map((result, index) => (
+                {Articles?.filter(item => item.category[0] === "entertainment").map((result, index) => (
                   <HomeCard key={index} result={result} onClick={() => {
                     console.log('navigate');
                     // navigate(`/fullnews/${result?.category[0]}/${result?.title}`, { state: { data: result } });

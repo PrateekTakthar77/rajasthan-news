@@ -9,6 +9,11 @@ import { getArticles } from '../../Redux/actions/Home';
 import { useSelector } from 'react-redux';
 
 import Carousel from 'react-grid-carousel';
+import { Card, CardMedia } from '@mui/material';
+
+import bjpimg from "../../assets/images/bjpimg2.jpeg"
+import congimg from "../../assets/images/congoimg1.webp"
+
 
 
 import add1 from "../../assets/images/add1.jpeg"
@@ -31,6 +36,109 @@ function Elections() {
     <>
       <div className="carousel-container">
         <Carousel cols={4} rows={1} gap={10} loop={true} dotColorActive='#795548' dotColorInactive='#ccc'>
+
+
+        <Carousel.Item width="20%">
+                {/* <Link to="/breakingnews" style={{ textDecoration: "none" }}> */}
+                  <Card >
+                    <CardMedia
+                      component="img"
+                      alt="Contemplative Reptile"
+                      height="200"
+                      image={bjpimg}
+                      title="Contemplative Reptile"
+                      sx={{ position: "relative" , height:"100px" , width:"100%" }}
+                      onClick={() => {
+                        console.log(Articles?.filter(item => item.subcategory[0] === "election"), "BJPpppppp");
+                        navigate('/elections/politics/election', { state: { data: Articles?.filter(item => item.subcategory[0] === "election") } });
+                      }}
+                    />
+                    <Typography
+                      sx={{
+                        // position: "absolute",
+                        top: "20%",
+                        width: "8-0%",
+                        textAlign: "center",
+                        color: "#011e29",
+                        backgroundColor: "none",
+                        fontFamily: "Poppins",
+                        fontSize:"25px",
+                        fontWeight:"600"
+                      }}
+                    >
+                      ELECTIONS
+                    </Typography>
+                  </Card>
+                {/* </Link> */}
+              </Carousel.Item>
+
+        <Carousel.Item width="20%">
+                {/* <Link to="/breakingnews" style={{ textDecoration: "none" }}> */}
+                  <Card >
+                    <CardMedia
+                      component="img"
+                      alt="Contemplative Reptile"
+                      height="200"
+                      image={bjpimg}
+                      title="Contemplative Reptile"
+                      sx={{ position: "relative" , height:"100px" , width:"100%" }}
+                      onClick={() => {
+                        console.log(Articles?.filter(item => item.subcategory[0] === "bjp"), "BJPpppppp");
+                        navigate('/elections/politics/bjp', { state: { data: Articles?.filter(item => item.subcategory[0] === "bjp") } });
+                      }}
+                    />
+                    <Typography
+                      sx={{
+                        // position: "absolute",
+                        top: "20%",
+                        width: "8-0%",
+                        textAlign: "center",
+                        color: "#011e29",
+                        backgroundColor: "none",
+                        fontFamily: "Poppins",
+                        fontSize:"25px",
+                        fontWeight:"600"
+                      }}
+                    >
+                      BJP
+                    </Typography>
+                  </Card>
+                {/* </Link> */}
+              </Carousel.Item>
+
+        <Carousel.Item width="20%">
+                {/* <Link to="/breakingnews" style={{ textDecoration: "none" }}> */}
+                  <Card >
+                    <CardMedia
+                      component="img"
+                      alt="Contemplative Reptile"
+                      height="200"
+                      image={congimg}
+                      title="Contemplative Reptile"
+                      sx={{ position: "relative" , height:"100px" , width:"100%" }}
+                      onClick={() => {
+                        console.log(Articles?.filter(item => item.subcategory[0] === "congress"), "BJPpppppp");
+                        navigate('/elections/politics/bjp', { state: { data: Articles?.filter(item => item.subcategory[0] === "congress") } });
+                      }}
+                    />
+                    <Typography
+                      sx={{
+                        // position: "absolute",
+                        top: "20%",
+                        width: "8-0%",
+                        textAlign: "center",
+                        color: "#011e29",
+                        backgroundColor: "none",
+                        fontFamily: "Poppins",
+                        fontSize:"25px",
+                        fontWeight:"600"
+                      }}
+                    >
+                      CONGRESS
+                    </Typography>
+                  </Card>
+                {/* </Link> */}
+              </Carousel.Item>
 
           <Carousel.Item>
             <div
