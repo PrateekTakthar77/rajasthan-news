@@ -86,7 +86,7 @@ function Elections() {
                     fontWeight: "700",
                     fontSize: "40px",
                     fontFamily: "Poppins",
-                  }} >ELECTIONS</div>
+                  }} >चुनाव</div>
                   <img src={election} style={{
                     height: "160px",
                     width: "100%",
@@ -130,7 +130,7 @@ function Elections() {
                     fontWeight: "700",
                     fontSize: "40px",
                     fontFamily: "Poppins",
-                  }} >BJP</div>
+                  }} >बीजेपी</div>
                   <img src={bjpimg} style={{
                     height: "160px",
                     width: "100%",
@@ -173,7 +173,7 @@ function Elections() {
                     fontWeight: "700",
                     fontSize: "40px",
                     fontFamily: "Poppins",
-                  }} >CONGRESS</div>
+                  }} >कांग्रेस</div>
                   <img src={congimg} style={{
                     height: "160px",
                     width: "100%",
@@ -218,7 +218,7 @@ function Elections() {
                     fontWeight: "700",
                     fontSize: "40px",
                     fontFamily: "Poppins",
-                  }} >SAMAJWADI</div>
+                  }} >समाजवादी</div>
                   <img src={samaj} style={{
                     height: "160px",
                     width: "100%",
@@ -231,49 +231,7 @@ function Elections() {
               </Carousel.Item>
 
             
-              <Carousel.Item width="20%">
-                <div style={{
-                  position: "relative",
-                  display: "flex",
-                  flexDirection: "column",
-                  borderRadius: "10px",
-                  borderTopRightRadius: "10px",
-                  borderTopLeftRadius: "10px"
-                }}  onClick={() => {
-                  console.log(Articles?.filter(item => item.subcategory[0] === "samajwadi"), "BJPpppppp");
-                  navigate('/elections/politics/samajwadi', { state: { data: Articles?.filter(item => item.subcategory[0] === "samajwadi") } });
-                }}>
-                  <div style={{
-                    position: "absolute",
-                    top: "0",
-                    left: "0",
-                    height: "160px",
-                    width: "100%",
-                    backgroundColor: "black",
-                    opacity: "0.8",
-                    borderBottomRightRadius: "10px",
-                    borderBottomLeftRadius: "10px",
-                    borderTopRightRadius: "10px",
-                    borderTopLeftRadius: "10px",
-                    display: "flex",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    color: "#fff",
-                    fontWeight: "700",
-                    fontSize: "40px",
-                    fontFamily: "Poppins",
-                  }} >SAMAJWADI</div>
-                  <img src={shivsena} style={{
-                    height: "160px",
-                    width: "100%",
-                    borderBottomLeftRadius: "10px",
-                    borderBottomRightRadius: "10px",
-                    borderTopRightRadius: "10px",
-                    borderTopLeftRadius: "10px"
-                  }} />
-                </div>
-              </Carousel.Item>
-
+            
 
               
                <Carousel.Item width="20%">
@@ -307,7 +265,7 @@ function Elections() {
                     fontWeight: "700",
                     fontSize: "40px",
                     fontFamily: "Poppins",
-                  }} >SHIV SENA</div>
+                  }} >शिव सेना</div>
                   <img src={shivsena} style={{
                     height: "160px",
                     width: "100%",
@@ -350,7 +308,7 @@ function Elections() {
                     fontWeight: "700",
                     fontSize: "40px",
                     fontFamily: "Poppins",
-                  }} >DMK</div>
+                  }} >डीएमके</div>
                   <img src={dmk} style={{
                     height: "160px",
                     width: "100%",
@@ -393,7 +351,7 @@ function Elections() {
                     fontWeight: "700",
                     fontSize: "40px",
                     fontFamily: "Poppins",
-                  }} >OTHERS</div>
+                  }} >अन्य</div>
                   <img src={other} style={{
                     height: "160px",
                     width: "100%",
