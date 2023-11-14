@@ -106,14 +106,14 @@ function Header(props) {
             <Typography
               variant="h6"
               component="div"
-              style={{ fontSize: "30px"  , fontFamily:"Poppins" , fontWeight:"600"}}
+              style={{ fontSize: "30px"  , fontFamily:"Poppins" , fontWeight:"600", marginLeft:"43px"}}
             >
                आज का समाचार
                            </Typography>
           </Link>
-          <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
+          <Box sx={{ display: { xs: 'none', sm: 'block' } , marginRight:"35px"}}>
             {navItems.map((item, index) => (
-              <Button key={index} sx={{ color: '#fff', fontSize: "25px", fontFamily:"Poppins" , fontWeight:"400", ...buttonHoverStyle, }} onClick={() => { navigate(item?.to) }}>
+              <Button key={index} sx={{ color: '#fff', fontSize: "20px", fontFamily:"Poppins" , fontWeight:"400", ...buttonHoverStyle, }} onClick={() => { navigate(item?.to) }}>
                 {item?.name}
               </Button>
             ))}

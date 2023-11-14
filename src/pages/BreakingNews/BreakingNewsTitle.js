@@ -19,15 +19,15 @@ const BreakingNewsTitle = () => {
     }, [])
     return (
         <Grid container sx={{ textDecoration: "none" }}>
-            <Grid item xs={12} sm={12} md={0.5} lg={0.5} ></Grid>
-            <Grid item xs={12} sm={12} md={11} lg={11} sx={{ textDecoration: "none" }}>
+            <Grid item xs={12} sm={12} md={0.4} lg={0.4} ></Grid>
+            <Grid item xs={12} sm={12} md={11.2} lg={11.2} sx={{ textDecoration: "none" }}>
                 <Link to="/breakingnews" style={{ textDecoration: "none" }}>
                     <Box sx={{
                         height: 'auto',
                         backgroundColor: 'red',
                         margin: '0 auto',
                         marginTop: 10,
-                        borderRadius: '20px',
+                        borderRadius: '5px',
                         marginLeft: "20px",
                         marginRight: "20px",
                         // marginBottom: "10px",
@@ -36,6 +36,7 @@ const BreakingNewsTitle = () => {
                         flexDirection: 'row',
                         animation: 'blink 3s infinite', // Apply the animation
                     }}>
+                        
                         <Typography sx={{
                             fontSize: "20px",
                             fontFamily: "Poppins",
@@ -50,6 +51,7 @@ const BreakingNewsTitle = () => {
                         }}>
                             BREAKING NEWS
                         </Typography>
+
                         <Divider sx={{
                             width: '0.2%',
                             marginLeft: '22px',
@@ -82,7 +84,7 @@ const BreakingNewsTitle = () => {
                     </Box>
                 </Link>
             </Grid>
-            <Grid item xs={12} sm={12} md={0.5} lg={0.5} >
+            <Grid item xs={12} sm={12} md={0.4} lg={0.4} >
             </Grid>
             <style>
                 {`

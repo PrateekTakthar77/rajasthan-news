@@ -25,6 +25,7 @@ import add2 from "../../assets/images/add2.jpeg"
 import add3 from "../../assets/images/add3.jpeg"
 import add4 from "../../assets/images/add4.jpeg"
 import add5 from "../../assets/images/add5.jpeg"
+import advert from "../../assets/images/Uttarakhand.jpg"
 
 // import ElectionsSubcategory from './ElectionsSubcategory';
 function Elections() {
@@ -38,294 +39,401 @@ function Elections() {
 
   return (
     <>
-      <div className="carousel-container">
-        <Carousel cols={4} rows={1} gap={10} loop={true} dotColorActive='#795548' dotColorInactive='#ccc'>
+      <Grid container  >
+        <Grid item xs={12} sm={12} lg={0.4} md={0.4}
+          sx={{
+            // backgroundColor:"pink"
+          }}>
+
+        </Grid>
+
+        <Grid item xs={12} sm={12} lg={11.2} md={11.2} >
+          <div className="carousel-container" style={{
+            // backgroundColor:"red"
+          }}>
+            <Carousel cols={4} rows={1} gap={10} loop={true} dotColorActive='#795548' dotColorInactive='#ccc'>
 
 
-        <Carousel.Item width="20%">
-                {/* <Link to="/breakingnews" style={{ textDecoration: "none" }}> */}
-                  <Card >
-                    <CardMedia
-                      component="img"
-                      alt="Contemplative Reptile"
-                      height="200"
-                      image={election}
-                      title="Contemplative Reptile"
-                      sx={{ position: "relative" , height:"100px" , width:"100%" }}
-                      onClick={() => {
-                        console.log(Articles?.filter(item => item.subcategory[0] === "election"), "BJPpppppp");
-                        navigate('/elections/politics/election', { state: { data: Articles?.filter(item => item.subcategory[0] === "election") } });
-                      }}
-                    />
-                    <Typography
-                      sx={{
-                        // position: "absolute",
-                        top: "20%",
-                        width: "8-0%",
-                        textAlign: "center",
-                        color: "#011e29",
-                        backgroundColor: "none",
-                        fontFamily: "Poppins",
-                        fontSize:"25px",
-                        fontWeight:"600"
-                      }}
-                    >
-                      ELECTIONS
-                    </Typography>
-                  </Card>
-                {/* </Link> */}
+              <Carousel.Item width="20%">
+
+                <div style={{
+                  position: "relative",
+                  display: "flex",
+                  flexDirection: "column",
+                  borderRadius: "10px",
+                  borderTopRightRadius: "10px",
+                  borderTopLeftRadius: "10px"
+                }} onClick={() => {
+                  console.log(Articles?.filter(item => item.subcategory[0] === "election"), "BJPpppppp");
+                  navigate('/elections/politics/election', { state: { data: Articles?.filter(item => item.subcategory[0] === "election") } });
+                }}>
+                  <div style={{
+                    position: "absolute",
+                    top: "0",
+                    left: "0",
+                    height: "160px",
+                    width: "100%",
+                    backgroundColor: "black",
+                    opacity: "0.8",
+                    borderBottomRightRadius: "10px",
+                    borderBottomLeftRadius: "10px",
+                    borderTopRightRadius: "10px",
+                    borderTopLeftRadius: "10px",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    color: "#fff",
+                    fontWeight: "700",
+                    fontSize: "40px",
+                    fontFamily: "Poppins",
+                  }} >ELECTIONS</div>
+                  <img src={election} style={{
+                    height: "160px",
+                    width: "100%",
+                    borderBottomLeftRadius: "10px",
+                    borderBottomRightRadius: "10px",
+                    borderTopRightRadius: "10px",
+                    borderTopLeftRadius: "10px"
+                  }} />
+                </div>
               </Carousel.Item>
 
-        <Carousel.Item width="20%">
-                {/* <Link to="/breakingnews" style={{ textDecoration: "none" }}> */}
-                  <Card >
-                    <CardMedia
-                      component="img"
-                      alt="Contemplative Reptile"
-                      height="200"
-                      image={bjpimg}
-                      title="Contemplative Reptile"
-                      sx={{ position: "relative" , height:"100px" , width:"100%" }}
-                      onClick={() => {
-                        console.log(Articles?.filter(item => item.subcategory[0] === "bjp"), "BJPpppppp");
-                        navigate('/elections/politics/bjp', { state: { data: Articles?.filter(item => item.subcategory[0] === "bjp") } });
-                      }}
-                    />
-                    <Typography
-                      sx={{
-                        // position: "absolute",
-                        top: "20%",
-                        width: "8-0%",
-                        textAlign: "center",
-                        color: "#011e29",
-                        backgroundColor: "none",
-                        fontFamily: "Poppins",
-                        fontSize:"25px",
-                        fontWeight:"600"
-                      }}
-                    >
-                      BJP
-                    </Typography>
-                  </Card>
-                {/* </Link> */}
-              </Carousel.Item>
 
-        <Carousel.Item width="20%">
-                {/* <Link to="/breakingnews" style={{ textDecoration: "none" }}> */}
-                  <Card >
-                    <CardMedia
-                      component="img"
-                      alt="Contemplative Reptile"
-                      height="200"
-                      image={congimg}
-                      title="Contemplative Reptile"
-                      sx={{ position: "relative" , height:"100px" , width:"100%" }}
-                      onClick={() => {
-                        console.log(Articles?.filter(item => item.subcategory[0] === "congress"), "BJPpppppp");
-                        navigate('/elections/politics/congress', { state: { data: Articles?.filter(item => item.subcategory[0] === "congress") } });
-                      }}
-                    />
-                    <Typography
-                      sx={{
-                        // position: "absolute",
-                        top: "20%",
-                        width: "8-0%",
-                        textAlign: "center",
-                        color: "#011e29",
-                        backgroundColor: "none",
-                        fontFamily: "Poppins",
-                        fontSize:"25px",
-                        fontWeight:"600"
-                      }}
-                    >
-                      CONGRESS
-                    </Typography>
-                  </Card>
-                {/* </Link> */}
-              </Carousel.Item>
-
-          {/* <Carousel.Item>
-            <div
-              onClick={() => {
-                console.log(Articles?.filter(item => item.subcategory[0] === "bjp"), "BJPpppppp");
-                navigate('/elections/politics/bjp', { state: { data: Articles?.filter(item => item.subcategory[0] === "bjp") } });
-              }}
-              style={{ backgroundColor: "#011e29", height: "100px", width: "100%", display: "flex", alignItems: "center", justifyContent: "center", borderRadius: "10px" , transition: "background-color 0.3s"}}>
-              <h3 style={{ color: "#fff", fontFamily: "Poppins", fontSize: "30px", fontWeight: "700" }}>BJP</h3>
-            </div>
-          </Carousel.Item> */}
-
-
-          {/* <Carousel.Item>
-            <div
-              onClick={() => {
-                console.log(Articles?.filter(item => item.subcategory[0] === "congress"), "CONGOOooooooo");
-                navigate('/elections/politics/congress', { state: { data: Articles?.filter(item => item.subcategory[0] === "congress") } });
-              }}
-              style={{ backgroundColor: "#011e29", height: "100px", width: "100%", display: "flex", alignItems: "center", justifyContent: "center", borderRadius: "10px" , transition: "background-color 0.3s"}}>
-              <h3 style={{ color: "#fff", fontFamily: "Poppins", fontSize: "30px", fontWeight: "700" }}>CONGRESS</h3>
-            </div>
-          </Carousel.Item> */}
-
-<Carousel.Item width="20%">
-                {/* <Link to="/breakingnews" style={{ textDecoration: "none" }}> */}
-                  <Card >
-                    <CardMedia
-                      component="img"
-                      alt="Contemplative Reptile"
-                      height="200"
-                      image={samaj}
-                      title="Contemplative Reptile"
-                      sx={{ position: "relative" , height:"100px" , width:"100%" }}
-                      onClick={() => {
-                        console.log(Articles?.filter(item => item.subcategory[0] === "samajwadi"), "BJPpppppp");
-                        navigate('/elections/politics/samajwadi', { state: { data: Articles?.filter(item => item.subcategory[0] === "samajwadi") } });
-                      }}
-                    />
-                    <Typography
-                      sx={{
-                        // position: "absolute",
-                        top: "20%",
-                        width: "8-0%",
-                        textAlign: "center",
-                        color: "#011e29",
-                        backgroundColor: "none",
-                        fontFamily: "Poppins",
-                        fontSize:"25px",
-                        fontWeight:"600"
-                      }}
-                    >
-                      SAMAJWADI
-                    </Typography>
-                  </Card>
-                {/* </Link> */}
-              </Carousel.Item>
-
-          {/* <Carousel.Item>
-            <div
-              onClick={() => {
-                console.log(Articles?.filter(item => item.subcategory[0] === "samajwadi"), "CONGOOooooooo");
-                navigate('/elections/politics/samajwadi', { state: { data: Articles?.filter(item => item.subcategory[0] === "samajwadi") } });
-              }}
-              style={{ backgroundColor: "#011e29", height: "100px", width: "100%", display: "flex", alignItems: "center", justifyContent: "center", borderRadius: "10px" , transition: "background-color 0.3s"}}>
-              <h3 style={{ color: "#fff", fontFamily: "Poppins", fontSize: "30px", fontWeight: "700",  alignItems: "center", justifyContent: "center", textAlign:"center" }}>SAMAJWADI</h3>
-            </div>
-          </Carousel.Item> */}
-
-<Carousel.Item width="20%">
-                {/* <Link to="/breakingnews" style={{ textDecoration: "none" }}> */}
-                  <Card >
-                    <CardMedia
-                      component="img"
-                      alt="Contemplative Reptile"
-                      height="200"
-                      image={shivsena}
-                      title="Contemplative Reptile"
-                      sx={{ position: "relative" , height:"100px" , width:"100%" }}
-                      onClick={() => {
-                        console.log(Articles?.filter(item => item.subcategory[0] === "shiv sena"), "BJPpppppp");
-                        navigate('/elections/politics/shivsena', { state: { data: Articles?.filter(item => item.subcategory[0] === "shiv sena") } });
-                      }}
-                    />
-                    <Typography
-                      sx={{
-                        // position: "absolute",
-                        top: "20%",
-                        width: "8-0%",
-                        textAlign: "center",
-                        color: "#011e29",
-                        backgroundColor: "none",
-                        fontFamily: "Poppins",
-                        fontSize:"25px",
-                        fontWeight:"600"
-                      }}
-                    >
-                      SHIV SENA
-                    </Typography>
-                  </Card>
-                {/* </Link> */}
+              <Carousel.Item width="20%">
+                <div style={{
+                  position: "relative",
+                  display: "flex",
+                  flexDirection: "column",
+                  borderRadius: "10px",
+                  borderTopRightRadius: "10px",
+                  borderTopLeftRadius: "10px"
+                }} onClick={() => {
+                  console.log(Articles?.filter(item => item.subcategory[0] === "bjp"), "BJPpppppp");
+                  navigate('/elections/politics/bjp', { state: { data: Articles?.filter(item => item.subcategory[0] === "bjp") } });
+                }}>
+                  <div style={{
+                    position: "absolute",
+                    top: "0",
+                    left: "0",
+                    height: "160px",
+                    width: "100%",
+                    backgroundColor: "black",
+                    opacity: "0.8",
+                    borderBottomRightRadius: "10px",
+                    borderBottomLeftRadius: "10px",
+                    borderTopRightRadius: "10px",
+                    borderTopLeftRadius: "10px",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    color: "#fff",
+                    fontWeight: "700",
+                    fontSize: "40px",
+                    fontFamily: "Poppins",
+                  }} >BJP</div>
+                  <img src={bjpimg} style={{
+                    height: "160px",
+                    width: "100%",
+                    borderBottomLeftRadius: "10px",
+                    borderBottomRightRadius: "10px",
+                    borderTopRightRadius: "10px",
+                    borderTopLeftRadius: "10px"
+                  }} />
+                </div>
               </Carousel.Item>
 
               <Carousel.Item width="20%">
-                {/* <Link to="/breakingnews" style={{ textDecoration: "none" }}> */}
-                  <Card >
-                    <CardMedia
-                      component="img"
-                      alt="Contemplative Reptile"
-                      height="200"
-                      image={dmk}
-                      title="Contemplative Reptile"
-                      sx={{ position: "relative" , height:"100px" , width:"100%" }}
-                      onClick={() => {
-                        console.log(Articles?.filter(item => item.subcategory[0] === "dmk"), "BJPpppppp");
-                        navigate('/elections/politics/dmk', { state: { data: Articles?.filter(item => item.subcategory[0] === "dmk") } });
-                      }}
-                    />
-                    <Typography
-                      sx={{
-                        // position: "absolute",
-                        top: "20%",
-                        width: "8-0%",
-                        textAlign: "center",
-                        color: "#011e29",
-                        backgroundColor: "none",
-                        fontFamily: "Poppins",
-                        fontSize:"25px",
-                        fontWeight:"600"
-                      }}
-                    >
-                      DMK
-                    </Typography>
-                  </Card>
-                {/* </Link> */}
+                <div style={{
+                  position: "relative",
+                  display: "flex",
+                  flexDirection: "column",
+                  borderRadius: "10px",
+                  borderTopRightRadius: "10px",
+                  borderTopLeftRadius: "10px"
+                }}  onClick={() => {
+                  console.log(Articles?.filter(item => item.subcategory[0] === "congress"), "congressssss");
+                  navigate('/elections/politics/congress', { state: { data: Articles?.filter(item => item.subcategory[0] === "congress") } });
+                }}>
+                  <div style={{
+                    position: "absolute",
+                    top: "0",
+                    left: "0",
+                    height: "160px",
+                    width: "100%",
+                    backgroundColor: "black",
+                    opacity: "0.8",
+                    borderBottomRightRadius: "10px",
+                    borderBottomLeftRadius: "10px",
+                    borderTopRightRadius: "10px",
+                    borderTopLeftRadius: "10px",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    color: "#fff",
+                    fontWeight: "700",
+                    fontSize: "40px",
+                    fontFamily: "Poppins",
+                  }} >CONGRESS</div>
+                  <img src={congimg} style={{
+                    height: "160px",
+                    width: "100%",
+                    borderBottomLeftRadius: "10px",
+                    borderBottomRightRadius: "10px",
+                    borderTopRightRadius: "10px",
+                    borderTopLeftRadius: "10px"
+                  }} />
+                </div>
               </Carousel.Item>
+
+
+
               <Carousel.Item width="20%">
-                {/* <Link to="/breakingnews" style={{ textDecoration: "none" }}> */}
-                  <Card >
-                    <CardMedia
-                      component="img"
-                      alt="Contemplative Reptile"
-                      height="200"
-                      image={other}
-                      title="Contemplative Reptile"
-                      sx={{ position: "relative" , height:"100px" , width:"100%" }}
-                      onClick={() => {
-                        console.log(Articles?.filter(item => item.subcategory[0] === "other"), "BJPpppppp");
-                        navigate('/elections/politics/others', { state: { data: Articles?.filter(item => item.subcategory[0] === "other") } });
-                      }}
-                    />
-                    <Typography
-                      sx={{
-                        // position: "absolute",
-                        top: "20%",
-                        width: "8-0%",
-                        textAlign: "center",
-                        color: "#011e29",
-                        backgroundColor: "none",
-                        fontFamily: "Poppins",
-                        fontSize:"25px",
-                        fontWeight:"600"
-                      }}
-                    >
-                      OTHERS
-                    </Typography>
-                  </Card>
-                {/* </Link> */}
+                <div style={{
+                  position: "relative",
+                  display: "flex",
+                  flexDirection: "column",
+                  borderRadius: "10px",
+                  borderTopRightRadius: "10px",
+                  borderTopLeftRadius: "10px"
+                }} onClick={() => {
+                  console.log(Articles?.filter(item => item.subcategory[0] === "samajwadi"), "BJPpppppp");
+                  navigate('/elections/politics/samajwadi', { state: { data: Articles?.filter(item => item.subcategory[0] === "samajwadi") } });
+                }}>
+                  <div style={{
+                    position: "absolute",
+                    top: "0",
+                    left: "0",
+                    height: "160px",
+                    width: "100%",
+                    backgroundColor: "black",
+                    opacity: "0.8",
+                    borderBottomRightRadius: "10px",
+                    borderBottomLeftRadius: "10px",
+                    borderTopRightRadius: "10px",
+                    borderTopLeftRadius: "10px",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    color: "#fff",
+                    fontWeight: "700",
+                    fontSize: "40px",
+                    fontFamily: "Poppins",
+                  }} >SAMAJWADI</div>
+                  <img src={samaj} style={{
+                    height: "160px",
+                    width: "100%",
+                    borderBottomLeftRadius: "10px",
+                    borderBottomRightRadius: "10px",
+                    borderTopRightRadius: "10px",
+                    borderTopLeftRadius: "10px"
+                  }} />
+                </div>
+              </Carousel.Item>
+
+            
+              <Carousel.Item width="20%">
+                <div style={{
+                  position: "relative",
+                  display: "flex",
+                  flexDirection: "column",
+                  borderRadius: "10px",
+                  borderTopRightRadius: "10px",
+                  borderTopLeftRadius: "10px"
+                }}  onClick={() => {
+                  console.log(Articles?.filter(item => item.subcategory[0] === "samajwadi"), "BJPpppppp");
+                  navigate('/elections/politics/samajwadi', { state: { data: Articles?.filter(item => item.subcategory[0] === "samajwadi") } });
+                }}>
+                  <div style={{
+                    position: "absolute",
+                    top: "0",
+                    left: "0",
+                    height: "160px",
+                    width: "100%",
+                    backgroundColor: "black",
+                    opacity: "0.8",
+                    borderBottomRightRadius: "10px",
+                    borderBottomLeftRadius: "10px",
+                    borderTopRightRadius: "10px",
+                    borderTopLeftRadius: "10px",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    color: "#fff",
+                    fontWeight: "700",
+                    fontSize: "40px",
+                    fontFamily: "Poppins",
+                  }} >SAMAJWADI</div>
+                  <img src={shivsena} style={{
+                    height: "160px",
+                    width: "100%",
+                    borderBottomLeftRadius: "10px",
+                    borderBottomRightRadius: "10px",
+                    borderTopRightRadius: "10px",
+                    borderTopLeftRadius: "10px"
+                  }} />
+                </div>
               </Carousel.Item>
 
 
-        </Carousel>
-      </div >
+              
+               <Carousel.Item width="20%">
+                <div style={{
+                  position: "relative",
+                  display: "flex",
+                  flexDirection: "column",
+                  borderRadius: "10px",
+                  borderTopRightRadius: "10px",
+                  borderTopLeftRadius: "10px"
+                }}    onClick={() => {
+                  console.log(Articles?.filter(item => item.subcategory[0] === "shiv sena"), "BJPpppppp");
+                  navigate('/elections/politics/shivsena', { state: { data: Articles?.filter(item => item.subcategory[0] === "shiv sena") } });
+                }}>
+                  <div style={{
+                    position: "absolute",
+                    top: "0",
+                    left: "0",
+                    height: "160px",
+                    width: "100%",
+                    backgroundColor: "black",
+                    opacity: "0.8",
+                    borderBottomRightRadius: "10px",
+                    borderBottomLeftRadius: "10px",
+                    borderTopRightRadius: "10px",
+                    borderTopLeftRadius: "10px",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    color: "#fff",
+                    fontWeight: "700",
+                    fontSize: "40px",
+                    fontFamily: "Poppins",
+                  }} >SHIV SENA</div>
+                  <img src={shivsena} style={{
+                    height: "160px",
+                    width: "100%",
+                    borderBottomLeftRadius: "10px",
+                    borderBottomRightRadius: "10px",
+                    borderTopRightRadius: "10px",
+                    borderTopLeftRadius: "10px"
+                  }} />
+                </div>
+              </Carousel.Item>
 
-      <Box marginTop={5} sx={{ flexGrow: 1 }} >
+              <Carousel.Item width="20%">
+                <div style={{
+                  position: "relative",
+                  display: "flex",
+                  flexDirection: "column",
+                  borderRadius: "10px",
+                  borderTopRightRadius: "10px",
+                  borderTopLeftRadius: "10px"
+                }}     onClick={() => {
+                  console.log(Articles?.filter(item => item.subcategory[0] === "dmk"), "BJPpppppp");
+                  navigate('/elections/politics/dmk', { state: { data: Articles?.filter(item => item.subcategory[0] === "dmk") } });
+                }}>
+                  <div style={{
+                    position: "absolute",
+                    top: "0",
+                    left: "0",
+                    height: "160px",
+                    width: "100%",
+                    backgroundColor: "black",
+                    opacity: "0.8",
+                    borderBottomRightRadius: "10px",
+                    borderBottomLeftRadius: "10px",
+                    borderTopRightRadius: "10px",
+                    borderTopLeftRadius: "10px",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    color: "#fff",
+                    fontWeight: "700",
+                    fontSize: "40px",
+                    fontFamily: "Poppins",
+                  }} >DMK</div>
+                  <img src={dmk} style={{
+                    height: "160px",
+                    width: "100%",
+                    borderBottomLeftRadius: "10px",
+                    borderBottomRightRadius: "10px",
+                    borderTopRightRadius: "10px",
+                    borderTopLeftRadius: "10px"
+                  }} />
+                </div>
+              </Carousel.Item>
+
+              <Carousel.Item width="20%">
+                <div style={{
+                  position: "relative",
+                  display: "flex",
+                  flexDirection: "column",
+                  borderRadius: "10px",
+                  borderTopRightRadius: "10px",
+                  borderTopLeftRadius: "10px"
+                }}     onClick={() => {
+                  console.log(Articles?.filter(item => item.subcategory[0] === "other"), "BJPpppppp");
+                  navigate('/elections/politics/others', { state: { data: Articles?.filter(item => item.subcategory[0] === "other") } });
+                }}>
+                  <div style={{
+                    position: "absolute",
+                    top: "0",
+                    left: "0",
+                    height: "160px",
+                    width: "100%",
+                    backgroundColor: "black",
+                    opacity: "0.8",
+                    borderBottomRightRadius: "10px",
+                    borderBottomLeftRadius: "10px",
+                    borderTopRightRadius: "10px",
+                    borderTopLeftRadius: "10px",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    color: "#fff",
+                    fontWeight: "700",
+                    fontSize: "40px",
+                    fontFamily: "Poppins",
+                  }} >OTHERS</div>
+                  <img src={other} style={{
+                    height: "160px",
+                    width: "100%",
+                    borderBottomLeftRadius: "10px",
+                    borderBottomRightRadius: "10px",
+                    borderTopRightRadius: "10px",
+                    borderTopLeftRadius: "10px"
+                  }} />
+                </div>
+              </Carousel.Item>
+
+
+            </Carousel>
+          </div >
+
+        </Grid>
+        <Grid item xs={12} sm={12} lg={0.4} md={0.4} sx={{
+          // backgroundColor:"pink"
+        }}>
+
+        </Grid>
+      </Grid >
+
+
+      {/* CONTENT */}
+      <Box
+        marginTop={5}
+        sx={{ flexGrow: 1 }} >
 
         <Grid container >
-          <Grid item xs={12} sm={12} md={0.3} lg={0.3} marginTop={2}
-          // sx={{backgroundColor:"blue"}}
+
+          <Grid item xs={12} sm={12} md={0.5} lg={0.5}
+          // sx={{ backgroundColor: "yellow" }}
           >
           </Grid>
 
-          <Grid item xs={12} sm={12} md={8.7} lg={8.7} paddingBlock={2} >
+          <Grid item xs={12} sm={12} md={8.5} lg={8.5} paddingBlock={2} sx={{
+            // backgroundColor: "green", 
+            padding: "10px"
+          }} >
 
             <Box>
               <Grid container spacing={3}>
@@ -342,16 +450,24 @@ function Elections() {
 
           </Grid>
 
-          <Grid item xs={12} sm={12} md={3} lg={3} sx={{
-            marginTop: "16px",
+          <Grid item xs={12} sm={12} md={2.7} lg={2.7} sx={{
+
             display: "flex",
-            //  backgroundColor:"green",
+            // backgroundColor: "yellow",
             flexDirection: "column",
           }}>
-            <img src={add2} alt='add' style={{ width: "260px", height: "250px", alignSelf: "center" }} />
-            <img src={add3} alt='add' style={{ width: "260px", height: "250px", marginTop: "20px", alignSelf: "center" }} />
-            <img src={add5} alt='add' style={{ width: "260px", height: "250px", marginTop: "20px", alignSelf: "center" }} />
+            <a href="https://www.youtube.com/uttaranchalwasi" target="_blank" rel="noopener noreferrer">
+                <img src={advert} alt='add' style={{ width: "260px", height: "250px", alignSelf: "center" }} />
+              </a>
           </Grid>
+          <Grid item xs={12} sm={12} md={0.3} lg={0.3} sx={{
+
+            // backgroundColor: "yellow",
+
+          }}>
+
+          </Grid>
+
 
         </Grid>
 

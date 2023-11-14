@@ -25,7 +25,7 @@ function All() {
               {Articles?.map((result, index) => (
                 <HomeCard key={index} result={result} onClick={() => {
                   console.log('navigate');
-                  navigate(`/${result?.category[0]}/${result?.title}`, { state: { data: result } });
+                  navigate(`/${result?.category[0]}/${result?.subcategory[0]}/${result?.engtitle}`, { state: { data: result } });
                 }} />
               ))}
             </Grid>
