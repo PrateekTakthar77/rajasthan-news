@@ -66,6 +66,7 @@ function Elections() {
                 }} onClick={() => {
                   console.log(Articles?.filter(item => item.subcategory[0] === "election"), "BJPpppppp");
                   navigate('/elections/politics/election', { state: { data: Articles?.filter(item => item.subcategory[0] === "election") } });
+                  // navigate('/news/politics/election', { state: { data: Articles?.filter(item => item.subcategory[0] === "election") } });
                 }}>
                   <div style={{
                     position: "absolute",

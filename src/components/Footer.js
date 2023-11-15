@@ -21,7 +21,7 @@ export default function Footer() {
 
         }}>
           <Typography variant="h6" color="text.primary" gutterBottom style={{ fontSize: "25px" , fontFamily:"Poppins" ,fontWeight:"600"}}>
-            राजस्थान-समाचार
+          आज का समाचार    
           </Typography>
         </Grid>
 
@@ -65,7 +65,7 @@ export default function Footer() {
       </Grid>
     </Box >
 
-    <Box sx={{ backgroundColor: "#A8A8A8"}}>
+    <Box sx={{ backgroundColor: "#A8A8A8" }}>
     <Grid item xs={12} sm={12} lg={2} md={2} sx={{
           backgroundColor:"red" 
         }}>
@@ -74,7 +74,7 @@ export default function Footer() {
         <Grid item xs={12} sm={12} lg={8} md={8} sx={{
           // backgroundColor:"blue" ,
         }}>
-          <Typography variant="body2" color="text.secondary" align="center">
+          <Typography variant="body2" color="text.secondary" align="center" sx={{paddingTop:"30px"}}>
             {"Copyright © "}
             <Link color="inherit" href="" style={{textDecoration:"none"}}>
               All right reserved , Website Designed , Developed & Maintained by JanusKoncepts

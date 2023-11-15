@@ -76,17 +76,23 @@ const FullNews = () => {
                 <Grid container>
 
                     <Grid item xs={12} sm={12} md={1} lg={1}>
-                        <Box sx={{backgroundColor:"red" , height:"100px" , width:"100%"}}>
+                        <Box sx={{
+                            // backgroundColor:"red" ,
+                             height:"100px" , width:"100%"}}>
 
                         </Box>
                     </Grid>
                     <Grid item xs={12} sm={12} md={10} lg={10}>
-                        <Box sx={{backgroundColor:"purple" , height:"100px" , width:"100%"}}>
+                        <Box sx={{
+                            // backgroundColor:"purple" ,
+                             height:"100px" , width:"100%"}}>
 
                         </Box>
                     </Grid>
                     <Grid item xs={12} sm={12} md={1} lg={1}>
-                        <Box sx={{backgroundColor:"orange" , height:"100px" , width:"100%"}}>
+                        <Box sx={{
+                            // backgroundColor:"orange" ,
+                             height:"100px" , width:"100%"}}>
 
                         </Box>
                     </Grid>
@@ -94,7 +100,7 @@ const FullNews = () => {
                 </Grid>
             </Grid>
             <Grid xs={12} sm={12} md={0.3} lg={0.3} style={{
-                backgroundColor: "yellow",
+                // backgroundColor: "yellow",
                 // display: "flex",
                 // flexDirection: "column",
                 // backgroundColor:"red"
