@@ -37,6 +37,7 @@ const HomeCard = ({ result, onClick }) => {
                             fontFamily:"Poppins", 
                             fontWeight: "600",
                             textAlign: "justify",
+                            wordSpacing: "1px"
                            
                         }}>
                             {result?.title}

@@ -64,6 +64,7 @@ function Header(props) {
 
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
+      
       <Typography variant="h6" sx={{ my: 2  ,fontFamily:"Poppins" , fontWeight:"700" , fontSize:"25px" }}>
       आज का समाचार
       </Typography>

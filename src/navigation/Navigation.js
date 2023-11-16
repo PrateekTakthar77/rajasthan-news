@@ -26,13 +26,13 @@ import EducationSubcategory from '../pages/Education/EducationSubcategory';
 function Navigation() {
     return (
         <BrowserRouter>
-            <Header />
+           <Header/>
             <Routes>
                 <Route path='/' element={<Home />} />
                 <Route path='/:param1?/:param2?/:param3?' element={<FullNews />} />
                 <Route path='/elections' element={<Elections />} />
-                <Route path='/elections/:param1?/:param2?' element={<ElectionsSubcategory />} />
-                {/* <Route path='/news/:param1?/:param2?' element={<ElectionsSubcategory />} /> */}
+                {/* <Route path='/elections/:param1?/:param2?' element={<ElectionsSubcategory />} /> */}
+                <Route path='/news/:param1?/:param2?' element={<ElectionsSubcategory />} />
                 <Route path='/sports' element={<Sports />} />
                 <Route path='/game/:param1?/:param2?' element={<SportsSubcategory/>} />
                 <Route path='/education' element={<Education />} />
@@ -41,10 +41,14 @@ function Navigation() {
                 <Route path='/technology' element={<Technology/>} />
                 <Route path='/entertainment' element={<Entertainment/>} />
 
-                <Route path='/all' element={<All />} />
-                <Route path='/bjpnews' element={<BjpNews />} />
-                <Route path='/congressnews' element={<CongressNews />} />
-                <Route path='/sportsnews' element={<SportsNews />} />
+                {/* <Route path='/all' element={<All />} /> */}
+                <Route path='/todays-all-news' element={<All />} />
+                {/* <Route path='/bjpnews' element={<BjpNews />} /> */}
+                <Route path='/bjp-news' element={<BjpNews />} />
+                {/* <Route path='/congressnews' element={<CongressNews />} /> */}
+                <Route path='/congress-news' element={<CongressNews />} />
+                {/* <Route path='/sportsnews' element={<SportsNews />} /> */}
+                <Route path='/sports-news' element={<SportsNews />} />
                 <Route path='/jdunews' element={<JduNews/>} />
                 <Route path='/breakingnews' element={<BreakingNews />} />
                 <Route path='/others' element={<Others/>} />

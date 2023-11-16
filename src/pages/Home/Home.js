@@ -7,7 +7,7 @@ import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import BreakingNewsTitle from '../BreakingNews/BreakingNewsTitle';
 import Carousel from 'react-grid-carousel';
-
+import Header from "../../components/Header"
 import redTia from "../../assets/images/RedTriangle.png";
 
 
@@ -43,6 +43,8 @@ function Home() {
 
   return (
     <Box sx={{ flexGrow: 1, backgroundColor: "#fff" }}>
+
+      {/* <Header /> */}
       {/* ... your existing code ... */}
       {loading ? (
         <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh', flexDirection: "column" }}>
@@ -62,7 +64,7 @@ function Home() {
           <Grid container sx={{ marginTop: "15px" }}>
             <Grid item xs={12} sm={12} md={0.4} lg={0.4}></Grid>
             <Grid item xs={12} sm={12} md={11.2} lg={11.2}>
-              <Carousel cols={4} rows={1} gap={10} loop={true} showDots={false} dotColorActive='#795548' dotColorInactive='#ccc' style={{ padding: "10px" }}>
+              <Carousel cols={3} rows={1} gap={20} loop={true} showDots={false} dotColorActive='#795548' dotColorInactive='#ccc' style={{ padding: "10px" }}>
 
 
                 <Carousel.Item width="20%">
@@ -176,7 +178,7 @@ function Home() {
                 </Box>
 
                 <Box style={{ textDecoration: 'none' }}>
-                  <Link to={'/all'} style={{ textDecoration: 'none' }}>
+                  <Link to={'/todays-all-news'} style={{ textDecoration: 'none' }}>
                     <Typography style={{ textDecoration: 'none', color: 'red', fontSize: "12px", fontWeight: "700", fontFamily: "Poppins" }}>
                       और देखें
                     </Typography>
@@ -203,7 +205,7 @@ function Home() {
                   <img src={redTia} style={{ width: "28px", height: "28px", marginTop: "10px", marginLeft: "10px" }} />
                 </Box>
                 <Box style={{ textDecoration: 'none' }}>
-                  <Link to={'/bjpnews'} style={{ textDecoration: 'none' }}>
+                  <Link to={'/bjp-news'} style={{ textDecoration: 'none' }}>
                     <Typography style={{ textDecoration: 'none', color: 'red', fontSize: "12px", fontWeight: "700", fontFamily: "Poppins" }}>
                       और देखें
                     </Typography>
@@ -233,7 +235,7 @@ function Home() {
                   <img src={redTia} style={{ width: "28px", height: "28px", marginTop: "10px", marginLeft: "10px" }} />
                 </Box>
                 <Box style={{ textDecoration: 'none' }}>
-                  <Link to={'/congressnews'} style={{ textDecoration: 'none' }}>
+                  <Link to={'/congress-news'} style={{ textDecoration: 'none' }}>
                     <Typography style={{ textDecoration: 'none', color: 'red', fontSize: "12px", fontWeight: "700", fontFamily: "Poppins" }}>
                       और देखें
                     </Typography>
@@ -260,7 +262,7 @@ function Home() {
                   <img src={redTia} style={{ width: "28px", height: "28px", marginTop: "10px", marginLeft: "10px" }} />
                 </Box>
                 <Box style={{ textDecoration: 'none' }}>
-                  <Link to={'/sportsnews'} style={{ textDecoration: 'none' }}>
+                  <Link to={'/sports-news'} style={{ textDecoration: 'none' }}>
                     <Typography style={{ textDecoration: 'none', color: 'red', fontSize: "12px", fontWeight: "700", fontFamily: "Poppins" }}>
                       और देखें
                     </Typography>
@@ -270,7 +272,7 @@ function Home() {
 
               <Box>
                 <Grid container spacing={3}>
-                  {Articles?.filter(item => item.subcategory[0] === "sports" || item.subcategory[0] === "cricket").map((result, index) => index < 6 && (
+                  {Articles?.filter(item => item.subcategory[0] === "cricket" || item.subcategory[0] === "sports-news").map((result, index) => index < 6 && (
                     <HomeCard key={index} result={result} onClick={() => {
                       console.log('navigate');
                       navigate(`/${result?.category[0]}/${result?.subcategory[0]}/${result?.engtitle}`, { state: { data: result } });
@@ -286,7 +288,7 @@ function Home() {
 
 
             <Grid item xs={12} sm={12} md={2.7} lg={2.7}
-              sx={{ display: "flex", flexDirection: "column" , marginTop:"80px" }}>
+              sx={{ display: "flex", flexDirection: "column", marginTop: "80px" }}>
               <a href="https://www.youtube.com/uttaranchalwasi" target="_blank" rel="noopener noreferrer">
                 <img src={advert} alt='add' style={{ width: "260px", height: "250px", alignSelf: "center" }} />
               </a>

@@ -37,7 +37,14 @@ const FullNews = () => {
             >
                 <Box style={{ display: "flex", flexDirection: "row", padding: "10px" }}>
                     <img src={R2} style={{ height: "20px", width: "20px", marginTop: "4px", marginRight: "5px", }} />
-                    <Typography variant="h4" component="div" style={{ color: "#D2122E", fontSize: "25px", fontFamily: "Poppins", fontWeight: "600", textAlign: "justify", }}>
+                    <Typography variant="h4" component="div" style={{ 
+                        color: "#D2122E", 
+                        fontSize: "25px", 
+                        fontFamily: "Poppins", 
+                        fontWeight: "600", 
+                        textAlign: "justify", 
+                        // wordSpacing: "-1px"
+                        }}>
                         {state?.data?.title}
                     </Typography>
                 </Box>
