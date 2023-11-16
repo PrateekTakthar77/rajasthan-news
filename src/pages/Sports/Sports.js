@@ -10,6 +10,8 @@ import { useSelector } from 'react-redux';
 
 import "./SportsCarousel.css"
 
+import advert from "../../assets/images/Uttarakhand.jpg"
+
 import add1 from "../../assets/images/add1.jpeg"
 import add2 from "../../assets/images/add2.jpeg"
 import add3 from "../../assets/images/add3.jpeg"
@@ -121,16 +123,20 @@ function Sports() {
 
           </Grid>
 
-          <Grid item xs={12} sm={12} md={2.7} lg={2.7} sx={{
+          <Grid item xs={12} sm={12} md={2.7} lg={2.7}
+              sx={{ display: "flex", flexDirection: "column", marginTop: "10px" }}>
+              <Box sx={{display:"flex" , flexDirection:"column" , alignItems:"center"}}>
+              <a href="https://www.youtube.com/uttaranchalwasi" target="_blank" rel="noopener noreferrer" sx={{textDecoration:"none"}}>
+                <Box sx={{ backgroundColor: "gray", width: "290px", height: "15px", alignSelf: "center" }}>
+                  <Typography sx={{textAlign:"center" , fontSize:"12px" , color:"black" , textDecoration:"none"}}>ADVERTISEMENT</Typography>
+                </Box>
+               
+                  <img src={advert} alt='add' style={{ width: "290px", height: "280px", alignSelf: "center" }} />
+                </a>
+              </Box>
 
-            display: "flex",
-            //  backgroundColor:"purple",
-            flexDirection: "column",
-          }}>
-            <img src={add2} alt='add' style={{ width: "260px", height: "250px", alignSelf: "center" }} />
-            <img src={add3} alt='add' style={{ width: "260px", height: "250px", marginTop: "20px", alignSelf: "center" }} />
-            <img src={add5} alt='add' style={{ width: "260px", height: "250px", marginTop: "20px", alignSelf: "center" }} />
-          </Grid>
+
+            </Grid>
           <Grid item xs={12} sm={12} md={0.3} lg={0.3} sx={{
             // backgroundColor:"purple",
           }} >

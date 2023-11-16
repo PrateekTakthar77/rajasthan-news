@@ -42,7 +42,7 @@ function Navigation() {
                 <Route path='/entertainment' element={<Entertainment/>} />
 
                 {/* <Route path='/all' element={<All />} /> */}
-                <Route path='/todays-all-news' element={<All />} />
+                <Route path='/all-news' element={<All />} />
                 {/* <Route path='/bjpnews' element={<BjpNews />} /> */}
                 <Route path='/bjp-news' element={<BjpNews />} />
                 {/* <Route path='/congressnews' element={<CongressNews />} /> */}

@@ -178,8 +178,8 @@ function Home() {
                 </Box>
 
                 <Box style={{ textDecoration: 'none' }}>
-                  <Link to={'/todays-all-news'} style={{ textDecoration: 'none' }}>
-                    <Typography style={{ textDecoration: 'none', color: 'red', fontSize: "12px", fontWeight: "700", fontFamily: "Poppins" }}>
+                  <Link to={'/all-news'} style={{ textDecoration: 'none' }}>
+                    <Typography style={{ textDecoration: 'none', color: 'red', fontSize: "12px", fontWeight: "700", fontFamily: "Poppins" , margin:"15px" }}>
                       और देखें
                     </Typography>
                   </Link>
@@ -206,7 +206,7 @@ function Home() {
                 </Box>
                 <Box style={{ textDecoration: 'none' }}>
                   <Link to={'/bjp-news'} style={{ textDecoration: 'none' }}>
-                    <Typography style={{ textDecoration: 'none', color: 'red', fontSize: "12px", fontWeight: "700", fontFamily: "Poppins" }}>
+                    <Typography style={{ textDecoration: 'none', color: 'red', fontSize: "12px", fontWeight: "700", fontFamily: "Poppins" ,  margin:"15px" }}>
                       और देखें
                     </Typography>
                   </Link>
@@ -229,14 +229,14 @@ function Home() {
 
               {/* --------CONGRESS NEWS------------------------------------------------ */}
 
-              <Box display="flex" justifyContent="space-between">
+              <Box display="flex" justifyContent="space-between" sx={{ paddingTop: '15px' }}>
                 < Box style={{ display: "flex", flexDirection: "row" }}>
                   <Typography style={{ fontSize: "35px", fontWeight: "700", fontStyle: "italic", fontFamily: "Poppins" }}>CONGRESS</Typography>
                   <img src={redTia} style={{ width: "28px", height: "28px", marginTop: "10px", marginLeft: "10px" }} />
                 </Box>
                 <Box style={{ textDecoration: 'none' }}>
                   <Link to={'/congress-news'} style={{ textDecoration: 'none' }}>
-                    <Typography style={{ textDecoration: 'none', color: 'red', fontSize: "12px", fontWeight: "700", fontFamily: "Poppins" }}>
+                    <Typography style={{ textDecoration: 'none', color: 'red', fontSize: "12px", fontWeight: "700", fontFamily: "Poppins" ,  margin:"15px"  }}>
                       और देखें
                     </Typography>
                   </Link>
@@ -263,7 +263,7 @@ function Home() {
                 </Box>
                 <Box style={{ textDecoration: 'none' }}>
                   <Link to={'/sports-news'} style={{ textDecoration: 'none' }}>
-                    <Typography style={{ textDecoration: 'none', color: 'red', fontSize: "12px", fontWeight: "700", fontFamily: "Poppins" }}>
+                    <Typography style={{ textDecoration: 'none', color: 'red', fontSize: "12px", fontWeight: "700", fontFamily: "Poppins" , margin:"15px"  }}>
                       और देखें
                     </Typography>
                   </Link>
@@ -288,10 +288,17 @@ function Home() {
 
 
             <Grid item xs={12} sm={12} md={2.7} lg={2.7}
-              sx={{ display: "flex", flexDirection: "column", marginTop: "80px" }}>
-              <a href="https://www.youtube.com/uttaranchalwasi" target="_blank" rel="noopener noreferrer">
-                <img src={advert} alt='add' style={{ width: "260px", height: "250px", alignSelf: "center" }} />
-              </a>
+              sx={{ display: "flex", flexDirection: "column", marginTop: "78px" }}>
+              <Box sx={{display:"flex" , flexDirection:"column" , alignItems:"center"}}>
+              <a href="https://www.youtube.com/uttaranchalwasi" target="_blank" rel="noopener noreferrer" sx={{textDecoration:"none"}}>
+                <Box sx={{ backgroundColor: "gray", width: "290px", height: "15px", alignSelf: "center" }}>
+                  <Typography sx={{textAlign:"center" , fontSize:"12px" , color:"black" , textDecoration:"none"}}>ADVERTISEMENT</Typography>
+                </Box>
+               
+                  <img src={advert} alt='add' style={{ width: "290px", height: "280px", alignSelf: "center" }} />
+                </a>
+              </Box>
+
 
             </Grid>
             <Grid xs={12} sm={12} md={0.3} lg={0.3}>

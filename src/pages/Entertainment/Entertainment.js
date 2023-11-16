@@ -10,6 +10,7 @@ import { useSelector } from 'react-redux';
 
 import Carousel from 'react-grid-carousel';
 
+
 import Button from '@mui/material/Button';
 
 import add1 from "../../assets/images/add1.jpeg"
@@ -126,16 +127,20 @@ function Entertainment() {
 
           </Grid>
 
-          <Grid item xs={12} sm={12} md={2.7} lg={2.7} sx={{
+          <Grid item xs={12} sm={12} md={2.7} lg={2.7}
+              sx={{ display: "flex", flexDirection: "column", marginTop: "10px" }}>
+              <Box sx={{display:"flex" , flexDirection:"column" , alignItems:"center"}}>
+              <a href="https://www.youtube.com/uttaranchalwasi" target="_blank" rel="noopener noreferrer" sx={{textDecoration:"none"}}>
+                <Box sx={{ backgroundColor: "gray", width: "290px", height: "15px", alignSelf: "center" }}>
+                  <Typography sx={{textAlign:"center" , fontSize:"12px" , color:"black" , textDecoration:"none"}}>ADVERTISEMENT</Typography>
+                </Box>
+               
+                  <img src={advert} alt='add' style={{ width: "290px", height: "280px", alignSelf: "center" }} />
+                </a>
+              </Box>
 
-            display: "flex",
-            //  backgroundColor:"purple",
-            flexDirection: "column",
-          }}>
-            <a href="https://www.youtube.com/uttaranchalwasi" target="_blank" rel="noopener noreferrer">
-                <img src={advert} alt='add' style={{ width: "260px", height: "250px", alignSelf: "center" }} />
-              </a>
-          </Grid>
+
+            </Grid>
           <Grid xs={12} sm={12} md={0.3} lg={0.3} sx={{
 
             //  backgroundColor:"purple",
