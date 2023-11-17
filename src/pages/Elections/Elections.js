@@ -55,7 +55,7 @@ function Elections() {
             <Carousel cols={4} rows={1} gap={10} loop={true} dotColorActive='#795548' dotColorInactive='#ccc'>
 
 
-              <Carousel.Item width="20%">
+              {/* <Carousel.Item width="20%">
 
                 <div style={{
                   position: "relative",
@@ -98,7 +98,7 @@ function Elections() {
                     borderTopLeftRadius: "10px"
                   }} />
                 </div>
-              </Carousel.Item>
+              </Carousel.Item> */}
 
 
               <Carousel.Item width="20%">
@@ -463,7 +463,9 @@ function Elections() {
           </Grid>
 
           <Grid item xs={12} sm={12} md={2.7} lg={2.7}
-              sx={{ display: "flex", flexDirection: "column", marginTop: "10px" }}>
+              sx={{ display: "flex", flexDirection: "column", marginTop: "10px" , 
+              // backgroundColor:"black" 
+              }}>
               <Box sx={{display:"flex" , flexDirection:"column" , alignItems:"center"}}>
               <a href="https://www.youtube.com/uttaranchalwasi" target="_blank" rel="noopener noreferrer" sx={{textDecoration:"none"}}>
                 <Box sx={{ backgroundColor: "gray", width: "290px", height: "15px", alignSelf: "center" }}>
@@ -478,7 +480,7 @@ function Elections() {
             </Grid>
           <Grid item xs={12} sm={12} md={0.3} lg={0.3} sx={{
 
-            // backgroundColor: "yellow",
+            // backgroundColor: "purple",
 
           }}>
 

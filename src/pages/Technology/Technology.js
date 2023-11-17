@@ -1,20 +1,15 @@
-import React, { useEffect } from 'react';
+import React, { useEffect } from 'react'
 import HomeCard from '../Home/HomeCard';
 import { Box, Typography, Grid } from '@mui/material';
+import { useNavigate } from 'react-router-dom';
+import { getArticles } from '../../Redux/actions/Home';
+import { useSelector } from 'react-redux';
 
 import Carousel from 'react-grid-carousel';
 import { Link } from 'react-router-dom';
 
-import { useNavigate } from 'react-router-dom';
-import { getArticles } from '../../Redux/actions/Home';
-import { useSelector } from 'react-redux';
+// images
 import advert from "../../assets/images/Uttarakhand.jpg"
-
-import add1 from "../../assets/images/add1.jpeg"
-import add2 from "../../assets/images/add2.jpeg"
-import add3 from "../../assets/images/add3.jpeg"
-import add4 from "../../assets/images/add4.jpeg"
-import add5 from "../../assets/images/add5.jpeg"
 
 function Technology() {
 
@@ -121,19 +116,19 @@ function Technology() {
           </Grid>
 
           <Grid item xs={12} sm={12} md={2.7} lg={2.7}
-              sx={{ display: "flex", flexDirection: "column", marginTop: "10px" }}>
-              <Box sx={{display:"flex" , flexDirection:"column" , alignItems:"center"}}>
-              <a href="https://www.youtube.com/uttaranchalwasi" target="_blank" rel="noopener noreferrer" sx={{textDecoration:"none"}}>
+            sx={{ display: "flex", flexDirection: "column", marginTop: "10px" }}>
+            <Box sx={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
+              <a href="https://www.youtube.com/uttaranchalwasi" target="_blank" rel="noopener noreferrer" sx={{ textDecoration: "none" }}>
                 <Box sx={{ backgroundColor: "gray", width: "290px", height: "15px", alignSelf: "center" }}>
-                  <Typography sx={{textAlign:"center" , fontSize:"12px" , color:"black" , textDecoration:"none"}}>ADVERTISEMENT</Typography>
+                  <Typography sx={{ textAlign: "center", fontSize: "12px", color: "black", textDecoration: "none" }}>ADVERTISEMENT</Typography>
                 </Box>
-               
-                  <img src={advert} alt='add' style={{ width: "290px", height: "280px", alignSelf: "center" }} />
-                </a>
-              </Box>
+
+                <img src={advert} alt='add' style={{ width: "290px", height: "280px", alignSelf: "center" }} />
+              </a>
+            </Box>
 
 
-            </Grid>
+          </Grid>
           <Grid item xs={12} sm={12} md={0.3} lg={0.3} sx={{
             // backgroundColor:"purple"
           }}></Grid>

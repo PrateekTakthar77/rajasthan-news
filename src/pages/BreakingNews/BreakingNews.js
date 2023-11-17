@@ -6,6 +6,7 @@ import { useSelector } from 'react-redux';
 
 import add2 from "../../assets/images/add2.jpeg"
 import add4 from "../../assets/images/add4.jpeg"
+import advert from "../../assets/images/Uttarakhand.jpg"
 
 
 const BreakingNews = () => {
@@ -24,13 +25,14 @@ const BreakingNews = () => {
 
                 <Grid container>
                     <Grid item xs={12} sm={12} lg={0.5} md={0.5}
-                        // style={{ backgroundColor: "yellow" }}
+                    // style={{ backgroundColor: "yellow" }}
                     ></Grid>
-                    <Grid item xs={12} sm={12} lg={8.5} md={8.5} sx={{ padding: "10px", 
-                    // backgroundColor: "green" 
+                    <Grid item xs={12} sm={12} lg={8.5} md={8.5} sx={{
+                        padding: "10px",
+                        // backgroundColor: "green" 
                     }} >
 
-                        <Box sx={{ display: "flex", flexDirection: "row", marginLeft: "11px", marginBottom: "40px" , marginTop:"20px"}}>
+                        <Box sx={{ display: "flex", flexDirection: "row", marginLeft: "11px", marginBottom: "40px", marginTop: "20px" }}>
                             <Typography sx={{ fontSize: "17px", fontFamily: "Poppins", fontWeight: "600", marginTop: "4px" }}>Hindi News</Typography>
                             <Typography sx={{ fontSize: "17px", fontFamily: "Poppins", fontWeight: "600", marginTop: "3px", padding: "4px" }}>  /  </Typography>
                             <Box sx={{ backgroundColor: "red", }}>
@@ -75,14 +77,16 @@ const BreakingNews = () => {
                     </Grid>
 
                     <Grid item xs={12} sm={12} md={2.7} lg={2.7}
-                        style={{
-                            // backgroundColor: "purple",
-                            display: "flex",
-                            flexDirection: "column",
-                        }}
-                    >
-                        <img src={add2} style={{ width: "260px", height: "250px", marginTop: "20px" ,alignSelf:"center" }} />
-                        <img src={add4} style={{ width: "260px", height: "250px", marginTop: "20px" ,alignSelf:"center"  }} />
+                        sx={{ display: "flex", flexDirection: "column", marginTop: "30px" }}>
+                        <Box sx={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
+                            <a href="https://www.youtube.com/uttaranchalwasi" target="_blank" rel="noopener noreferrer" sx={{ textDecoration: "none" }}>
+                                <Box sx={{ backgroundColor: "gray", width: "290px", height: "15px", alignSelf: "center" }}>
+                                    <Typography sx={{ textAlign: "center", fontSize: "12px", color: "black", textDecoration: "none" }}>ADVERTISEMENT</Typography>
+                                </Box>
+
+                                <img src={advert} alt='add' style={{ width: "290px", height: "280px", alignSelf: "center" }} />
+                            </a>
+                        </Box>
                     </Grid>
                     <Grid item xs={12} sm={12} md={0.3} lg={0.3}>
 

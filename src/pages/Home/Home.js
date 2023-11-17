@@ -9,6 +9,7 @@ import BreakingNewsTitle from '../BreakingNews/BreakingNewsTitle';
 import Carousel from 'react-grid-carousel';
 import Header from "../../components/Header"
 import redTia from "../../assets/images/RedTriangle.png";
+import { Helmet } from 'react-helmet';
 
 
 import breakingnews from "../../assets/images/breakingNews.jpeg"
@@ -42,6 +43,12 @@ function Home() {
 
 
   return (
+    <>
+       <Helmet>
+                <title>आज की बड़ी खबर: ताजगी से रिलेटेड समाचार</title>
+                <meta name="description" content="दिनभर की ब्रेकिंग न्यूज़, आज की मुख्य समाचार, ताजगी से जुड़े हलचल। नवीनतम और अद्यतित समाचारों के लिए हमारे साथ रहें" />
+                <meta name="keywords" content="news" />
+            </Helmet>
     <Box sx={{ flexGrow: 1, backgroundColor: "#fff" }}>
 
       {/* <Header /> */}
@@ -298,9 +305,8 @@ function Home() {
                   <img src={advert} alt='add' style={{ width: "290px", height: "280px", alignSelf: "center" }} />
                 </a>
               </Box>
-
-
             </Grid>
+
             <Grid xs={12} sm={12} md={0.3} lg={0.3}>
 
             </Grid>
@@ -308,6 +314,7 @@ function Home() {
         </Box >
       )}
     </Box>
+    </>
   )
 }
 
