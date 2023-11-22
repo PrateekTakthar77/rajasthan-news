@@ -34,10 +34,10 @@ const HomeCard = ({ result, onClick }) => {
                                     WebkitBoxOrient: 'vertical',
                                     WebkitLineClamp: 2,
                                     color: "#D2122E",
-                                    fontSize: "18px",
-                                    fontFamily: "Poppins",
+                                    fontSize: "20px",
+                                    fontFamily: "'Noto Sans', sans-serif",
                                     fontWeight: "600",
-                                    textAlign: "justify",
+                                    // textAlign: "justify",
                                     wordSpacing: "1px"
 
                                 }}>
@@ -49,10 +49,10 @@ const HomeCard = ({ result, onClick }) => {
                                     WebkitBoxOrient: 'vertical',
                                     WebkitLineClamp: 3,
                                     color: "black",
-                                    fontSize: "15px",
+                                    fontSize: "17px",
                                     fontWeight: "500",
-                                    fontFamily: "Poppins",
-                                    textAlign: "justify"
+                                    fontFamily: "'Noto Sans', sans-serif",
+                                    // textAlign: "justify"
                                 }} dangerouslySetInnerHTML={createMarkup(result?.description)} />
                             </Box>
                         </CardContent>

@@ -33,10 +33,10 @@ const BreakingNews = () => {
                     }} >
 
                         <Box sx={{ display: "flex", flexDirection: "row", marginLeft: "11px", marginBottom: "40px", marginTop: "20px" }}>
-                            <Typography sx={{ fontSize: "17px", fontFamily: "Poppins", fontWeight: "600", marginTop: "4px" }}>Hindi News</Typography>
-                            <Typography sx={{ fontSize: "17px", fontFamily: "Poppins", fontWeight: "600", marginTop: "3px", padding: "4px" }}>  /  </Typography>
+                            <Typography sx={{ fontSize: "17px", fontFamily: "'Noto Sans', sans-serif", fontWeight: "600", marginTop: "4px" }}>Hindi News</Typography>
+                            <Typography sx={{ fontSize: "17px", fontFamily: "'Noto Sans', sans-serif", fontWeight: "600", marginTop: "3px", padding: "4px" }}>  /  </Typography>
                             <Box sx={{ backgroundColor: "red", }}>
-                                <Typography sx={{ padding: "3px", fontSize: "17px", fontFamily: "Poppins", fontWeight: "600", color: "#fff", marginTop: "3px" }}>ब्रेकिंग न्यूज़</Typography>
+                                <Typography sx={{ padding: "3px", fontSize: "17px", fontFamily: "'Noto Sans', sans-serif", fontWeight: "600", color: "#fff", marginTop: "3px" }}>ब्रेकिंग न्यूज़</Typography>
                             </Box>
                         </Box>
 
@@ -56,7 +56,7 @@ const BreakingNews = () => {
                                     <Typography key={index} result={result} onClick={() => {
                                         console.log('navigate');
                                         navigate(`/${result?.category[0]}/${result?.subcategory[0]}/${result?.engtitle}`, { state: { data: result } });
-                                    }} style={{ fontSize: "20px", fontWeight: "600", fontFamily: "Poppins", color: "#D2122E" }}>{result?.title}</Typography>
+                                    }} style={{ fontSize: "20px", fontWeight: "600", fontFamily: "'Noto Sans', sans-serif", color: "#D2122E" }}>{result?.title}</Typography>
                                 </Grid>
 
                                 <Grid item xs={12} sm={12} lg={2.5} md={2.5}

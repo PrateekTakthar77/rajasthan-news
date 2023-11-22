@@ -138,9 +138,9 @@ function Footer() {
           <Grid item xs={12}>
 
             <Typography variant="body2" color="text.secondary" align="center" sx={{ paddingTop: "10px" }}>
-              {"Copyright © "}
+              {"© 2023 Todaympnews | All Rights Reserved "}
               <Link color="inherit" style={{ textDecoration: "none" }} href="https://www.todaympnews.com/">
-                All right reserved , Website Designed , Developed & Maintained by JanusKoncepts
+                Website Designed , Developed & Maintained by JanusKoncepts
               </Link>
               {new Date().getFullYear()}
             </Typography>

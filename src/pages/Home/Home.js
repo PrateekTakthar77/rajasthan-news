@@ -23,6 +23,7 @@ import CircularProgress from '@mui/material/CircularProgress';
 
 
 import add1 from "../../assets/images/add1.jpeg"
+import breakingnewsimage from "../../assets/images/cover-lg.jpeg"
 
 import add3 from "../../assets/images/add3.jpeg"
 import add4 from "../../assets/images/add4.jpeg"
@@ -56,7 +57,7 @@ function Home() {
       {loading ? (
         <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh', flexDirection: "column" }}>
           <CircularProgress style={{ color: '#0a2351' }} />
-          <Typography style={{ fontFamily: "Poppins", fontSize: "15px", fontWeight: "500", marginTop: "10px" }} >Loading...</Typography>
+          <Typography style={{ fontFamily: "'Noto Sans', sans-serif" , fontSize: "15px", fontWeight: "500", marginTop: "10px" }} >Loading...</Typography>
         </div>
       ) : (
         <Box sx={{ flexGrow: 1, backgroundColor: "#fff" }} style={{}} >
@@ -71,6 +72,7 @@ function Home() {
           <Grid container sx={{ marginTop: "15px" }}>
             <Grid item xs={12} sm={12} md={0.4} lg={0.4}></Grid>
             <Grid item xs={12} sm={12} md={11.2} lg={11.2}>
+
               <Carousel cols={3} rows={1} gap={20} loop={true} showDots={false} dotColorActive='#795548' dotColorInactive='#ccc' style={{ padding: "10px" }}>
 
 
@@ -81,7 +83,7 @@ function Home() {
                         position: "absolute", top: "0", left: "0", height: "160px", width: "100%", backgroundColor: "black", opacity: "0.8", borderBottomRightRadius: "10px", borderBottomLeftRadius: "10px", borderTopRightRadius: "10px", borderTopLeftRadius: "10px", display: "flex", justifyContent: "center", alignItems: "center", color: "#fff", fontWeight: "700",
                         fontSize: "40px", fontFamily: "Poppins"
                       }}>ब्रेकिंग न्यूज</div>
-                      <img src={breakingnews} style={{ height: "160px", width: "100%", borderBottomLeftRadius: "10px", borderBottomRightRadius: "10px", borderTopRightRadius: "10px", borderTopLeftRadius: "10px" }} />
+                      <img src={breakingnewsimage} style={{ height: "160px", width: "100%", borderBottomLeftRadius: "10px", borderBottomRightRadius: "10px", borderTopRightRadius: "10px", borderTopLeftRadius: "10px" }} />
                     </div>
                   </Link>
                 </Carousel.Item>
@@ -186,7 +188,7 @@ function Home() {
 
                 <Box style={{ textDecoration: 'none' }}>
                   <Link to={'/all-news'} style={{ textDecoration: 'none' }}>
-                    <Typography style={{ textDecoration: 'none', color: 'red', fontSize: "12px", fontWeight: "700", fontFamily: "Poppins" , margin:"15px" }}>
+                    <Typography style={{ textDecoration: 'none', color: 'red', fontSize: "12px", fontWeight: "700", fontFamily: "'Noto Sans', sans-serif" , margin:"15px" }}>
                       और देखें
                     </Typography>
                   </Link>

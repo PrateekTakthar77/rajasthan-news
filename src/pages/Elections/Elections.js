@@ -18,6 +18,7 @@ import shivsena from "../../assets/images/shivsena2.webp"
 import dmk from "../../assets/images/dmk2.webp"
 import election from "../../assets/images/electionlogo.png"
 import other from "../../assets/images/others.png"
+import todaynews from "../../assets/images/todaynews.webp"
 import aapparty from "../../assets/images/aap-party.jpeg"
 
 
@@ -55,7 +56,7 @@ function Elections() {
             <Carousel cols={4} rows={1} gap={10} loop={true} dotColorActive='#795548' dotColorInactive='#ccc'>
 
 
-              {/* <Carousel.Item width="20%">
+              <Carousel.Item width="20%">
 
                 <div style={{
                   position: "relative",
@@ -65,9 +66,9 @@ function Elections() {
                   borderTopRightRadius: "10px",
                   borderTopLeftRadius: "10px"
                 }} onClick={() => {
-                  console.log(Articles?.filter(item => item.subcategory[0] === "viral-news"), "BJPpppppp");
+                  console.log(Articles?.filter(item => item.subcategory[0] === "todays-news"), "BJPpppppp");
                   // navigate('/elections/politics/election', { state: { data: Articles?.filter(item => item.subcategory[0] === "election") } });
-                  navigate('/news/politics/viral-news', { state: { data: Articles?.filter(item => item.subcategory[0] === "viral-news") } });
+                  navigate('/election/todays-news', { state: { data: Articles?.filter(item => item.subcategory[0] === "todays-news") } });
                 }}>
                   <div style={{
                     position: "absolute",
@@ -88,8 +89,8 @@ function Elections() {
                     fontWeight: "700",
                     fontSize: "40px",
                     fontFamily: "Poppins",
-                  }} >वायरल न्यूज़</div>
-                  <img src={election} style={{
+                  }} >टुडे न्यूज़</div>
+                  <img src={todaynews} style={{
                     height: "160px",
                     width: "100%",
                     borderBottomLeftRadius: "10px",
@@ -98,10 +99,10 @@ function Elections() {
                     borderTopLeftRadius: "10px"
                   }} />
                 </div>
-              </Carousel.Item> */}
+              </Carousel.Item>
 
 
-              <Carousel.Item width="20%">
+              {/* <Carousel.Item width="20%">
 
                 <div style={{
                   position: "relative",
@@ -144,7 +145,7 @@ function Elections() {
                     borderTopLeftRadius: "10px"
                   }} />
                 </div>
-              </Carousel.Item>
+              </Carousel.Item> */}
 
 
               <Carousel.Item width="20%">
@@ -158,7 +159,7 @@ function Elections() {
                 }} onClick={() => {
                   console.log(Articles?.filter(item => item.subcategory[0] === "bjp"), "BJPpppppp");
                   // navigate('/elections/politics/bjp', { state: { data: Articles?.filter(item => item.subcategory[0] === "bjp") } });
-                  navigate('/news/politics/bjp', { state: { data: Articles?.filter(item => item.subcategory[0] === "bjp") } });
+                  navigate('/election/bjp', { state: { data: Articles?.filter(item => item.subcategory[0] === "bjp") } });
                 }}>
                   <div style={{
                     position: "absolute",
@@ -202,7 +203,7 @@ function Elections() {
                 }} onClick={() => {
                   console.log(Articles?.filter(item => item.subcategory[0] === "congress"), "congressssss");
                   // navigate('/elections/politics/congress', { state: { data: Articles?.filter(item => item.subcategory[0] === "congress") } });
-                  navigate('/news/politics/congress', { state: { data: Articles?.filter(item => item.subcategory[0] === "congress") } });
+                  navigate('/election/congress', { state: { data: Articles?.filter(item => item.subcategory[0] === "congress") } });
                 }}>
                   <div style={{
                     position: "absolute",
@@ -248,7 +249,7 @@ function Elections() {
                 }} onClick={() => {
                   console.log(Articles?.filter(item => item.subcategory[0] === "samajwadi"), "BJPpppppp");
                   // navigate('/elections/politics/samajwadi', { state: { data: Articles?.filter(item => item.subcategory[0] === "samajwadi") } });
-                  navigate('/news/politics/samajwadi', { state: { data: Articles?.filter(item => item.subcategory[0] === "samajwadi") } });
+                  navigate('/election/samajwadi', { state: { data: Articles?.filter(item => item.subcategory[0] === "samajwadi") } });
                 }}>
                   <div style={{
                     position: "absolute",
@@ -296,7 +297,7 @@ function Elections() {
                 }} onClick={() => {
                   console.log(Articles?.filter(item => item.subcategory[0] === "shiv-sena"), "BJPpppppp");
                   // navigate('/elections/politics/shivsena', { state: { data: Articles?.filter(item => item.subcategory[0] === "shiv sena") } });
-                  navigate('/news/politics/shiv-sena', { state: { data: Articles?.filter(item => item.subcategory[0] === "shiv-sena") } });
+                  navigate('/election/shiv-sena', { state: { data: Articles?.filter(item => item.subcategory[0] === "shiv-sena") } });
                 }}>
                   <div style={{
                     position: "absolute",
@@ -340,7 +341,7 @@ function Elections() {
                 }} onClick={() => {
                   console.log(Articles?.filter(item => item.subcategory[0] === "dmk"), "BJPpppppp");
                   // navigate('/elections/politics/dmk', { state: { data: Articles?.filter(item => item.subcategory[0] === "dmk") } });
-                  navigate('/news/politics/dmk', { state: { data: Articles?.filter(item => item.subcategory[0] === "dmk") } });
+                  navigate('/election/dmk', { state: { data: Articles?.filter(item => item.subcategory[0] === "dmk") } });
                 }}>
                   <div style={{
                     position: "absolute",
@@ -384,7 +385,7 @@ function Elections() {
                 }} onClick={() => {
                   console.log(Articles?.filter(item => item.subcategory[0] === "aam-aadmi-party"), "aam-aadmi-party");
                   // navigate('/elections/politics/others', { state: { data: Articles?.filter(item => item.subcategory[0] === "other") } });
-                  navigate('/news/politics/aam-aadmi-party', { state: { data: Articles?.filter(item => item.subcategory[0] === "aam-aadmi-party") } });
+                  navigate('/election/aam-aadmi-party', { state: { data: Articles?.filter(item => item.subcategory[0] === "aam-aadmi-party") } });
                 }}>
                   <div style={{
                     position: "absolute",
@@ -450,7 +451,7 @@ function Elections() {
             <Box>
               <Grid container spacing={3}>
                 {/* {Articles?.filter(item => item.subcategory[0] === "Politics").map((result, index) => index < 6 && ( */}
-                {Articles?.filter(item => item.category[0] === "politics").map((result, index) => (
+                {Articles?.filter(item => item.category[0] === "election").map((result, index) => (
                   <HomeCard key={index} result={result} onClick={() => {
                     console.log('navigate');
                     // navigate(`/fullnews/${result?.category[0]}/${result?.title}`, { state: { data: result } });

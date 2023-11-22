@@ -30,9 +30,9 @@ function Navigation() {
             <Routes>
                 <Route path='/' element={<Home />} />
                 <Route path='/:param1?/:param2?/:param3?' element={<FullNews />} />
-                <Route path='/elections' element={<Elections />} />
+                <Route path='/election' element={<Elections />} />
                 {/* <Route path='/elections/:param1?/:param2?' element={<ElectionsSubcategory />} /> */}
-                <Route path='/news/:param1?/:param2?' element={<ElectionsSubcategory />} />
+                <Route path='/election/:param1?' element={<ElectionsSubcategory />} />
                 <Route path='/sports' element={<Sports />} />
                 <Route path='/game/:param1?/:param2?' element={<SportsSubcategory/>} />
                 <Route path='/education' element={<Education />} />

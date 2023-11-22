@@ -39,7 +39,7 @@ const BreakingNewsTitle = () => {
                         
                         <Typography sx={{
                             fontSize: "20px",
-                            fontFamily: "Poppins",
+                            fontFamily: "'Noto Sans', sans-serif",
                             fontWeight: "500",
                             color: "#fff",
                             padding: "-3px",
@@ -74,7 +74,8 @@ const BreakingNewsTitle = () => {
                                 //  paddingRight:"2px" ,
                                  paddingLeft:"5px",
                                  paddingRight:"10px",
-                                 marginRight:"3px"
+                                 marginRight:"3px",
+                                 fontFamily: "'Noto Sans', sans-serif",
                             }}>
                                {result?.title}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;             
                             </Typography>
