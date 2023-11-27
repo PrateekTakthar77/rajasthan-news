@@ -30,7 +30,94 @@ const FullNews = () => {
         <meta name="keywords" content="news" />
       </Helmet>
 
-      <Box sx={{ marginTop: "30px" }}>
+      <Box sx={{ marginTop: "65px" }}>
+        <Grid container>
+          <Grid
+            item
+            xs={12}
+            sm={12}
+            md={0.5}
+            lg={0.5}
+            // sx={{ backgroundColor: "#A52A2A" }}
+          ></Grid>
+          <Grid
+            item
+            xs={12}
+            sm={12}
+            md={8.5}
+            lg={8.5}
+            // sx={{ backgroundColor: "#8A2BE2" }}
+          >
+            <Box
+              sx={{
+                display: "flex",
+                flexDirection: "column",
+                // alignItems: "center",
+                paddingTop:"5px",
+                paddingBottom:"5px",
+                width:"100%"
+              }}
+            >
+              <a
+                href=""
+                target="_blank"
+                rel="noopener noreferrer"
+                sx={{ textDecoration: "none" }}
+              >
+                <Box
+                  sx={{
+                    backgroundColor: "#eaeaea",
+                    width: "100%",
+                    height: "120px",
+                    alignSelf: "center",
+                    paddingTop:"5px",
+                   
+                  }}
+                >
+                  <Typography
+                    sx={{
+                      textAlign: "center",
+                      fontSize: "12px",
+                      color: "black",
+                      textDecoration: "none",
+                    }}
+                  >
+                    ADVERTISEMENT
+                  </Typography>
+                </Box>
+
+                {/* <img
+                  src={advert}
+                  alt="add"
+                  style={{
+                    width: "290px",
+                    height: "280px",
+                    alignSelf: "center",
+                  }} */}
+                
+              </a>
+            </Box>
+          </Grid>
+          <Grid
+            item
+            xs={12}
+            sm={12}
+            md={2.7}
+            lg={2.7}
+            // sx={{ backgroundColor: "#0000FF" }}
+          ></Grid>
+          <Grid
+            item
+            xs={12}
+            sm={12}
+            md={0.3}
+            lg={0.3}
+            // sx={{ backgroundColor: "#7FFF00" }}
+          ></Grid>
+        </Grid>
+
+
+{/* COntenbt */}
         <Grid container paddingBlock={2}>
           <Grid
             xs={12}
@@ -59,14 +146,14 @@ const FullNews = () => {
             {/* TITLE */}
 
             <Box
-              style={{ display: "flex", flexDirection: "row", padding: "10px" }}
+              style={{ display: "flex", flexDirection: "row"}}
             >
               <img
                 src={R2}
                 style={{
                   height: "20px",
                   width: "20px",
-                  marginTop: "10px",
+                  // marginTop: "10px",
                   marginRight: "5px",
                 }}
               />
@@ -113,7 +200,8 @@ const FullNews = () => {
                   marginTop: "10px",
                   fontSize: "19px",
                   backgroundColor: "#fff",
-                  fontFamily: "'Noto Sans', sans-serif",
+                  // fontFamily: "'Noto Sans', sans-serif",
+                  fontFamily: "'Noto Sans Devanagari'",
                   fontWeight: "500",
                   textAlign: "justify",
                   padding: "10px",
@@ -186,14 +274,12 @@ const FullNews = () => {
             sm={12}
             md={0.3}
             lg={0.3}
-            style={
-              {
-                // backgroundColor: "yellow",
-                // display: "flex",
-                // flexDirection: "column",
-                // backgroundColor:"red"
-              }
-            }
+            style={{
+              // backgroundColor: "yellow",
+              // display: "flex",
+              // flexDirection: "column",
+              // backgroundColor:"red"
+            }}
           ></Grid>
         </Grid>
       </Box>

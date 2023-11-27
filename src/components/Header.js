@@ -51,6 +51,11 @@ const navItems = [
     to: '/entertainment',
     name: 'मनोरंजन',
   },
+  {
+    to: '/health',
+    name: 'हेल्थ',
+  },
+
 ];
 
 function Header(props) {
@@ -114,7 +119,7 @@ function Header(props) {
             </Typography>
           </Link>
           <Box sx={{ display: { xs: 'none', sm: 'block' }, marginRight: "35px" }}>
-            {navItems.map((item, index) => (
+            {navItems.map((item, index) => index < 8 && (
               <Button key={index} sx={{ color: '#fff', fontSize: "22px", fontFamily: "'Noto Sans', sans-serif", fontWeight: "400", ...buttonHoverStyle, }} onClick={() => { navigate(item?.to) }}>
                 {item?.name}
               </Button>
