@@ -56,6 +56,8 @@ const FullNews = () => {
                 paddingTop: "5px",
                 paddingBottom: "5px",
                 width: "100%",
+                paddingLeft:"10px",
+                    paddingRight:"10px"
               }}
             >
               <a
@@ -71,6 +73,7 @@ const FullNews = () => {
                     height: "120px",
                     alignSelf: "center",
                     paddingTop: "5px",
+                    
                   }}
                 >
                   <Typography
@@ -147,9 +150,10 @@ const FullNews = () => {
                 src={R2}
                 style={{
                   height: "20px",
-                  width: "20px",
+                  width: "30px",
                   marginTop: "10px",
                   marginRight: "5px",
+                  paddingLeft:"10px",
                 }}
               />
               <Typography
@@ -161,6 +165,8 @@ const FullNews = () => {
                   fontFamily: "'Noto Sans', sans-serif",
                   fontWeight: "600",
                   textAlign: "justify",
+                 
+                  paddingRight:"10px"
                   // wordSpacing: "-1px"
                 }}
               >
@@ -183,6 +189,7 @@ const FullNews = () => {
                   maxWidth: "100%",
                   height: "auto",
                   width: "100%",
+                  
                 }}
               />
             </Box>
