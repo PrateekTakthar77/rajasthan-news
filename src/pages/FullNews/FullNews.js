@@ -53,9 +53,9 @@ const FullNews = () => {
                 display: "flex",
                 flexDirection: "column",
                 // alignItems: "center",
-                paddingTop:"5px",
-                paddingBottom:"5px",
-                width:"100%"
+                paddingTop: "5px",
+                paddingBottom: "5px",
+                width: "100%",
               }}
             >
               <a
@@ -70,8 +70,7 @@ const FullNews = () => {
                     width: "100%",
                     height: "120px",
                     alignSelf: "center",
-                    paddingTop:"5px",
-                   
+                    paddingTop: "5px",
                   }}
                 >
                   <Typography
@@ -94,7 +93,6 @@ const FullNews = () => {
                     height: "280px",
                     alignSelf: "center",
                   }} */}
-                
               </a>
             </Box>
           </Grid>
@@ -116,8 +114,7 @@ const FullNews = () => {
           ></Grid>
         </Grid>
 
-
-{/* COntenbt */}
+        {/* COntenbt */}
         <Grid container paddingBlock={2}>
           <Grid
             xs={12}
@@ -145,15 +142,13 @@ const FullNews = () => {
           >
             {/* TITLE */}
 
-            <Box
-              style={{ display: "flex", flexDirection: "row"}}
-            >
+            <Box style={{ display: "flex", flexDirection: "row" }}>
               <img
                 src={R2}
                 style={{
                   height: "20px",
                   width: "20px",
-                  // marginTop: "10px",
+                  marginTop: "10px",
                   marginRight: "5px",
                 }}
               />
@@ -274,12 +269,14 @@ const FullNews = () => {
             sm={12}
             md={0.3}
             lg={0.3}
-            style={{
-              // backgroundColor: "yellow",
-              // display: "flex",
-              // flexDirection: "column",
-              // backgroundColor:"red"
-            }}
+            style={
+              {
+                // backgroundColor: "yellow",
+                // display: "flex",
+                // flexDirection: "column",
+                // backgroundColor:"red"
+              }
+            }
           ></Grid>
         </Grid>
       </Box>
