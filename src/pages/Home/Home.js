@@ -45,11 +45,11 @@ function Home() {
 
   return (
     <>
-       <Helmet>
+       {/* <Helmet>
                 <title>आज की बड़ी खबर: ताजगी से रिलेटेड समाचार</title>
                 <meta name="description" content="दिनभर की ब्रेकिंग न्यूज़, आज की मुख्य समाचार, ताजगी से जुड़े हलचल। नवीनतम और अद्यतित समाचारों के लिए हमारे साथ रहें" />
                 <meta name="keywords" content="news" />
-            </Helmet>
+            </Helmet> */}
     <Box sx={{ flexGrow: 1, backgroundColor: "#fff" }}>
 
       {/* <Header /> */}
