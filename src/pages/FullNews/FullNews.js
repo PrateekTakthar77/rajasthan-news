@@ -18,6 +18,7 @@ const FullNews = () => {
 
   useEffect(() => {
     console.log(param3);
+    // getArticleById(param3)
     getArticleById(param3);
   }, [])
   
