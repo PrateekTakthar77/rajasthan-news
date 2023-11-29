@@ -23,6 +23,7 @@ import ElectionsSubcategory from '../pages/Elections/ElectionsSubcategory';
 import SportsSubcategory from '../pages/Sports/SportsSubcategory';
 import EducationSubcategory from '../pages/Education/EducationSubcategory';
 import Health from '../pages/Health/Health';
+import Articles from '../pages/Articles/Articles';
 
 function Navigation() {
     return (
@@ -31,6 +32,7 @@ function Navigation() {
             <Routes>
                 <Route path='/' element={<Home />} />
                 <Route path='/:param1?/:param2?/:param3?' element={<FullNews />} />
+                <Route path='/articles/:id' element={<Articles />} />
                 <Route path='/election' element={<Elections />} />
                 {/* <Route path='/elections/:param1?/:param2?' element={<ElectionsSubcategory />} /> */}
                 <Route path='/election/:param1?' element={<ElectionsSubcategory />} />

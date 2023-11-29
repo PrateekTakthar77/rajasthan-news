@@ -5,35 +5,37 @@ import { Helmet } from "react-helmet";
 
 import R2 from "../../assets/images/R2.png";
 import advert from "../../assets/images/Uttarakhand.jpg";
-import { getArticleById } from "../../Redux/actions/Home";
 import { useSelector } from "react-redux";
+import { getArticleById } from "../../Redux/actions/Home";
 
 function createMarkup(htmlContent) {
   return { __html: htmlContent };
 }
 
-const FullNews = () => {
-  const {param3} = useParams();
-  const FullArticle = useSelector(state => state.HomeReducer.FullArticle);
+const Articles = () => {
+    
+    const {id} = useParams();
 
-  useEffect(() => {
-    console.log(param3);
-    getArticleById(param3);
-  }, [])
-  
+    const FullArticle = useSelector(state => state.HomeReducer.FullArticle);
+    console.log("alpha" ,FullArticle)
+
+    useEffect(() => {
+        getArticleById(id);
+    }, [])
+    
 
   return (
     <>
       <Helmet>
         <title>
-          {FullArticle?.seotitle ? FullArticle?.seotitle : FullArticle?.title}
+          {state?.data?.seotitle ? state?.data?.seotitle : state?.data?.title}
         </title>
         <meta
           name="description"
           content={
-            FullArticle?.seodescription
-              ? FullArticle?.seodescription
-              : FullArticle?.description
+            state?.data?.seodescription
+              ? state?.data?.seodescription
+              : state?.data?.description
           }
         />
         <meta name="keywords" content="news" />
@@ -47,15 +49,15 @@ const FullNews = () => {
             sm={12}
             md={0.5}
             lg={0.5}
-            // sx={{ backgroundColor: "#A52A2A" }}
+            sx={{ backgroundColor: "#A52A2A" }}
           ></Grid>
           <Grid
             item
             xs={12}
             sm={12}
-            md={11.2}
-            lg={11.2}
-            // sx={{ backgroundColor: "#8A2BE2" }}
+            md={11}
+            lg={11}
+            sx={{ backgroundColor: "#8A2BE2" }}
           >
             <Box
               sx={{
@@ -79,7 +81,7 @@ const FullNews = () => {
                   sx={{
                     backgroundColor: "#eaeaea",
                     width: "100%",
-                    height: "100px",
+                    height: "120px",
                     alignSelf: "center",
                     paddingTop: "5px",
                     
@@ -108,21 +110,21 @@ const FullNews = () => {
               </a>
             </Box>
           </Grid>
-          {/* <Grid
+          <Grid
             item
             xs={12}
             sm={12}
             md={2.7}
             lg={2.7}
             sx={{ backgroundColor: "#0000FF" }}
-          ></Grid> */}
+          ></Grid>
           <Grid
             item
             xs={12}
             sm={12}
             md={0.3}
             lg={0.3}
-            // sx={{ backgroundColor: "#7FFF00" }}
+            sx={{ backgroundColor: "#7FFF00" }}
           ></Grid>
         </Grid>
 
@@ -179,7 +181,7 @@ const FullNews = () => {
                   // wordSpacing: "-1px"
                 }}
               >
-                {FullArticle?.title}
+                {state?.data?.title}
               </Typography>
             </Box>
 
@@ -193,7 +195,7 @@ const FullNews = () => {
                                 width: '100%',
                             }} /> */}
               <img
-                src={FullArticle?.photo}
+                src={state?.data?.photo}
                 style={{
                   maxWidth: "100%",
                   height: "auto",
@@ -217,7 +219,7 @@ const FullNews = () => {
                   textAlign: "justify",
                   padding: "10px",
                 }}
-                dangerouslySetInnerHTML={createMarkup(FullArticle?.description)}
+                dangerouslySetInnerHTML={createMarkup(state?.data?.description)}
               />
             </Box>
           </Grid>
@@ -300,4 +302,4 @@ const FullNews = () => {
   );
 };
 
-export default FullNews;
+export default Articles;
