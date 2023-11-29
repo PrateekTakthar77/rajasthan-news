@@ -82,7 +82,7 @@ const FullNews = () => {
                     width: "100%",
                     height: "100px",
                     alignSelf: "center",
-                    paddingTop: "5px",
+                    paddingTop: "10px",
                     
                   }}
                 >
