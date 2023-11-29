@@ -27,6 +27,8 @@ import add4 from "../../assets/images/add4.jpeg";
 import add5 from "../../assets/images/add5.jpeg";
 import advert from "../../assets/images/Uttarakhand.jpg";
 
+import "./HomeCard.css";
+
 function Home() {
   const [loading, setLoading] = useState(true);
   const { Articles } = useSelector((state) => state.HomeReducer);
@@ -41,10 +43,13 @@ function Home() {
   return (
     <>
       <Helmet>
-                <title>आज की बड़ी खबर: ताजगी से रिलेटेड समाचार</title>
-                <meta name="description" content="दिनभर की ब्रेकिंग न्यूज़, आज की मुख्य समाचार, ताजगी से जुड़े हलचल। नवीनतम और अद्यतित समाचारों के लिए हमारे साथ रहें" />
-                <meta name="keywords" content="news" />
-            </Helmet>
+        <title>आज की बड़ी खबर: ताजगी से रिलेटेड समाचार</title>
+        <meta
+          name="description"
+          content="दिनभर की ब्रेकिंग न्यूज़, आज की मुख्य समाचार, ताजगी से जुड़े हलचल। नवीनतम और अद्यतित समाचारों के लिए हमारे साथ रहें"
+        />
+      </Helmet>
+
       <Box sx={{ flexGrow: 1, backgroundColor: "#fff" }}>
         {/* <Header /> */}
         {loading ? (
@@ -121,7 +126,7 @@ function Home() {
                             color: "#fff",
                             fontWeight: "700",
                             fontSize: "40px",
-                            fontFamily: "Poppins",
+                           fontFamily: "'Noto Sans Devanagari'",
                           }}
                         >
                           ब्रेकिंग न्यूज
@@ -172,7 +177,7 @@ function Home() {
                             color: "#fff",
                             fontWeight: "700",
                             fontSize: "40px",
-                            fontFamily: "Poppins",
+                            fontFamily: "'Noto Sans Devanagari'",
                           }}
                         >
                           चुनाव 2023
@@ -223,7 +228,7 @@ function Home() {
                             color: "#fff",
                             fontWeight: "700",
                             fontSize: "40px",
-                            fontFamily: "Poppins",
+                            fontFamily: "'Noto Sans Devanagari'",
                           }}
                         >
                           स्पोर्ट्स
@@ -274,7 +279,7 @@ function Home() {
                             color: "#fff",
                             fontWeight: "700",
                             fontSize: "40px",
-                            fontFamily: "Poppins",
+                            fontFamily: "'Noto Sans Devanagari'",
                           }}
                         >
                           एजुकेशन
@@ -325,7 +330,7 @@ function Home() {
                             color: "#fff",
                             fontWeight: "700",
                             fontSize: "40px",
-                            fontFamily: "Poppins",
+                            fontFamily: "'Noto Sans Devanagari'",
                           }}
                         >
                           टेक्नोलॉजी
@@ -379,7 +384,7 @@ function Home() {
                             color: "#fff",
                             fontWeight: "700",
                             fontSize: "40px",
-                            fontFamily: "Poppins",
+                            fontFamily: "'Noto Sans Devanagari'",
                           }}
                         >
                           मनोरंजन
@@ -444,7 +449,7 @@ function Home() {
                         fontSize: "35px",
                         fontWeight: "700",
                         fontStyle: "italic",
-                        fontFamily: "Poppins",
+                        fontFamily: "'Noto Sans Devanagari'",
                       }}
                     >
                       HINDI NEWS
@@ -468,7 +473,7 @@ function Home() {
                           color: "red",
                           fontSize: "12px",
                           fontWeight: "700",
-                          fontFamily: "'Noto Sans', sans-serif",
+                          fontFamily: "'Noto Sans Devanagari'",
                           margin: "15px",
                         }}
                       >
@@ -535,7 +540,7 @@ function Home() {
                           color: "red",
                           fontSize: "12px",
                           fontWeight: "700",
-                          fontFamily: "Poppins",
+                          fontFamily: "'Noto Sans Devanagari'",
                           margin: "15px",
                         }}
                       >
@@ -583,7 +588,7 @@ function Home() {
                         fontSize: "35px",
                         fontWeight: "700",
                         fontStyle: "italic",
-                        fontFamily: "Poppins",
+                        fontFamily: "'Noto Sans Devanagari'",
                       }}
                     >
                       CONGRESS
@@ -609,7 +614,7 @@ function Home() {
                           color: "red",
                           fontSize: "12px",
                           fontWeight: "700",
-                          fontFamily: "Poppins",
+                          fontFamily: "'Noto Sans Devanagari'",
                           margin: "15px",
                         }}
                       >
@@ -655,7 +660,7 @@ function Home() {
                         fontSize: "35px",
                         fontWeight: "700",
                         fontStyle: "italic",
-                        fontFamily: "Poppins",
+                        fontFamily: "'Noto Sans Devanagari'",
                       }}
                     >
                       SPORTS
@@ -681,7 +686,7 @@ function Home() {
                           color: "red",
                           fontSize: "12px",
                           fontWeight: "700",
-                          fontFamily: "Poppins",
+                          fontFamily: "'Noto Sans Devanagari'",
                           margin: "15px",
                         }}
                       >

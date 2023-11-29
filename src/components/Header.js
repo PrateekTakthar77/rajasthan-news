@@ -13,8 +13,9 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
-
 import { Link, useNavigate } from 'react-router-dom';
+
+import "./Header.css"
 
 const buttonHoverStyle = {
   '&:hover': {
@@ -71,7 +72,7 @@ function Header(props) {
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
 
-      <Typography variant="h6" sx={{ my: 2, fontFamily: "'Noto Sans', sans-serif", fontWeight: "700", fontSize: "25px" }}>
+      <Typography variant="h6" sx={{ my: 2,  fontFamily: "'Noto Sans Devanagari'", fontWeight: "700", fontSize: "25px" }}>
         आज का समाचार
       </Typography>
       <Divider />
@@ -82,7 +83,7 @@ function Header(props) {
               <ListItemButton sx={{ textAlign: 'center' }} onClick={() => {
                 navigate(item?.to);
               }}>
-                <Typography sx={{ fontFamily: "Poppins", fontWeight: "700", fontSize: "20px" }}>{item?.name}</Typography>
+                <Typography sx={{  fontFamily: "'Noto Sans Devanagari'" , fontWeight: "700", fontSize: "20px" }}>{item?.name}</Typography>
 
               </ListItemButton>
             </ListItem>
@@ -113,14 +114,17 @@ function Header(props) {
             <Typography
               variant="h6"
               component="div"
-              style={{ fontSize: "30px", fontFamily: "'Noto Sans', sans-serif", fontWeight: "600", marginLeft: "43px" }}
+              style={{ fontSize: "30px", fontFamily: "'Noto Sans Devanagari'", fontWeight: "600", marginLeft: "43px" }}
             >
               आज का समाचार
             </Typography>
           </Link>
           <Box sx={{ display: { xs: 'none', sm: 'block' }, marginRight: "35px" }}>
             {navItems.map((item, index) => index < 8 && (
-              <Button key={index} sx={{ color: '#fff', fontSize: "22px", fontFamily: "'Noto Sans', sans-serif", fontWeight: "400", ...buttonHoverStyle, }} onClick={() => { navigate(item?.to) }}>
+              <Button key={index} sx={{ color: '#fff', fontSize: "22px",
+               fontFamily: "'Noto Sans Devanagari'",
+              //  fontFamily: "Poppins",
+                fontWeight: "400", ...buttonHoverStyle, }} onClick={() => { navigate(item?.to) }}>
                 {item?.name}
               </Button>
             ))}

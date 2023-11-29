@@ -5,6 +5,8 @@ import CardMedia from '@mui/material/CardMedia';
 import { CardActionArea } from '@mui/material'
 import { Typography, Grid, Box } from '@mui/material';
 
+import "./HomeCard.css"
+
 const HomeCard = ({ result, onClick }) => {
 
     function createMarkup(htmlContent) {
@@ -35,7 +37,7 @@ const HomeCard = ({ result, onClick }) => {
                                     WebkitLineClamp: 2,
                                     color: "#D2122E",
                                     fontSize: "20px",
-                                    fontFamily: "'Noto Sans', sans-serif",
+                                    fontFamily: "'Noto Sans Devanagari'",
                                     fontWeight: "600",
                                     // textAlign: "justify",
                                     wordSpacing: "1px"
@@ -51,7 +53,7 @@ const HomeCard = ({ result, onClick }) => {
                                     color: "black",
                                     fontSize: "17px",
                                     fontWeight: "500",
-                                    fontFamily: "'Noto Sans', sans-serif",
+                                    fontFamily: "'Noto Sans Devanagari'",
                                     // textAlign: "justify"
                                 }} dangerouslySetInnerHTML={createMarkup(result?.description)} />
                             </Box>

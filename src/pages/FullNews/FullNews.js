@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { Typography, Grid, Box } from "@mui/material";
 import { useLocation, useParams } from "react-router-dom";
 import { Helmet } from "react-helmet";
+import "./FullNews.css"
 
 import R2 from "../../assets/images/R2.png";
 import advert from "../../assets/images/Uttarakhand.jpg";
@@ -37,10 +38,12 @@ const FullNews = () => {
               : FullArticle?.description
           }
         />
+        {/* <meta name="keywords" content="news" /> */}
       </Helmet>
 
+
       <Box sx={{ marginTop: "65px" }}>
-        <Grid container>
+        {/* <Grid container>
           <Grid
             item
             xs={12}
@@ -96,26 +99,10 @@ const FullNews = () => {
                     ADVERTISEMENT
                   </Typography>
                 </Box>
-
-                {/* <img
-                  src={advert}
-                  alt="add"
-                  style={{
-                    width: "290px",
-                    height: "280px",
-                    alignSelf: "center",
-                  }} */}
               </a>
             </Box>
           </Grid>
-          {/* <Grid
-            item
-            xs={12}
-            sm={12}
-            md={2.7}
-            lg={2.7}
-            sx={{ backgroundColor: "#0000FF" }}
-          ></Grid> */}
+
           <Grid
             item
             xs={12}
@@ -124,7 +111,7 @@ const FullNews = () => {
             lg={0.3}
             // sx={{ backgroundColor: "#7FFF00" }}
           ></Grid>
-        </Grid>
+        </Grid> */}
 
         {/* COntenbt */}
         <Grid container paddingBlock={2}>
@@ -171,7 +158,7 @@ const FullNews = () => {
                 style={{
                   color: "#D2122E",
                   fontSize: "27px",
-                  fontFamily: "'Noto Sans', sans-serif",
+                  fontFamily: "'Noto Sans Devanagari'",
                   fontWeight: "600",
                   textAlign: "justify",
                  
@@ -239,7 +226,7 @@ const FullNews = () => {
                 display: "flex",
                 flexDirection: "column",
                 alignItems: "center",
-                marginTop: "50px",
+                marginTop: "20px",
               }}
             >
               <a
@@ -296,6 +283,7 @@ const FullNews = () => {
           ></Grid>
         </Grid>
       </Box>
+
     </>
   );
 };
