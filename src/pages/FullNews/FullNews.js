@@ -24,35 +24,9 @@ const FullNews = () => {
   }, [])
 
 
-useEffect(() => {
-  const title = FullArticle?.seotitle ? FullArticle?.seotitle : FullArticle?.title;
-  const description = FullArticle?.seodescription
-    ? FullArticle?.seodescription
-    : FullArticle?.description;
-
-  // Create and append title element
-  const titleElement = document.createElement("title");
-  titleElement.textContent = title;
-  document.head.appendChild(titleElement);
-
-  // Create and append meta description element
-  const metaDescriptionElement = document.createElement("meta");
-  metaDescriptionElement.name = "description";
-  metaDescriptionElement.content = description;
-  document.head.appendChild(metaDescriptionElement);
-
-  // Cleanup function to remove dynamically added elements on component unmount
-  return () => {
-    document.head.removeChild(titleElement);
-    document.head.removeChild(metaDescriptionElement);
-  };
-}, [FullArticle]);
-
-  
-
   return (
     <>
-      {/* <Helmet>
+      <Helmet>
         <title>
           {FullArticle?.seotitle ? FullArticle?.seotitle : FullArticle?.title}
         </title>
@@ -64,7 +38,7 @@ useEffect(() => {
               : FullArticle?.description
           }
         />
-      </Helmet> */}
+      </Helmet>
 
       
 
