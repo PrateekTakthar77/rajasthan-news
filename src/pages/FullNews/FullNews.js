@@ -37,7 +37,6 @@ const FullNews = () => {
               : FullArticle?.description
           }
         />
-        <meta name="keywords" content="news" />
       </Helmet>
 
       <Box sx={{ marginTop: "65px" }}>
