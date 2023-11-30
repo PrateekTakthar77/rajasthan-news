@@ -517,7 +517,7 @@ function Home() {
                         fontSize: "35px",
                         fontWeight: "700",
                         fontStyle: "italic",
-                        fontFamily: "Poppins",
+                        fontFamily: "'Noto Sans Devanagari'",
                       }}
                     >
                       BJP
