@@ -316,6 +316,15 @@ const FullNews = () => {
     <>
       <HelmetProvider>
         <Helmet>
+          <meta charset="UTF-8" />
+          <meta
+            name="google-site-verification"
+            content="bbYxZyvg0xdO06ERBW-d0lDObNAaAyf47w8mh5rdk_M"
+          />
+          <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+          />
           <title>
             {FullArticle?.seotitle ? FullArticle?.seotitle : FullArticle?.title}
           </title>
