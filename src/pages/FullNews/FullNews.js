@@ -450,7 +450,7 @@ const FullNews = () => {
                 }}
               />
               <Typography
-                variant="h4"
+                variant="h1"
                 component="div"
                 style={{
                   color: "#D2122E",
