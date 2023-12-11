@@ -78,11 +78,11 @@ function Home() {
           <Box sx={{ flexGrow: 1, backgroundColor: "#fff" }} style={{}}>
             {/* Breaking news */}
 
-            <BreakingNewsTitle />
+            {/* <BreakingNewsTitle /> */}
 
             {/* Carousell */}
 
-            <Grid container sx={{ marginTop: "15px" }}>
+            {/* <Grid container sx={{ marginTop: "15px" }}>
               <Grid item xs={12} sm={12} md={0.4} lg={0.4}></Grid>
               <Grid item xs={12} sm={12} md={11.2} lg={11.2}>
                 <Carousel
@@ -407,7 +407,7 @@ function Home() {
               </Grid>
 
               <Grid item xs={12} sm={12} md={0.4} lg={0.4}></Grid>
-            </Grid>
+            </Grid> */}
 
             {/* CONTENT */}
 
@@ -752,7 +752,7 @@ function Home() {
                     <Box
                       sx={{
                         backgroundColor: "#eaeaea",
-                        width: "100%",
+                        width: "90%",
                         height: "15px",
                         alignSelf: "center",
                       }}
@@ -773,8 +773,8 @@ function Home() {
                       src={advert}
                       alt="add"
                       style={{
-                        width: "100%",
-                        height: "280px",
+                        width: "90%",
+                        height: "200px",
                         // height: "auto",
                         alignSelf: "center",
                       }}
