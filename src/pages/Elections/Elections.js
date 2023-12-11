@@ -14,7 +14,7 @@ import { Card, CardMedia } from '@mui/material';
 import bjpimg from "../../assets/images/bjpimg2.jpeg"
 import congimg from "../../assets/images/congoimg1.webp"
 import samaj from "../../assets/images/samjawadi.png"
-import shivsena from "../../assets/images/shivsena2.webp"
+import shivsena from "../../assets/images/shivsena2.webp" 
 import dmk from "../../assets/images/dmk2.webp"
 import election from "../../assets/images/electionlogo.png"
 import other from "../../assets/images/others.png"

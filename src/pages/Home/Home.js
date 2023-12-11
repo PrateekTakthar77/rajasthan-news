@@ -752,7 +752,7 @@ function Home() {
                     <Box
                       sx={{
                         backgroundColor: "#eaeaea",
-                        width: "290px",
+                        width: "100%",
                         height: "15px",
                         alignSelf: "center",
                       }}
@@ -773,8 +773,9 @@ function Home() {
                       src={advert}
                       alt="add"
                       style={{
-                        width: "290px",
+                        width: "100%",
                         height: "280px",
+                        // height: "auto",
                         alignSelf: "center",
                       }}
                     />

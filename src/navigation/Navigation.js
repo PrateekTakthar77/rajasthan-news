@@ -24,6 +24,7 @@ import SportsSubcategory from '../pages/Sports/SportsSubcategory';
 import EducationSubcategory from '../pages/Education/EducationSubcategory';
 import Health from '../pages/Health/Health';
 // import Articles from '../pages/Articles/Articles';
+import NotFound from "../pages/NotFound/NotFound"
 
 function Navigation() {
     return (
@@ -56,6 +57,7 @@ function Navigation() {
                 <Route path='/jdunews' element={<JduNews />} />
                 <Route path='/breakingnews' element={<BreakingNews />} />
                 <Route path='/others' element={<Others />} />
+                <Route path="*" element={<NotFound/>}/>
             </Routes>
         </BrowserRouter>
     )
