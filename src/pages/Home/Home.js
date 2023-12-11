@@ -76,13 +76,13 @@ function Home() {
           </div>
         ) : (
           <Box sx={{ flexGrow: 1, backgroundColor: "#fff" }} style={{}}>
-            {/* Breaking news */}
+            Breaking news
 
-            {/* <BreakingNewsTitle /> */}
+            <BreakingNewsTitle />
 
             {/* Carousell */}
 
-            {/* <Grid container sx={{ marginTop: "15px" }}>
+            <Grid container sx={{ marginTop: "15px" }}>
               <Grid item xs={12} sm={12} md={0.4} lg={0.4}></Grid>
               <Grid item xs={12} sm={12} md={11.2} lg={11.2}>
                 <Carousel
@@ -407,7 +407,7 @@ function Home() {
               </Grid>
 
               <Grid item xs={12} sm={12} md={0.4} lg={0.4}></Grid>
-            </Grid> */}
+            </Grid>
 
             {/* CONTENT */}
 
