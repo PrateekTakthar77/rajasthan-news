@@ -1,302 +1,24 @@
-// import React, { useEffect } from "react";
-// import { Typography, Grid, Box } from "@mui/material";
-// import { useLocation, useParams } from "react-router-dom";
-// import { Helmet } from "react-helmet";
-// import "./FullNews.css"
-
-// import R2 from "../../assets/images/R2.png";
-// import advert from "../../assets/images/Uttarakhand.jpg";
-// import { getArticleById } from "../../Redux/actions/Home";
-// import { useSelector } from "react-redux";
-
-// function createMarkup(htmlContent) {
-//   return { __html: htmlContent };
-// }
-
-// const FullNews = () => {
-//   const {param3} = useParams();
-//   const FullArticle = useSelector(state => state.HomeReducer.FullArticle);
-
-//   useEffect(() => {
-//     console.log(param3);
-//     // getArticleById(param3)
-//     getArticleById(param3);
-//   }, [])
-
-//   return (
-//     <>
-//       <Helmet>
-//         <title>
-//           {FullArticle?.seotitle ? FullArticle?.seotitle : FullArticle?.title}
-//         </title>
-//         <meta
-//           name="description"
-//           content={
-//             FullArticle?.seodescription
-//               ? FullArticle?.seodescription
-//               : FullArticle?.description
-//           }
-//         />
-//       </Helmet>
-
-//       <Box sx={{ marginTop: "65px" }}>
-//         {/* <Grid container>
-//           <Grid
-//             item
-//             xs={12}
-//             sm={12}
-//             md={0.5}
-//             lg={0.5}
-//             // sx={{ backgroundColor: "#A52A2A" }}
-//           ></Grid>
-//           <Grid
-//             item
-//             xs={12}
-//             sm={12}
-//             md={11.2}
-//             lg={11.2}
-//             // sx={{ backgroundColor: "#8A2BE2" }}
-//           >
-//             <Box
-//               sx={{
-//                 display: "flex",
-//                 flexDirection: "column",
-//                 // alignItems: "center",
-//                 paddingTop: "5px",
-//                 paddingBottom: "5px",
-//                 width: "100%",
-//                 paddingLeft:"10px",
-//                     paddingRight:"10px"
-//               }}
-//             >
-//               <a
-//                 href=""
-//                 target="_blank"
-//                 rel="noopener noreferrer"
-//                 sx={{ textDecoration: "none" }}
-//               >
-//                 <Box
-//                   sx={{
-//                     backgroundColor: "#eaeaea",
-//                     width: "100%",
-//                     height: "100px",
-//                     alignSelf: "center",
-//                     paddingTop: "10px",
-
-//                   }}
-//                 >
-//                   <Typography
-//                     sx={{
-//                       textAlign: "center",
-//                       fontSize: "12px",
-//                       color: "black",
-//                       textDecoration: "none",
-//                     }}
-//                   >
-//                     ADVERTISEMENT
-//                   </Typography>
-//                 </Box>
-//               </a>
-//             </Box>
-//           </Grid>
-
-//           <Grid
-//             item
-//             xs={12}
-//             sm={12}
-//             md={0.3}
-//             lg={0.3}
-//             // sx={{ backgroundColor: "#7FFF00" }}
-//           ></Grid>
-//         </Grid> */}
-
-//         {/* COntenbt */}
-//         <Grid container paddingBlock={2}>
-//           <Grid
-//             xs={12}
-//             sm={12}
-//             md={0.5}
-//             lg={0.5}
-//             paddingBlock={2}
-//             spacing={2}
-//             // sx={{ backgroundColor: "orange" }}
-//           ></Grid>
-
-//           <Grid
-//             item
-//             xs={12}
-//             sm={12}
-//             md={8.5}
-//             lg={8.5}
-//             paddingBlock={2}
-//             sx={{
-//               width: "800px",
-//               alignItems: "center",
-//               // backgroundColor: "blue",
-//               // padding: "10px"
-//             }}
-//           >
-//             {/* TITLE */}
-
-//             <Box style={{ display: "flex", flexDirection: "row" }}>
-//               <img
-//                 src={R2}
-//                 style={{
-//                   height: "20px",
-//                   width: "30px",
-//                   marginTop: "6px",
-//                   marginRight: "5px",
-//                   paddingLeft:"10px",
-//                 }}
-//               />
-//               <Typography
-//                 variant="h4"
-//                 component="div"
-//                 style={{
-//                   color: "#D2122E",
-//                   fontSize: "27px",
-//                   fontFamily: "'Noto Sans Devanagari'",
-//                   fontWeight: "600",
-//                   textAlign: "justify",
-
-//                   paddingRight:"10px"
-//                   // wordSpacing: "-1px"
-//                 }}
-//               >
-//                 {FullArticle?.title}
-//               </Typography>
-//             </Box>
-
-//             {/* IMAGE */}
-
-//             <Box sx={{ padding: "10px" }}>
-//               {/* <img src={state?.data?.photo}
-//                             sx={{
-//                                 maxWidth: '100%',
-//                                 height: 'auto',
-//                                 width: '100%',
-//                             }} /> */}
-//               <img
-//                 src={FullArticle?.photo}
-//                 style={{
-//                   maxWidth: "100%",
-//                   height: "auto",
-//                   width: "100%",
-
-//                 }}
-//               />
-//             </Box>
-
-//             {/* DESCRIPTION */}
-
-//             <Box>
-//               <Typography
-//                 style={{
-//                   marginTop: "10px",
-//                   fontSize: "19px",
-//                   backgroundColor: "#fff",
-//                   // fontFamily: "'Noto Sans', sans-serif",
-//                   fontFamily: "'Noto Sans Devanagari'",
-//                   fontWeight: "500",
-//                   textAlign: "justify",
-//                   padding: "10px",
-//                 }}
-//                 dangerouslySetInnerHTML={createMarkup(FullArticle?.description)}
-//               />
-//             </Box>
-//           </Grid>
-
-//           <Grid
-//             xs={12}
-//             sm={12}
-//             md={2.7}
-//             lg={2.7}
-//             sx={{
-//               // backgroundColor: "green",
-//               display: "flex",
-//               flexDirection: "column",
-//               // backgroundColor:"red"
-//             }}
-//           >
-//             <Box
-//               sx={{
-//                 display: "flex",
-//                 flexDirection: "column",
-//                 alignItems: "center",
-//                 marginTop: "20px",
-//               }}
-//             >
-//               <a
-//                 href="https://www.youtube.com/uttaranchalwasi"
-//                 target="_blank"
-//                 rel="noopener noreferrer"
-//                 sx={{ textDecoration: "none" }}
-//               >
-//                 <Box
-//                   sx={{
-//                     backgroundColor: "gray",
-//                     width: "290px",
-//                     height: "15px",
-//                     alignSelf: "center",
-//                   }}
-//                 >
-//                   <Typography
-//                     sx={{
-//                       textAlign: "center",
-//                       fontSize: "12px",
-//                       color: "black",
-//                       textDecoration: "none",
-//                     }}
-//                   >
-//                     ADVERTISEMENT
-//                   </Typography>
-//                 </Box>
-
-//                 <img
-//                   src={advert}
-//                   alt="add"
-//                   style={{
-//                     width: "290px",
-//                     height: "280px",
-//                     alignSelf: "center",
-//                   }}
-//                 />
-//               </a>
-//             </Box>
-//           </Grid>
-//           <Grid
-//             xs={12}
-//             sm={12}
-//             md={0.3}
-//             lg={0.3}
-//             style={
-//               {
-//                 // backgroundColor: "yellow",
-//                 // display: "flex",
-//                 // flexDirection: "column",
-//                 // backgroundColor:"red"
-//               }
-//             }
-//           ></Grid>
-//         </Grid>
-//       </Box>
-
-//     </>
-//   );
-// };
-
-// export default FullNews;
-
 import React, { useEffect } from "react";
-import { Typography, Grid, Box } from "@mui/material";
-import { useLocation, useParams } from "react-router-dom";
-import { Helmet, HelmetProvider } from "react-helmet-async";
-import "./FullNews.css";
 
-import R2 from "../../assets/images/R2.png";
-import advert from "../../assets/images/Uttarakhand.jpg";
-import { getArticleById } from "../../Redux/actions/Home";
+// MATERIAL-UI
+import { Typography, Grid, Box } from "@mui/material";
+
+// REACT-HELMET
+import { Helmet } from "react-helmet";
+
+// CSS
+import "./Fullnews.css";
+
+// REACT-ROUTER-DOM
+import { useParams } from "react-router-dom";
+
+// REDUX
+import { getArticleById } from "../../redux/actions/Home";
 import { useSelector } from "react-redux";
+
+// IMAGES
+import JanusAdd from "../../assets/images/Janus.jpg";
+import R2 from "../../assets/images/R2.png";
 
 function createMarkup(htmlContent) {
   return { __html: htmlContent };
@@ -314,111 +36,119 @@ const FullNews = () => {
 
   return (
     <>
-      <HelmetProvider>
-        <Helmet>
-          <meta charset="UTF-8" />
-          <meta
-            name="google-site-verification"
-            content="bbYxZyvg0xdO06ERBW-d0lDObNAaAyf47w8mh5rdk_M"
-          />
-          <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1.0"
-          />
-          <title>
-            {FullArticle?.seotitle ? FullArticle?.seotitle : FullArticle?.title}
-          </title>
-          <meta
-            name="description"
-            content={
-              FullArticle?.seodescription
-                ? FullArticle?.seodescription
-                : FullArticle?.description
-            }
-          />
-        </Helmet>
-      </HelmetProvider>
+      <Helmet>
+        <meta charset="UTF-8" />
+        <meta
+          name="google-site-verification"
+          content="bbYxZyvg0xdO06ERBW-d0lDObNAaAyf47w8mh5rdk_M"
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>
+          {FullArticle?.seotitle ? FullArticle?.seotitle : FullArticle?.title}
+        </title>
+        <meta
+          name="description"
+          content={
+            FullArticle?.seodescription
+              ? FullArticle?.seodescription
+              : FullArticle?.description
+          }
+        />
+      </Helmet>
 
-      <Box sx={{ marginTop: "65px" }}>
-        {/* <Grid container>
+      <Box
+        sx={{ marginTop: { xs: "60px", sm: "60px", md: "80px", lg: "80px" } }}
+      >
+        {/* TITLE */}
+        <Grid container>
           <Grid
             item
             xs={12}
             sm={12}
-            md={0.5}
-            lg={0.5}
-            // sx={{ backgroundColor: "#A52A2A" }}
+            md={0.6}
+            lg={0.6}
+            // sx={{ backgroundColor: "orange" }}
           ></Grid>
           <Grid
             item
             xs={12}
             sm={12}
-            md={11.2}
-            lg={11.2}
-            // sx={{ backgroundColor: "#8A2BE2" }}
+            md={10.7}
+            lg={10.7}
+            // sx={{ backgroundColor: "aqua" }}
           >
             <Box
               sx={{
                 display: "flex",
-                flexDirection: "column",
-                // alignItems: "center",
-                paddingTop: "5px",
-                paddingBottom: "5px",
-                width: "100%",
-                paddingLeft:"10px",
-                    paddingRight:"10px"
+                flexDirection: "row",
+                paddingLeft: { xs: "5px", sm: "5px", md: "0px", lg: "0px" },
+                paddingRight: { xs: "5px", sm: "5px", md: "0px", lg: "0px" },
+                height: "auto",
               }}
             >
-              <a
-                href=""
-                target="_blank"
-                rel="noopener noreferrer"
-                sx={{ textDecoration: "none" }}
+              <Box
+                component="img"
+                sx={{
+                  width: {
+                    xs: "15px",
+                    sm: "15px",
+                    md: "23px",
+                    lg: "23px",
+                  },
+                  height: {
+                    xs: "15px",
+                    sm: "15px",
+                    md: "23px",
+                    lg: "23px",
+                  },
+                  marginTop: { xs: "12px", sm: "12px", md: "9px", lg: "9px" },
+                }}
+                alt="redTriangleArrow"
+                src={R2}
+              />
+
+              <Typography
+                sx={{
+                  color: "#D2122E",
+                  fontSize: { xs: "23px", sm: "23px", md: "27px", lg: "27px" },
+                  fontFamily: " 'Mukta', sans-serif",
+                  fontWeight: "600",
+                  textAlign: "justify",
+                  marginTop: { xs: "3px", sm: "3px", md: "0px", lg: "0px" },
+                  paddingLeft: { xs: "3px", sm: "3px", md: "5px", lg: "5px" },
+                  // wordSpacing: "-1px"
+                  lineHeight: { xs: "1.2", sm: "1.2" },
+                  paddingTop: "3px",
+                  paddingBottom: "3px",
+                }}
               >
-                <Box
-                  sx={{
-                    backgroundColor: "#eaeaea",
-                    width: "100%",
-                    height: "100px",
-                    alignSelf: "center",
-                    paddingTop: "10px",
-                    
-                  }}
-                >
-                  <Typography
-                    sx={{
-                      textAlign: "center",
-                      fontSize: "12px",
-                      color: "black",
-                      textDecoration: "none",
-                    }}
-                  >
-                    ADVERTISEMENT
-                  </Typography>
-                </Box>
-              </a>
+                {FullArticle?.title}
+              </Typography>
             </Box>
           </Grid>
-
           <Grid
             item
             xs={12}
             sm={12}
-            md={0.3}
-            lg={0.3}
-            // sx={{ backgroundColor: "#7FFF00" }}
+            md={0.7}
+            lg={0.7}
+            // sx={{ backgroundColor: "green" }}
           ></Grid>
-        </Grid> */}
+        </Grid>
 
-        {/* COntenbt */}
-        <Grid container paddingBlock={2}>
+        {/* IMAGE */}
+        <Grid
+          container
+          sx={{
+            // backgroundColor: "green",
+            marginTop: "10px",
+          }}
+        >
           <Grid
             xs={12}
             sm={12}
-            md={0.5}
-            lg={0.5}
-            paddingBlock={2}
-            spacing={2}
+            md={0.6}
+            lg={0.6}
             // sx={{ backgroundColor: "orange" }}
           ></Grid>
 
@@ -428,54 +158,16 @@ const FullNews = () => {
             sm={12}
             md={8.5}
             lg={8.5}
-            paddingBlock={2}
             sx={{
               width: "800px",
               alignItems: "center",
-              // backgroundColor: "blue",
-              // padding: "10px"
+              // backgroundColor: "aqua",
+              // marginTop:"10px"
             }}
           >
-            {/* TITLE */}
-
-            <Box style={{ display: "flex", flexDirection: "row" }}>
-              <img
-                src={R2}
-                style={{
-                  height: "20px",
-                  width: "30px",
-                  marginTop: "6px",
-                  marginRight: "5px",
-                  paddingLeft: "10px",
-                }}
-              />
-              <Typography
-                variant="h1"
-                component="div"
-                style={{
-                  color: "#D2122E",
-                  fontSize: "27px",
-                  fontFamily: "'Noto Sans Devanagari'",
-                  fontWeight: "600",
-                  textAlign: "justify",
-
-                  paddingRight: "10px",
-                  // wordSpacing: "-1px"
-                }}
-              >
-                {FullArticle?.title}
-              </Typography>
-            </Box>
-
             {/* IMAGE */}
 
-            <Box sx={{ padding: "10px" }}>
-              {/* <img src={state?.data?.photo}
-                            sx={{
-                                maxWidth: '100%',
-                                height: 'auto',
-                                width: '100%',
-                            }} /> */}
+            {/* <Box>
               <img
                 src={FullArticle?.photo}
                 style={{
@@ -484,98 +176,167 @@ const FullNews = () => {
                   width: "100%",
                 }}
               />
+            </Box> */}
+            <Box>
+              <Box
+                component="img"
+                sx={{
+                  width: {
+                    xs: "100%",
+                    sm: "100%",
+                    md: "70%",
+                    lg: "70%",
+                  },
+                  height: {
+                    xs: "100%",
+                    sm: "100%",
+                    md: "100%",
+                    lg: "100%",
+                  },
+                  padding: {
+                    xs: "10px",
+                    sm: "10px",
+                    md: "0px",
+                    lg: "0px",
+                  },
+                }}
+                alt="ArticleImage"
+                src={FullArticle?.photo}
+              />
             </Box>
+          </Grid>
+          <Grid
+            item
+            xs={12}
+            sm={12}
+            md={2.5}
+            lg={2.5}
+            sx={
+              {
+                // backgroundColor: "green",
+                // marginTop:"10px"
+              }
+            }
+          >
+            <Box sx={{ display: "flex", justifyContent: "center" }}>
+              <a
+                href="www.januskoncpets.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ textDecoration: "none" }}
+              >
+                <Box
+                  sx={{
+                    backgroundColor: "#F0F0F0",
+                    height: "200px",
+                    width: "200px",
+                    marginTop: {
+                      xs: "10px",
+                      sm: "10px",
+                      md: "0px",
+                      lg: "0px",
+                    },
+                    marginBottom: {
+                      xs: "40px",
+                      sm: "40px",
+                      md: "0px",
+                      lg: "0px",
+                    },
+                  }}
+                >
+                  <Box>
+                    <Typography
+                      sx={{
+                        fontSize: {
+                          xs: "10px",
+                          sm: "10px",
+                          md: "9px",
+                          lg: "9px",
+                        },
+                        fontWeight: "600",
+                        textAlign: "center",
+                        color: "black",
+                      }}
+                    >
+                      ADVERTISEMENT
+                    </Typography>
+                  </Box>
+                  <Box
+                    component="img"
+                    sx={{
+                      width: {
+                        xs: "200px",
+                        sm: "200px",
+                        md: "200px",
+                        lg: "200px",
+                      },
+                      height: {
+                        xs: "200px",
+                        sm: "200px",
+                        md: "200px",
+                        lg: "200px",
+                      },
+                    }}
+                    alt="redTriangleArrow"
+                    src={JanusAdd}
+                  />
+                </Box>
+              </a>
+            </Box>
+          </Grid>
+          <Grid
+            item
+            xs={12}
+            sm={12}
+            md={0.4}
+            lg={0.4}
+            // sx={{ backgroundColor: "orange" }}
+          ></Grid>
+        </Grid>
 
-            {/* DESCRIPTION */}
-
+        {/* DESCRIPTION */}
+        <Grid container>
+          <Grid
+            item
+            xs={12}
+            sm={12}
+            md={0.6}
+            lg={0.6}
+            // sx={{ backgroundColor: "orange" }}
+          ></Grid>
+          <Grid
+            item
+            xs={12}
+            sm={12}
+            md={10.7}
+            lg={10.7}
+            // sx={{ backgroundColor: "aqua" }}
+          >
             <Box>
               <Typography
-                style={{
-                  marginTop: "10px",
+                sx={{
+                  // marginTop: "10px",
                   fontSize: "19px",
                   backgroundColor: "#fff",
                   // fontFamily: "'Noto Sans', sans-serif",
-                  fontFamily: "'Noto Sans Devanagari'",
+                  fontFamily: " 'Mukta', sans-serif",
+
                   fontWeight: "500",
                   textAlign: "justify",
-                  padding: "10px",
+                  paddingLeft: { xs: "5px", sm: "5px", md: "0px", lg: "0px" },
+                  paddingRight: { xs: "5px", sm: "5px", md: "0px", lg: "0px" },
                 }}
                 dangerouslySetInnerHTML={createMarkup(FullArticle?.description)}
               />
             </Box>
           </Grid>
-
           <Grid
+            item
             xs={12}
             sm={12}
-            md={2.7}
-            lg={2.7}
-            sx={{
-              // backgroundColor: "green",
-              display: "flex",
-              flexDirection: "column",
-              // backgroundColor:"red"
-            }}
-          >
-            <Box
-              sx={{
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-                marginTop: "20px",
-              }}
-            >
-              <a
-                href="https://www.youtube.com/uttaranchalwasi"
-                target="_blank"
-                rel="noopener noreferrer"
-                sx={{ textDecoration: "none" }}
-              >
-                <Box
-                  sx={{
-                    backgroundColor: "gray",
-                    width: "290px",
-                    height: "15px",
-                    alignSelf: "center",
-                  }}
-                >
-                  <Typography
-                    sx={{
-                      textAlign: "center",
-                      fontSize: "12px",
-                      color: "black",
-                      textDecoration: "none",
-                    }}
-                  >
-                    ADVERTISEMENT
-                  </Typography>
-                </Box>
-
-                <img
-                  src={advert}
-                  alt="add"
-                  style={{
-                    width: "290px",
-                    height: "280px",
-                    alignSelf: "center",
-                  }}
-                />
-              </a>
-            </Box>
-          </Grid>
-          <Grid
-            xs={12}
-            sm={12}
-            md={0.3}
-            lg={0.3}
-            style={
-              {
-                // backgroundColor: "yellow",
-                // display: "flex",
-                // flexDirection: "column",
-                // backgroundColor:"red"
-              }
-            }
+            md={0.7}
+            lg={0.7}
+            // sx={{ backgroundColor: "green" }}
           ></Grid>
         </Grid>
       </Box>
@@ -584,3 +345,22 @@ const FullNews = () => {
 };
 
 export default FullNews;
+
+{
+  /* <Box>
+              <Typography
+                style={{
+                  marginTop: "10px",
+                  fontSize: "19px",
+                  backgroundColor: "#fff",
+                  // fontFamily: "'Noto Sans', sans-serif",
+                  fontFamily: " 'Mukta', sans-serif",
+
+                  fontWeight: "500",
+                  textAlign: "justify",
+                  padding: "10px",
+                }}
+                dangerouslySetInnerHTML={createMarkup(FullArticle?.description)}
+              />
+            </Box> */
+}

@@ -3,29 +3,39 @@ import React, { useState, useEffect } from "react";
 // MUI
 import { Grid, Typography, Button, Box } from "@mui/material";
 
-// REACT_ROUTER_DOM
+// REDUX
+import { useLocation } from 'react-router-dom';
 import { useNavigate } from "react-router-dom";
 import { getArticles } from "../../redux/actions/Home";
 import { useSelector } from "react-redux";
 
 // PAGES
 import HomeCard from "../Home/HomeCard";
+import Electionpagecarousel from "../Carousels/Electionpagecarousel/Electionpagecarousel";
 
 // IMAGES
 import JanusAdd from "../../assets/images/Janus.jpg";
 
-const Sports = () => {
-  const { Articles } = useSelector((state) => state.HomeReducer);
+const Electionsubcategory = () => {
+  const { Articles } = useSelector(state => state.HomeReducer)
   const navigate = useNavigate();
+
+  const { state } = useLocation();
 
   useEffect(() => {
     getArticles();
   }, []);
   return (
     <Box sx={{ marginTop: "80px" }}>
-      <Grid container   sx={{
-            marginBottom: { xs: "0px", sm: "0px", md: "15px", lg: "15px" },
-          }}>
+      {/* Election carousel */}
+      <Electionpagecarousel />
+
+      <Grid
+        container
+        sx={{
+          marginBottom: { xs: "0px", sm: "0px", md: "15px", lg: "15px" },
+        }}
+      >
         <Grid
           item
           xs={12}
@@ -49,21 +59,19 @@ const Sports = () => {
             }}
           >
             <Grid container spacing={3}>
-              {Articles?.filter((item) => item.category[0] === "sports").map(
-                (result, index) => (
-                  <HomeCard
-                    key={index}
-                    result={result}
-                    onClick={() => {
-                      console.log("navigate");
-                      navigate(
-                        `/${result?.category[0]}/${result?.subcategory[0]}/${result?.engtitle}`,
-                        { state: { data: result } }
-                      );
-                    }}
-                  />
-                )
-              )}
+              {state.data.map((result, index) => (
+                <HomeCard
+                  key={index}
+                  result={result}
+                  onClick={() => {
+                    console.log("navigate");
+                    navigate(
+                      `/${result?.category[0]}/${result?.subcategory[0]}/${result?.engtitle}`,
+                      { state: { data: result } }
+                    );
+                  }}
+                />
+              ))}
             </Grid>
           </Box>
         </Grid>
@@ -149,4 +157,4 @@ const Sports = () => {
   );
 };
 
-export default Sports;
+export default Electionsubcategory;

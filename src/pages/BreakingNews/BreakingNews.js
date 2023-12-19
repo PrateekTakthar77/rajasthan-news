@@ -1,101 +1,197 @@
-import React, { useEffect, useState } from 'react';
-import { Box, Typography, Grid } from '@mui/material';
-import { useNavigate } from 'react-router-dom';
-import { getArticles } from '../../Redux/actions/Home';
-import { useSelector } from 'react-redux';
+import React, { useState, useEffect } from "react";
 
-import add2 from "../../assets/images/add2.jpeg"
-import add4 from "../../assets/images/add4.jpeg"
-import advert from "../../assets/images/Uttarakhand.jpg"
+// MUI
+import { Grid, Typography, Button, Box } from "@mui/material";
 
+// REACT_ROUTER_DOM
+import { useNavigate } from "react-router-dom";
+import { getArticles } from "../../redux/actions/Home";
+import { useSelector } from "react-redux";
 
-const BreakingNews = () => {
-    const [loading, setLoading] = useState(true);
-    const { Articles } = useSelector(state => state.HomeReducer)
-    const navigate = useNavigate();
+// PAGES
+import HomeCard from "../Home/HomeCard";
 
-    useEffect(() => {
-        getArticles().then(() => {
-            setLoading(false)
-        })
-    }, [])
-    return (
-        <>
-            <Box sx={{ marginTop: "50px" }}>
+// IMAGES
+import JanusAdd from "../../assets/images/Janus.jpg";
 
+// CSS
+import "./Breakingnews.css";
+
+const Breakingnews = () => {
+  const { Articles } = useSelector((state) => state.HomeReducer);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    getArticles();
+  }, []);
+  return (
+    <Box sx={{ marginTop: { xs: "60px", sm: "60px", md: "80px", lg: "80px" } }}>
+      <Grid
+        container
+        sx={{
+          marginBottom: { xs: "0px", sm: "0px", md: "15px", lg: "15px" },
+        }}
+      >
+        <Grid
+          item
+          xs={12}
+          sm={12}
+          md={0.6}
+          lg={0.6}
+          // sx={{ backgroundColor: "red" }}
+        ></Grid>
+        <Grid
+          item
+          xs={12}
+          sm={12}
+          md={8.5}
+          lg={8.5}
+          // sx={{ backgroundColor: "aqua" }}
+        >
+          {Articles?.map(
+            (result, index) =>
+              index < 10 && (
                 <Grid container>
-                    <Grid item xs={12} sm={12} lg={0.5} md={0.5}
-                    // style={{ backgroundColor: "yellow" }}
-                    ></Grid>
-                    <Grid item xs={12} sm={12} lg={8.5} md={8.5} sx={{
-                        padding: "10px",
-                        // backgroundColor: "green" 
-                    }} >
+                  <Grid
+                    key={index}
+                    item
+                    xs={12}
+                    sm={12}
+                    lg={1.5}
+                    md={1.5}
+                    // style={{ backgroundColor: "red" }}
+                  >
+                    <Typography
+                      sx={{
+                        fontSize:{ xs:"14px" , sm:"14px" , md:"17px" , lg:"17px"} ,
+                        fontWeight: "600",
+                        marginTop: "2px",
+                        marginLeft:{ xs:"5px" , sm:"5px" , md:"0px" , lg:"0px"} ,
+                      }}
+                    >
+                      {new Date(result?.createdAt).toLocaleTimeString([], {
+                        hour: "2-digit",
+                        minute: "2-digit",
+                      })}
+                    </Typography>
+                  </Grid>
+                  <Grid
+                    item
+                    xs={12}
+                    sm={12}
+                    lg={10.5}
+                    md={10.5}
+                    // style={{ backgroundColor: "blue" }}
+                  >
+                    <Typography
+                      key={index}
+                      result={result}
+                      onClick={() => {
+                        console.log("navigate");
+                        navigate(
+                          `/${result?.category[0]}/${result?.subcategory[0]}/${result?.engtitle}`,
+                          { state: { data: result } }
+                        );
+                      }}
+                      sx={{
+                        fontSize: "20px",
+                        fontSize:{xs:"15px" , sm:"15px" , md:"20px" , lg:"20px"},
+                        fontWeight: "600",
+                        fontFamily: " 'Mukta', sans-serif",
+                        color: "#D2122E",
+                        marginLeft:{xs:"5px" , sm:"5px" , md:"0px" , lg:"0px"},
+                        marginRight:{xs:"5px" , sm:"5px" , md:"0px" , lg:"0px"}
+                      }}
+                    >
+                      {result?.title}
+                    </Typography>
+                  </Grid>
 
-                        <Box sx={{ display: "flex", flexDirection: "row", marginLeft: "11px", marginBottom: "40px", marginTop: "20px" }}>
-                            <Typography sx={{ fontSize: "17px", fontFamily: "'Noto Sans', sans-serif", fontWeight: "600", marginTop: "4px" }}>Hindi News</Typography>
-                            <Typography sx={{ fontSize: "17px", fontFamily: "'Noto Sans', sans-serif", fontWeight: "600", marginTop: "3px", padding: "4px" }}>  /  </Typography>
-                            <Box sx={{ backgroundColor: "red", }}>
-                                <Typography sx={{ padding: "3px", fontSize: "17px", fontFamily: "'Noto Sans', sans-serif", fontWeight: "600", color: "#fff", marginTop: "3px" }}>ब्रेकिंग न्यूज़</Typography>
-                            </Box>
-                        </Box>
-
-                        {Articles?.map((result, index) => index < 10 && (
-                            <Grid container>
-                                <Grid key={index} item xs={12} sm={12} lg={1.5} md={1.5}
-                                // style={{ backgroundColor: "red" }}
-                                >
-                                    <Typography style={{ fontSize: "19px", fontWeight: "700", marginLeft: "10px" }}>
-                                        {new Date(result?.createdAt).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
-                                    </Typography>
-                                </Grid>
-                                <Grid item xs={12} sm={12} lg={8} md={8}
-                                // style={{ backgroundColor: "blue" }}
-                                >
-
-                                    <Typography key={index} result={result} onClick={() => {
-                                        console.log('navigate');
-                                        navigate(`/${result?.category[0]}/${result?.subcategory[0]}/${result?.engtitle}`, { state: { data: result } });
-                                    }} style={{ fontSize: "20px", fontWeight: "600", fontFamily: "'Noto Sans', sans-serif", color: "#D2122E" }}>{result?.title}</Typography>
-                                </Grid>
-
-                                <Grid item xs={12} sm={12} lg={2.5} md={2.5}
-                                // style={{ backgroundColor: "green" }}
-                                >
-                                    <Typography style={{ fontSize: "17px", fontWeight: "700", marginTop: "1px", marginLeft: "10px" }}>
-
-                                    </Typography>
-                                </Grid>
-                                <Box
-                                    borderBottom="1px solid #ccc"
-                                    width="100%"
-                                    my={2}
-                                />
-
-                            </Grid>
-                        ))}
-                    </Grid>
-
-                    <Grid item xs={12} sm={12} md={2.7} lg={2.7}
-                        sx={{ display: "flex", flexDirection: "column", marginTop: "30px" }}>
-                        <Box sx={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
-                            <a href="https://www.youtube.com/uttaranchalwasi" target="_blank" rel="noopener noreferrer" sx={{ textDecoration: "none" }}>
-                                <Box sx={{ backgroundColor: "gray", width: "290px", height: "15px", alignSelf: "center" }}>
-                                    <Typography sx={{ textAlign: "center", fontSize: "12px", color: "black", textDecoration: "none" }}>ADVERTISEMENT</Typography>
-                                </Box>
-
-                                <img src={advert} alt='add' style={{ width: "290px", height: "280px", alignSelf: "center" }} />
-                            </a>
-                        </Box>
-                    </Grid>
-                    <Grid item xs={12} sm={12} md={0.3} lg={0.3}>
-
-                    </Grid>
+                  <Box borderBottom="1px solid #ccc" width="100%" my={2} />
                 </Grid>
-            </Box>
-        </>
-    )
-}
+              )
+          )}
+        </Grid>
+        <Grid
+          item
+          xs={12}
+          sm={12}
+          md={2.5}
+          lg={2.5}
+          // sx={{ backgroundColor: "green" }}
+        >
+          <Box sx={{ display: "flex", justifyContent: "center" }}>
+            <a
+              href="www.januskoncpets.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ textDecoration: "none" }}
+            >
+              <Box
+                sx={{
+                  backgroundColor: "#F0F0F0",
+                  height: "200px",
+                  width: "200px",
+                  marginTop: { xs: "10px", sm: "10px", md: "0px", lg: "0px" },
+                  marginBottom: {
+                    xs: "40px",
+                    sm: "40px",
+                    md: "0px",
+                    lg: "0px",
+                  },
+                }}
+              >
+                <Box>
+                  <Typography
+                    sx={{
+                      fontSize: {
+                        xs: "10px",
+                        sm: "10px",
+                        md: "9px",
+                        lg: "9px",
+                      },
+                      fontWeight: "600",
+                      textAlign: "center",
+                      color: "black",
+                    }}
+                  >
+                    ADVERTISEMENT
+                  </Typography>
+                </Box>
+                <Box
+                  component="img"
+                  sx={{
+                    width: {
+                      xs: "200px",
+                      sm: "200px",
+                      md: "200px",
+                      lg: "200px",
+                    },
+                    height: {
+                      xs: "200px",
+                      sm: "200px",
+                      md: "200px",
+                      lg: "200px",
+                    },
+                  }}
+                  alt="redTriangleArrow"
+                  src={JanusAdd}
+                />
+              </Box>
+            </a>
+          </Box>
+        </Grid>
+        <Grid
+          item
+          xs={12}
+          sm={12}
+          md={0.4}
+          lg={0.4}
+          // sx={{ backgroundColor: "purple" }}
+        ></Grid>
+      </Grid>
+    </Box>
+  );
+};
 
-export default BreakingNews
-
+export default Breakingnews;
