@@ -200,7 +200,7 @@ const FullNews = () => {
                     lg: "0px",
                   },
                 }}
-                alt="ArticleImage"
+                alt="BarcodeLeft"
                 src={FullArticle?.photo}
               />
             </Box>
