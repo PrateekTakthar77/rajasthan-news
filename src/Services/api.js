@@ -10,7 +10,7 @@ export async function getAuthorizationHeader() {
     }
     return null;
 }
-//request
+
 export async function request(url, method, data, headers) {
     const bearer = await getAuthorizationHeader();
 
