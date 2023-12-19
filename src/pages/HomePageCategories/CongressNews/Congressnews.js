@@ -1,29 +1,38 @@
 import React, { useState, useEffect } from "react";
 
 // MUI
-import { Grid, Typography, Button, Box } from "@mui/material";
+import { Grid, Box, Typography } from "@mui/material";
 
-// REACT_ROUTER_DOM
+// REACT-ROUTER-DOM
+import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-import { getArticles } from "../../redux/actions/Home";
-import { useSelector } from "react-redux";
 
 // PAGES
-import HomeCard from "../Home/HomeCard";
+import HomeCard from "../../Home/HomeCard";
 
-// IMAGES
-import JanusAdd from "../../assets/images/Janus.jpg";
+// REDUX
+import { getArticles } from "../../../redux/actions/Home";
+import { useSelector } from "react-redux";
 
-const Sports = () => {
+// CSS
+import "./Congressnews.css"
+
+// Images
+import JanusAdd from "../../../assets/images/Janus.jpg"
+
+const Congressnews = () => {
+  const [loading, setLoading] = useState(true);
   const { Articles } = useSelector((state) => state.HomeReducer);
   const navigate = useNavigate();
 
   useEffect(() => {
-    getArticles();
+    getArticles().then(() => {
+      setLoading(false);
+    });
   }, []);
   return (
-    <Box sx={{ marginTop: "80px" }}>
-      <Grid container   sx={{
+    <Box  style={{ marginTop: "80px" }}>
+      <Grid container  sx={{
             marginBottom: { xs: "0px", sm: "0px", md: "15px", lg: "15px" },
           }}>
         <Grid
@@ -40,7 +49,7 @@ const Sports = () => {
           sm={12}
           md={8.5}
           lg={8.5}
-          // sx={{ backgroundColor: "aqua" }}
+          // sx={{ backgroundColor: "#fff" }}
         >
           <Box
             sx={{
@@ -49,20 +58,20 @@ const Sports = () => {
             }}
           >
             <Grid container spacing={3}>
-              {Articles?.filter((item) => item.category[0] === "sports").map(
-                (result, index) => (
-                  <HomeCard
-                    key={index}
-                    result={result}
-                    onClick={() => {
-                      console.log("navigate");
-                      navigate(
-                        `/${result?.category[0]}/${result?.subcategory[0]}/${result?.engtitle}`,
-                        { state: { data: result } }
-                      );
-                    }}
-                  />
-                )
+              {Articles?.filter((item) => item.subcategory[0] === "congress").map(
+                (result, index) =>(
+                    <HomeCard
+                      key={index}
+                      result={result}
+                      onClick={() => {
+                        console.log("navigate");
+                        navigate(
+                          `/${result?.category[0]}/${result?.subcategory[0]}/${result?.engtitle}`,
+                          { state: { data: result } }
+                        );
+                      }}
+                    />
+                  )
               )}
             </Grid>
           </Box>
@@ -77,7 +86,7 @@ const Sports = () => {
         >
           <Box sx={{ display: "flex", justifyContent: "center" }}>
             <a
-              href="www.januskoncpets.com"
+              href="https://www.facebook.com/HeyGobind"
               target="_blank"
               rel="noopener noreferrer"
               style={{ textDecoration: "none" }}
@@ -114,24 +123,24 @@ const Sports = () => {
                   </Typography>
                 </Box>
                 <Box
-                  component="img"
-                  sx={{
-                    width: {
-                      xs: "200px",
-                      sm: "200px",
-                      md: "200px",
-                      lg: "200px",
-                    },
-                    height: {
-                      xs: "200px",
-                      sm: "200px",
-                      md: "200px",
-                      lg: "200px",
-                    },
-                  }}
-                  alt="redTriangleArrow"
-                  src={JanusAdd}
-                />
+                    component="img"
+                    sx={{
+                      width: {
+                        xs: "200px",
+                        sm: "200px",
+                        md: "200px",
+                        lg: "200px",
+                      },
+                      height: {
+                        xs: "200px",
+                        sm: "200px",
+                        md: "200px",
+                        lg: "200px",
+                      },
+                    }}
+                    alt="redTriangleArrow"
+                    src={JanusAdd}
+                  />
               </Box>
             </a>
           </Box>
@@ -142,11 +151,11 @@ const Sports = () => {
           sm={12}
           md={0.4}
           lg={0.4}
-          // sx={{ backgroundColor: "purple" }}
+          // sx={{ backgroundColor: "orange" }}
         ></Grid>
       </Grid>
     </Box>
   );
 };
 
-export default Sports;
+export default Congressnews;
