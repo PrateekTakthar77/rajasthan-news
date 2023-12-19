@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "link": "/breakingnews",
+        "title": "ब्रेकिंग न्यूज",
+        "image": "../assets/images/cricket.webp"
+    },
+    {
+        "id": 2,
+        "link":"/elections",
+        "title": "चुनाव 2023",
+        "image": "../assets/images/cricket.webp"
+    },
+    {
+        "id": 3,
+        "link":"/sports",
+        "title": "स्पोर्ट्स",
+        "image": "../assets/images/cricket.webp"
+    },
+    {
+        "id": 4,
+        "link":"/education" ,
+        "title": "एजुकेशन",
+        "image": "../assets/images/cricket.webp"
+    },
+    {
+        "id": 5,
+        "link":"/technology",
+        "title": "टेक्नोलॉजी",
+        "image": "../assets/images/cricket.webp"
+    },
+    {
+        "id": 6,
+        "link":"/entertainment",
+        "title": "मनोरंजन",
+        "image": "../assets/images/cricket.webp"
+    }
+]
