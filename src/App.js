@@ -1,21 +1,25 @@
-import React from 'react';
-import Box from '@mui/material/Box';
-import Navigation from './navigation/Navigation';
-import Footer from './components/Footer';
-import { Provider } from 'react-redux';
-// import store from "./store"
-import store from './Redux/store';
-import { ThreeSixty } from '@mui/icons-material';
+import React from "react";
 
-function App() {
+// MUI-LIBRARIES
+import { Box } from "@material-ui/core";
+
+// REDUX
+import { Provider } from "react-redux";
+import store from "./redux/store";
+
+// PAGES
+import Navigation from "./navigation/Navigation";
+import Footer from "./components/Footer/Footer";
+
+const App = () => {
   return (
     <Provider store={store}>
       <Box flex={1}>
         <Navigation />
-        <Footer />
+        <Footer/>
       </Box>
     </Provider>
-  )
-}
+  );
+};
 
 export default App;

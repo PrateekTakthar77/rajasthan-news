@@ -1,7 +1,7 @@
 import types from "../types";
 import store from "../store";
-import { apiGet } from "../../Services/api"
-import { GET_ARTICLES, GET_ARTICLE_BY_ID } from "../../Services/urls"
+import { apiGet } from "../../services/api"
+import { GET_ARTICLES, GET_ARTICLE_BY_ID } from "../../services/urls"
 
 
 const { dispatch } = store
